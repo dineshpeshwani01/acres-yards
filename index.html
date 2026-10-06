@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acres &amp; Yards — Dubai Real Estate Advisory</title>
+<meta name="description" content="Acres &amp; Yards — Dubai real estate advisory for residential buyers and investors. Off-plan and ready homes across Dubai’s leading developers.">
+<meta name="theme-color" content="#15110E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Acres &amp; Yards — Dubai Real Estate Advisory">
+<meta property="og:description" content="Guidance you can trust. Decisions treated like our own.">
+<meta property="og:image" content="assets/hero_poster.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/ay_mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;1,400;1,500&amp;family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero_poster.jpg" fetchpriority="high">
+<style>
+html.lenis,html.lenis body{height:auto}.lenis:not(.lenis-autoToggle).lenis-stopped{overflow:clip}.lenis.lenis-smooth iframe{pointer-events:none}.lenis.lenis-smooth{scroll-behavior:auto !important}
+
+html{scroll-behavior:smooth}
+body{margin:0;background:#F6F1EA}
+a{color:#7A5444}a:hover{color:#15110E}
+*{box-sizing:border-box}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.display{font-family:Urbanist,'Helvetica Neue',Helvetica,sans-serif;font-weight:500;letter-spacing:-0.015em}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+.navlinks{display:flex;gap:32px;align-items:center}
+.navlinks a{color:#E9DFD5;text-decoration:none;font-size:14px;letter-spacing:.04em}
+.navlinks a:hover{color:#E2A281}
+.search{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:0;background:#F6F1EA;border-radius:2px}
+.search label{display:flex;flex-direction:column;gap:6px;padding:18px 22px;border-right:1px solid #DDD0C2;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5E544D;font-weight:500}
+.search select{border:0;background:transparent;font:400 15px Poppins,system-ui,sans-serif;color:#15110E;padding:0;letter-spacing:0;text-transform:none;appearance:none;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;font:500 13px Poppins,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;border-radius:2px}
+.btn-dark{background:#15110E;color:#F6F1EA}
+.tab{background:transparent;border:0;border-bottom:1px solid transparent;padding:12px 2px;font:500 13px Poppins,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5E544D;cursor:pointer;min-height:44px}
+.tab:hover{color:#15110E}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.card{background:#FFFDFA;border:1px solid #E6DACD;display:flex;flex-direction:column}
+.card{transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s,border-color .3s}
+.card:hover{border-color:#C9A994;transform:translateY(-6px);box-shadow:0 24px 48px -24px rgba(21,17,14,.35)}
+.card img{transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+.card:hover img{transform:scale(1.06)}
+.btn{transition:background .3s,color .3s,border-color .3s,transform .3s}
+.btn:hover{transform:translateY(-2px)}
+.wa{transition:transform .3s}
+.wa:hover{transform:scale(1.08)}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#3A2F28}
+.cols2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 40px}
+.events{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.field{display:flex;flex-direction:column;gap:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#B9ADA3;font-weight:500}
+.field input,.field select,.field textarea{background:transparent;border:0;border-bottom:1px solid #4A3C33;color:#F6F1EA;font:400 16px Poppins,system-ui,sans-serif;padding:10px 0;letter-spacing:0;text-transform:none;border-radius:0}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:#E2A281}
+.field select option{color:#15110E}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:48px}
+.foot a{color:#B9ADA3;text-decoration:none;font-size:14px}
+.foot a:hover{color:#E2A281}
+.wa{position:fixed;right:28px;bottom:28px;z-index:20;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(21,17,14,.35)}
+.gt-l,.gt-d{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;background-position:0% 50%;padding-right:.04em}
+.gt-l{background-image:linear-gradient(100deg,#B98468 0%,#E2A281 28%,#F7D9C4 50%,#E2A281 72%,#B98468 100%)}
+.gt-d{background-image:linear-gradient(100deg,#6B4636 0%,#8A5F4B 30%,#A97B63 50%,#8A5F4B 70%,#6B4636 100%)}
+.gt-anim.sheen-on{animation:sheen 2.6s cubic-bezier(.45,0,.2,1) 1 both}
+@keyframes sheen{from{background-position:0% 50%}to{background-position:100% 50%}}
+.btn-copper{background:linear-gradient(110deg,#9A6E58 0%,#E2A281 30%,#F5D3BD 50%,#E2A281 70%,#9A6E58 100%);background-size:220% auto;background-position:0% 50%;color:#15110E;transition:background-position .9s cubic-bezier(.22,1,.36,1),transform .3s}
+.btn-copper:hover{background-position:100% 50%;color:#15110E}
+.btn-ghost{position:relative;background:transparent;color:#F6F1EA;border-color:transparent}
+.btn-ghost::before{content:"";position:absolute;inset:0;padding:1px;border-radius:inherit;background:linear-gradient(110deg,#9A6E58,#F5D3BD 50%,#9A6E58);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.8}
+.btn-ghost:hover{color:#F7D9C4}
+.btn-ghost:hover::before{opacity:1}
+.btn-dark:hover{background:linear-gradient(110deg,#6B4636,#9A6E58 50%,#6B4636);color:#F6F1EA}
+.tabpanel .cards > *,.tabpanel [data-m="sellpanel"] > *{transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1),filter .5s cubic-bezier(.22,1,.36,1),border-color .3s,box-shadow .5s}
+.tabpanel .cards > :nth-child(2),.tabpanel [data-m="sellpanel"] > :nth-child(2){transition-delay:.07s}
+.tabpanel .cards > :nth-child(3),.tabpanel [data-m="sellpanel"] > :nth-child(3){transition-delay:.14s}
+.tabpanel [data-m="sellpanel"] > :nth-child(4){transition-delay:.21s}
+.tabpanel.is-out .cards > *,.tabpanel.is-out [data-m="sellpanel"] > *{opacity:0;transform:translateY(-12px);filter:blur(3px);transition-duration:.24s;transition-timing-function:cubic-bezier(.4,0,1,1)}
+.tabpanel.is-in .cards > *,.tabpanel.is-in [data-m="sellpanel"] > *{opacity:0;transform:translateY(20px);filter:blur(4px);transition:none}
+.tabpanel.is-in .card img{transform:scale(1.08);transition:none}
+.tabpanel.is-idle .card:hover{transition-delay:0s}
+@media (prefers-reduced-motion:reduce){.tabpanel .cards > *,.tabpanel [data-m="sellpanel"] > *{transition:none}}
+.about-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:96px;align-items:center}
+.about-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.sel{position:relative;display:block;width:100%}
+.sel select{-webkit-appearance:none;appearance:none;width:100%;padding-right:26px !important;cursor:pointer;background-color:transparent;border-radius:0}
+.sel-chev{position:absolute;right:2px;top:50%;margin-top:-6px;pointer-events:none;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.sel-light .sel-chev{color:#9A6E58}
+.sel-dark .sel-chev{color:#E2A281}
+.sel-light select:focus-visible{outline:1px solid #C9A994;outline-offset:6px}
+.sel-dark select:focus-visible{outline:none}
+.sel-light select option{background:#FFFDFA;color:#15110E}
+.sel-dark select option{background:#211A16;color:#F6F1EA}
+@supports (appearance:base-select){
+.sel select,.sel select::picker(select){appearance:base-select}
+.sel select{border-top:0;border-left:0;border-right:0;min-height:0;line-height:1.5}
+.sel-light select{border-bottom:0;padding:0}
+.sel select::picker-icon{display:none}
+.sel select:open + .sel-chev{transform:rotate(180deg)}
+.sel select::picker(select){border:1px solid rgba(154,110,88,.35);border-radius:2px;padding:6px;margin-block:12px;min-width:anchor-size(width);box-shadow:0 28px 56px -24px rgba(21,17,14,.45);opacity:0;translate:0 -6px;transition:opacity .28s cubic-bezier(.22,1,.36,1),translate .28s cubic-bezier(.22,1,.36,1),overlay .28s allow-discrete,display .28s allow-discrete}
+.sel select:open::picker(select){opacity:1;translate:0 0}
+@starting-style{.sel select:open::picker(select){opacity:0;translate:0 -6px}}
+.sel-light select::picker(select){background:#FFFDFA;color:#15110E}
+.sel-dark select::picker(select){background:#211A16;color:#F6F1EA;border-color:rgba(226,162,129,.3)}
+.sel select option{padding:11px 16px;font:400 14px Poppins,system-ui,sans-serif;letter-spacing:0;text-transform:none;border-radius:1px;background:transparent;transition:background .2s,color .2s;gap:10px}
+.sel select option::checkmark{order:1;margin-left:auto;font-size:12px}
+.sel-light select option:hover,.sel-light select option:focus-visible{background:#F3EAE0;color:#15110E;outline:none}
+.sel-dark select option:hover,.sel-dark select option:focus-visible{background:rgba(226,162,129,.12);color:#F7D9C4;outline:none}
+.sel-light select option:checked{color:#7A5444;font-weight:500}
+.sel-dark select option:checked{color:#E2A281;font-weight:500}
+.sel-light select option::checkmark{color:#9A6E58}
+.sel-dark select option::checkmark{color:#E2A281}
+}
+.tab{transition:color .35s}
+.tab-on{color:#15110E}
+.tab-ind{position:absolute;left:0;bottom:-1px;height:1px;width:0;background:linear-gradient(90deg,#7A5444,#E2A281 50%,#7A5444);pointer-events:none}
+.wa{background:linear-gradient(135deg,#9A6E58,#E2A281 45%,#F5D3BD 60%,#E2A281 75%,#9A6E58)}
+.wa:hover{filter:brightness(1.06)}
+@media (prefers-reduced-motion:reduce){.gt-anim{animation:none}}
+.mq-row{display:flex;align-items:center;gap:40px;max-width:1240px;margin:0 auto;padding:30px 0 30px 40px}
+.mq-label{flex:none;white-space:nowrap;padding-right:40px;border-right:1px solid #E2D6C9;line-height:2.4}
+.mq{flex:1 1 auto;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{display:flex;width:max-content;animation:mq 44s linear infinite;will-change:transform}
+.mq:hover .mq-track{animation-play-state:paused}
+.mq-group{display:flex;align-items:center;gap:72px;padding-right:72px;flex:none;min-height:56px}
+.mq-name{font-family:Urbanist,'Helvetica Neue',Helvetica,sans-serif;font-weight:500;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#5E544D;white-space:nowrap;transition:color .3s}
+.mq-name:hover{color:#15110E}
+.mq-logo{flex:none;filter:grayscale(1) sepia(.25) brightness(.9);opacity:.62;transition:filter .4s,opacity .4s}
+.mq-logo:hover{filter:none;opacity:1}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+section > .wrap,footer > .wrap{position:relative;z-index:1}
+.hl{display:block}
+@media (max-width:640px){.hl{opacity:.6}}
+@media (max-width:1060px){
+.about-grid{grid-template-columns:minmax(0,1fr);gap:72px}
+.navlinks{display:none}
+.cols2{grid-template-columns:minmax(0,1fr);gap:48px}
+.cards,.svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+.events{grid-template-columns:repeat(2,minmax(0,1fr))}
+.search{grid-template-columns:repeat(2,minmax(0,1fr))}
+.search label{border-bottom:1px solid #DDD0C2}
+.foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+.about-facts{grid-template-columns:minmax(0,1fr)}
+.founder-card{left:0 !important;bottom:16px !important}
+.mq-row{flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0 28px 22px}
+.mq-label{border-right:0;padding-right:0;line-height:1.6}
+.mq{width:100%}
+h1.display{font-size:48px !important}
+.wrap{padding:0 22px}
+.cards,.svc,.events,.cols3,.form-grid,.foot,.search{grid-template-columns:minmax(0,1fr)}
+.search label{border-right:0}
+.hide-sm{display:none}
+}
+[hidden]{display:none !important}
+</style>
+<script src="assets/motion.min.js" defer></script>
+<script src="assets/lenis.min.js" defer></script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<div id="page" style="font-family: Poppins, system-ui, sans-serif; color: #15110E; background: #15110E; width: 100%">
+
+  <!-- ============ HEADER + HERO ============ -->
+  <header id="top" data-m="heroSection" style="background: #15110E; color: #F6F1EA; position: relative; overflow: hidden">
+    <!-- hero media layer: drone video goes here -->
+    <div data-m="heroBg" style="position: absolute; inset: -40px 0 0 0; z-index: 0; background: #1B1512">
+      <video data-m="video" src="assets/hero.mp4" poster="assets/hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%"></video>
+      
+      
+    </div>
+    <!-- legibility scrim -->
+    <div aria-hidden="true" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(21,17,14,.72) 0%, rgba(21,17,14,.35) 48%, rgba(21,17,14,0) 75%), linear-gradient(180deg, rgba(21,17,14,.75) 0%, rgba(21,17,14,.25) 34%, rgba(21,17,14,.4) 68%, rgba(21,17,14,.95) 100%)"></div>
+
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 96px; border-bottom: 1px solid rgba(233,223,213,.14); position: relative; z-index: 3">
+      <a href="#top" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
+        <img src="assets/ay_mark.svg" alt="" style="width: 44px; height: 44px; display: block">
+        <span class="gt-l" style="font-size: 14px; letter-spacing: .42em; color: #E2A281; font-weight: 400; white-space: nowrap">ACRES &amp; YARDS</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#properties">Buy</a>
+        <a href="#properties">Off-Plan</a>
+        <a href="#properties">Sell</a>
+        <a href="#services">Services</a>
+        <a href="#events">Events</a>
+        <a href="#company">About</a>
+      </nav>
+      <a class="btn btn-ghost" href="#contact" style="min-height: 46px; padding: 0 22px; font-size: 12px">Book a consultation</a>
+    </div>
+
+    <div class="wrap" style="position: relative; z-index: 3; padding-top: 150px; padding-bottom: 170px; display: flex; flex-direction: column; gap: 32px; max-width: 1240px">
+      <h1 class="display" style="margin: 0; font-size: 84px; line-height: 1.02; letter-spacing: -0.01em; color: #F6F1EA; max-width: 900px"><span data-m="hero" style="display: block">Guidance you can trust.</span><span class="gt-l gt-anim" data-m="hero" style="display: block; font-style: italic; color: #E2A281">Decisions treated like our own.</span></h1>
+      <div data-m="hero" style="display: flex; gap: 16px; flex-wrap: wrap">
+        <a class="btn btn-copper" href="#properties">Explore properties</a>
+        <a class="btn btn-ghost" href="https://wa.me/971566786429">Talk to an advisor</a>
+      </div>
+    </div>
+
+    <!-- search bar -->
+    <div data-m="hero" class="wrap" style="position: relative; z-index: 3; padding-bottom: 56px">
+      <div class="search" role="search">
+        <label>Purpose
+          <span class="sel sel-light"><select aria-label="Purpose"><option>Buy</option><option>Off-plan investment</option><option>Sell</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </label>
+        <label>Community
+          <span class="sel sel-light"><select aria-label="Community"><option>Any community</option><option>DAMAC Islands</option><option>Dubai Maritime City</option><option>Dubai Marina</option><option>Downtown Dubai</option><option>Business Bay</option><option>Palm Jumeirah</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </label>
+        <label>Property type
+          <span class="sel sel-light"><select aria-label="Property type"><option>Any type</option><option>Apartment</option><option>Townhouse</option><option>Villa</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </label>
+        <label>Budget
+          <span class="sel sel-light"><select aria-label="Budget"><option>Any budget</option><option>Up to AED 1M</option><option>AED 1M – 3M</option><option>AED 3M +</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </label>
+        <a class="btn btn-dark" href="#properties" style="border-radius: 0; min-height: 100%; padding: 0 36px">Search</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DEVELOPERS ============ -->
+  <section aria-label="Developers" style="border-bottom: 1px solid #E2D6C9; background: #F6F1EA">
+    <div data-m="reveal" class="mq-row">
+      <div class="eyebrow gt-d mq-label" style="color: #7A5444; font-size: 11px">Access across Dubai’s developers</div>
+      <div class="mq">
+        <div class="mq-track">
+          <div class="mq-group"><img class="mq-logo" src="assets/logo_ellington.png" alt="Ellington Properties" style="height: 40px; width: auto; display: block"><span class="mq-name">Emaar</span><img class="mq-logo" src="assets/logo_damac.png" alt="DAMAC" style="height: 24px; width: auto; display: block"><span class="mq-name">Sobha</span><img class="mq-logo" src="assets/logo_nakheel.png" alt="Nakheel" style="height: 50px; width: auto; display: block"><span class="mq-name">Binghatti</span><img class="mq-logo" src="assets/logo_meraas.png" alt="Meraas" style="height: 30px; width: auto; display: block"><span class="mq-name">Arada</span><img class="mq-logo" src="assets/logo_dubai-properties.png" alt="Dubai Properties" style="height: 42px; width: auto; display: block"><span class="mq-name">Danube</span></div>
+          <div class="mq-group" aria-hidden="true"><img class="mq-logo" src="assets/logo_ellington.png" alt="" style="height: 40px; width: auto; display: block"><span class="mq-name">Emaar</span><img class="mq-logo" src="assets/logo_damac.png" alt="" style="height: 24px; width: auto; display: block"><span class="mq-name">Sobha</span><img class="mq-logo" src="assets/logo_nakheel.png" alt="" style="height: 50px; width: auto; display: block"><span class="mq-name">Binghatti</span><img class="mq-logo" src="assets/logo_meraas.png" alt="" style="height: 30px; width: auto; display: block"><span class="mq-name">Arada</span><img class="mq-logo" src="assets/logo_dubai-properties.png" alt="" style="height: 42px; width: auto; display: block"><span class="mq-name">Danube</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROPERTIES ============ -->
+  <section id="properties" style="padding: 120px 0 112px; position: relative; overflow: hidden; background: #F6F1EA">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -90px; top: 30px" width="620" height="900" viewBox="0 0 620 900"><defs><linearGradient id="hlP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A6E58" stop-opacity="0.42"></stop><stop offset="1" stop-color="#9A6E58" stop-opacity="0"></stop></linearGradient></defs><path d="M100 900 V360 A260 260 0 0 1 620 360 V900" stroke="url(#hlP)" stroke-width=".8"></path><path d="M160 900 V300 A200 200 0 0 1 560 300 V900" stroke="url(#hlP)" stroke-width=".8"></path><path d="M220 900 V240 A140 140 0 0 1 500 240 V900" stroke="url(#hlP)" stroke-width=".8"></path><path d="M360 54 l6 6 l-6 6 l-6 -6 z" stroke="#9A6E58" stroke-opacity=".45" stroke-width=".8"></path><path d="M360 20 V46" stroke="#9A6E58" stroke-opacity=".3" stroke-width=".8"></path></svg>
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+      <div data-m="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 18px; max-width: 620px">
+          <div class="eyebrow gt-d" style="color: #7A5444">Curated opportunities</div>
+          <h2 class="display" style="margin: 0; font-size: 52px; line-height: 1.08">Fewer options. <span class="gt-d gt-anim" style="font-style: italic; color: #9A6E58">Better ones.</span></h2>
+        </div>
+        <div role="tablist" aria-label="Listing category" data-m="tabs" style="display: flex; gap: 32px; border-bottom: 1px solid #E2D6C9; position: relative">
+          <button role="tab" id="tab-offplan" aria-controls="panel-offplan" aria-selected="true" data-tab="offplan" class="tab tab-on">Off-Plan</button>
+          <button role="tab" id="tab-ready" aria-controls="panel-ready" aria-selected="false" tabindex="-1" data-tab="ready" class="tab">Ready to Buy</button>
+          <button role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="false" tabindex="-1" data-tab="sell" class="tab">Sell With Us</button>
+          <span class="tab-ind" data-m="tabind" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="tabpanel is-idle" data-m="tabwrap">
+      <div class="cards" data-m="stagger" role="tabpanel" id="panel-offplan" aria-labelledby="tab-offplan" data-panel="offplan">
+          <article class="card">
+              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
+                <img src="assets/img_kitchen_lux.jpg" alt="Warm modern kitchen with marble island and pendant lights" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Off-Plan</span></div>
+              </div>
+              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">DAMAC Islands · Dubai</div>
+                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">DAMAC Islands Townhouses</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Resort-style living in a lagoon-inspired waterfront community. Five bedrooms for the price of four.</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
+                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">5 BR townhouse</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Waterfront</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Golden Visa potential</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                  <div>
+                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Starting from</div>
+                    <div class="display" style="font-size: 22px; color: #15110E">AED 3.3M</div>
+                  </div>
+                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
+                </div>
+              </div>
+            </article>
+          <article class="card">
+              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
+                <img src="assets/img_loft.jpg" alt="Double-height living room with floor-to-ceiling windows" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Off-Plan</span></div>
+              </div>
+              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Dubai Maritime City</div>
+                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Shahrukhz by Danube</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Waterfront apartments with 50+ amenities, on the edge of Dubai’s maritime district.</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
+                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Waterfront</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">50+ amenities</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                  <div>
+                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Price</div>
+                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
+                  </div>
+                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
+                </div>
+              </div>
+            </article>
+          <article class="card">
+              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
+                <img src="assets/img_living.jpg" alt="Living room with linen sofa beside a city-view window" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Off-Plan</span></div>
+              </div>
+              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">DAMAC Communities · Dubai</div>
+                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">DAMAC Freehold Homes</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Freehold homes with a 0.25% monthly payment plan and 50% on handover.</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
+                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Freehold</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">0.25% monthly</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">50% on handover</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                  <div>
+                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Starting from</div>
+                    <div class="display" style="font-size: 22px; color: #15110E">AED 600K</div>
+                  </div>
+                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
+                </div>
+              </div>
+            </article>
+        </div>
+        <div class="cards" role="tabpanel" id="panel-ready" aria-labelledby="tab-ready" data-panel="ready" hidden>
+          <article class="card">
+              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
+                <img src="assets/img_kitchen_oak.jpg" alt="Oak kitchen with white gloss cabinets" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Ready</span></div>
+              </div>
+              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Dubai Marina</div>
+                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Marina Apartments</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Ready-to-move apartments by the water. Tell us your brief and we’ll share what’s available right now.</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
+                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Ready to move</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Waterfront</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                  <div>
+                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Availability</div>
+                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
+                  </div>
+                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
+                </div>
+              </div>
+            </article>
+          <article class="card">
+              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
+                <img src="assets/img_loft.jpg" alt="Double-height living room with city views" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Ready</span></div>
+              </div>
+              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Downtown Dubai</div>
+                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Downtown Residences</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Move-in-ready homes in the heart of the city, close to Dubai Mall and the Boulevard.</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
+                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Ready to move</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">City living</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                  <div>
+                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Availability</div>
+                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
+                  </div>
+                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
+                </div>
+              </div>
+            </article>
+          <article class="card">
+              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
+                <img src="assets/img_kitchen_lux.jpg" alt="Modern kitchen with marble breakfast bar" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Ready</span></div>
+              </div>
+              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Business Bay</div>
+                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Business Bay Homes</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Ready apartments along the Dubai Water Canal, minutes from Downtown.</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
+                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Ready to move</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Canal-side</span>
+                </div>
+                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                  <div>
+                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Availability</div>
+                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
+                  </div>
+                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
+                </div>
+              </div>
+            </article>
+        </div>
+
+      <div data-m="sellpanel" role="tabpanel" id="panel-sell" aria-labelledby="tab-sell" data-panel="sell" hidden style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #E2D6C9; border: 1px solid #E2D6C9">
+          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
+            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">01</div>
+            <h3 class="display" style="margin: 0; font-size: 24px">An honest valuation</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">What your property is worth today, and what buyers in your community are actually paying.</p>
+          </div>
+          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
+            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">02</div>
+            <h3 class="display" style="margin: 0; font-size: 24px">Presentation that sells</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">We don’t upload a listing and wait. Photography, video and content made in-house.</p>
+          </div>
+          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
+            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">03</div>
+            <h3 class="display" style="margin: 0; font-size: 24px">Local and global buyers</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Reach beyond Dubai through our investor events in London and Bangalore.</p>
+          </div>
+          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
+            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">04</div>
+            <h3 class="display" style="margin: 0; font-size: 24px">A clean close</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Negotiation, paperwork and handover handled by one advisor, start to finish.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+        <a class="btn btn-dark" href="#properties">View all properties</a>
+        <span style="font-size: 12px; color: #5E544D">Images are for illustration purposes only.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPROACH ============ -->
+  <section id="about" style="background: #15110E; color: #F6F1EA; padding: 120px 0; position: relative; overflow: hidden">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: 50%; top: 0; margin-left: -720px" width="1440" height="1000" viewBox="0 0 1440 1000"><path d="M120 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M360 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M600 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M840 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M1080 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M1320 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path></svg>
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -260px; top: -60px" width="1000" height="900" viewBox="0 0 1000 900"><defs><linearGradient id="hlA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E2A281" stop-opacity="0.28"></stop><stop offset="1" stop-color="#E2A281" stop-opacity="0.04"></stop></linearGradient></defs><circle cx="560" cy="450" r="380" stroke="url(#hlA)" stroke-width=".8"></circle><circle cx="640" cy="450" r="290" stroke="url(#hlA)" stroke-width=".8"></circle><path d="M0 760 C260 600 520 860 1000 540" stroke="#E2A281" stroke-opacity=".18" stroke-width=".8"></path><circle cx="640" cy="160" r="3" stroke="#E2A281" stroke-opacity=".5" stroke-width=".8"></circle></svg>
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 72px">
+      <div class="cols2" data-m="reveal">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <div class="eyebrow gt-l" style="color: #E2A281">Our approach</div>
+          <h2 class="display" style="margin: 0; font-size: 56px; line-height: 1.06">Less comparing.<br><span class="gt-l gt-anim" style="font-style: italic; color: #E2A281">More clarity.</span></h2>
+        </div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #C9BDB2; font-weight: 300; padding-top: 40px">One project becomes five, the shortlist keeps changing, and every new brochure makes the decision harder. We work the other way: start with what you want the property to do for you, and let everything that doesn’t fit fall away.</p>
+      </div>
+      <div class="cols3" data-m="stagger">
+        <div style="background: #15110E; padding: 40px 36px 8px 0; display: flex; flex-direction: column; gap: 16px">
+          <div class="display gt-l gt-anim" style="font-size: 18px; color: #E2A281; font-style: italic">Step one</div>
+          <h3 class="display" style="margin: 0; font-size: 30px">Know your goal</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #B9ADA3">A home to live in, a rental yield, a Golden Visa route, or a long-term hold. The goal shapes everything after it.</p>
+        </div>
+        <div style="background: #15110E; padding: 40px 36px 8px; display: flex; flex-direction: column; gap: 16px">
+          <div class="display gt-l gt-anim" style="font-size: 18px; color: #E2A281; font-style: italic">Step two</div>
+          <h3 class="display" style="margin: 0; font-size: 30px">Set your budget</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #B9ADA3">Including payment plans, mortgage options and what’s due on handover, so there are no surprises later.</p>
+        </div>
+        <div style="background: #15110E; padding: 40px 0 8px 36px; display: flex; flex-direction: column; gap: 16px">
+          <div class="display gt-l gt-anim" style="font-size: 18px; color: #E2A281; font-style: italic">Step three</div>
+          <h3 class="display" style="margin: 0; font-size: 30px">Filter what doesn’t fit</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #B9ADA3">We compare across developers and communities, then bring you a short list worth visiting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" style="padding: 120px 0; position: relative; overflow: hidden; background: #F6F1EA">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: -60px; bottom: -40px" width="1120" height="400" viewBox="0 0 1120 400"><path d="M-20 120 C220 50 420 170 700 110 S1040 156 1140 96" stroke="#9A6E58" stroke-opacity="0.26" stroke-width=".8"></path><path d="M-20 154 C220 84 420 204 700 144 S1040 190 1140 130" stroke="#9A6E58" stroke-opacity="0.23" stroke-width=".8"></path><path d="M-20 188 C220 118 420 238 700 178 S1040 224 1140 164" stroke="#9A6E58" stroke-opacity="0.2" stroke-width=".8"></path><path d="M-20 222 C220 152 420 272 700 212 S1040 258 1140 198" stroke="#9A6E58" stroke-opacity="0.17" stroke-width=".8"></path><path d="M-20 256 C220 186 420 306 700 246 S1040 292 1140 232" stroke="#9A6E58" stroke-opacity="0.14" stroke-width=".8"></path><path d="M-20 290 C220 220 420 340 700 280 S1040 326 1140 266" stroke="#9A6E58" stroke-opacity="0.11" stroke-width=".8"></path><path d="M-20 324 C220 254 420 374 700 314 S1040 360 1140 300" stroke="#9A6E58" stroke-opacity="0.08" stroke-width=".8"></path></svg>
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 64px">
+      <div data-m="reveal" style="display: flex; flex-direction: column; gap: 18px; max-width: 640px">
+        <div class="eyebrow gt-d" style="color: #7A5444">What we take care of</div>
+        <h2 class="display" style="margin: 0; font-size: 52px; line-height: 1.08">An agent who works for you, <span class="gt-d gt-anim" style="font-style: italic; color: #9A6E58">not just the deal.</span></h2>
+      </div>
+      <div class="svc" data-m="stagger">
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><path d="M5 27V13l11-8 11 8v14"></path><path d="M12 27v-8h8v8"></path></svg>
+          <h3 class="display" style="margin: 0; font-size: 25px">Curated shortlists</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Options compared side by side across developers, instead of the first one pushed your way.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><rect x="4" y="8" width="24" height="17" rx="1"></rect><path d="M4 13h24M9 20h6"></path></svg>
+          <h3 class="display" style="margin: 0; font-size: 25px">Mortgage &amp; finance</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Support with mortgage applications and personal finance options, arranged alongside your purchase.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="16" r="11"></circle><path d="M16 9v7l5 3"></path></svg>
+          <h3 class="display" style="margin: 0; font-size: 25px">Payment plans</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Off-plan structures like 20/80 and low monthly plans, explained in plain numbers before you commit.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><rect x="7" y="4" width="18" height="24" rx="1"></rect><circle cx="16" cy="13" r="3.5"></circle><path d="M11 22h10"></path></svg>
+          <h3 class="display" style="margin: 0; font-size: 25px">Golden Visa guidance</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Which properties may qualify, and what the process looks like from purchase to residency.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><path d="M5 9h14v10H11l-6 4z"></path><path d="M19 13h8v10l-4-3h-6"></path></svg>
+          <h3 class="display" style="margin: 0; font-size: 25px">In your language</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">A multilingual team, so every conversation feels like home — wherever you’re buying from.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><path d="M6 17l6 6L26 9"></path></svg>
+          <h3 class="display" style="margin: 0; font-size: 25px">Long after the booking</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Construction updates, handover, leasing or resale. We stay around once the paperwork is done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT THE COMPANY ============ -->
+  <section id="company" style="padding: 140px 0; position: relative; overflow: hidden; background: #15110E; color: #F6F1EA">
+    <div aria-hidden="true" style="position: absolute; inset: 0; z-index: 0; overflow: hidden">
+      <img data-m="companyBg" src="assets/founder_bg.jpg" alt="" decoding="async" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: 50% 35%; opacity: .55; display: block; will-change: transform">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,17,14,.55) 0%, rgba(21,17,14,.7) 40%, rgba(21,17,14,.92) 75%, rgba(21,17,14,.96) 100%)"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #15110E 0%, rgba(21,17,14,0) 22%, rgba(21,17,14,0) 78%, #15110E 100%)"></div>
+    </div>
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: -140px; top: -60px" width="520" height="520" viewBox="0 0 520 520"><circle cx="260" cy="260" r="240" stroke="#E2A281" stroke-opacity=".14" stroke-width=".8"></circle><circle cx="260" cy="260" r="180" stroke="#E2A281" stroke-opacity=".1" stroke-width=".8"></circle><path d="M20 260 H500" stroke="#E2A281" stroke-opacity=".08" stroke-width=".8"></path></svg>
+    <div class="wrap about-grid" style="position: relative; z-index: 1">
+      <div data-m="reveal" class="about-media">
+        <div style="position: relative; width: 100%; max-width: 470px; margin: 0 auto">
+          <div aria-hidden="true" style="position: absolute; left: 22px; top: -22px; right: -22px; bottom: 22px; border: 1px solid transparent; border-image: linear-gradient(160deg, rgba(247,217,196,.75), rgba(226,162,129,.35) 45%, rgba(154,110,88,.1)) 1; pointer-events: none"></div>
+          <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #211A16; box-shadow: 0 40px 80px -40px rgba(0,0,0,.7)">
+            <img src="assets/founder.jpg" alt="Mr. Sufiyan Hakam, Founder of Acres &amp; Yards, at his desk overlooking the city" loading="lazy" decoding="async" width="900" height="1205" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; display: block">
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21,17,14,0) 60%, rgba(21,17,14,.45) 100%)"></div>
+          </div>
+          <div class="founder-card" style="position: absolute; left: -28px; bottom: 36px; background: #F6F1EA; color: #15110E; padding: 22px 28px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 24px 50px -24px rgba(21,17,14,.55)">
+            <span class="display" style="font-size: 22px; line-height: 1.2">Mr. Sufiyan Hakam</span>
+            <span class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Founder · Acres &amp; Yards</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div data-m="reveal" style="display: flex; flex-direction: column; gap: 22px">
+          <div class="eyebrow gt-l" style="color: #E2A281">About Acres &amp; Yards</div>
+          <h2 class="display" style="margin: 0; font-size: 54px; line-height: 1.06">Built on trust,<br><span class="gt-l gt-anim" style="font-style: italic; color: #E2A281">not on volume.</span></h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #C9BDB2">Ark Acres &amp; Yards Real Estate is a Dubai advisory for residential buyers and investors. We work across the city’s leading developers — DAMAC, Emaar, Nakheel, Sobha, Ellington and more — so our advice starts with what fits you, not with one developer’s inventory.</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #C9BDB2">Dubai is home. This year we took Dubai real estate to investors abroad, with our first international property show in London and open houses in Bangalore.</p>
+        </div>
+        <div class="about-facts" data-m="stagger">
+          <div style="border-top: 1px solid rgba(226,162,129,.28); padding-top: 20px; display: flex; flex-direction: column; gap: 6px">
+            <span class="display gt-l" style="font-size: 40px; line-height: 1; color: #E2A281">Dubai</span>
+            <span style="font-size: 13px; line-height: 1.6; color: #C9BDB2">Home base and headquarters</span>
+          </div>
+          <div style="border-top: 1px solid rgba(226,162,129,.28); padding-top: 20px; display: flex; flex-direction: column; gap: 6px">
+            <span class="display gt-l" style="font-size: 40px; line-height: 1; color: #E2A281">10</span>
+            <span style="font-size: 13px; line-height: 1.6; color: #C9BDB2">Leading developers in our network</span>
+          </div>
+          <div style="border-top: 1px solid rgba(226,162,129,.28); padding-top: 20px; display: flex; flex-direction: column; gap: 6px">
+            <span class="display gt-l" style="font-size: 40px; line-height: 1; color: #E2A281">3</span>
+            <span style="font-size: 13px; line-height: 1.6; color: #C9BDB2">Cities where we’ve met investors</span>
+          </div>
+        </div>
+        <div data-m="reveal" style="display: flex; flex-direction: column; gap: 10px; padding: 26px 0 4px; border-top: 1px solid rgba(226,162,129,.22)">
+          <span class="display gt-l gt-anim" style="font-size: 26px; font-style: italic; line-height: 1.35; color: #E2A281">“We treat your decisions like our own.”</span>
+          <span style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #C9BDB2">The Acres &amp; Yards promise</span>
+        </div>
+        <div data-m="reveal" style="display: flex; gap: 16px; flex-wrap: wrap">
+          <a class="btn btn-copper" href="#contact">Speak with our team</a>
+          <a class="btn btn-ghost" href="https://wa.me/971566786429">WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS ============ -->
+  <section id="events" style="background: #EDE4D9; padding: 112px 0; position: relative; overflow: hidden">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -110px; top: -40px" width="640" height="640" viewBox="0 0 640 640"><circle cx="320" cy="320" r="250" stroke="#7A5444" stroke-opacity=".22" stroke-width=".8"></circle><ellipse cx="320" cy="320" rx="180" ry="250" stroke="#7A5444" stroke-opacity=".14" stroke-width=".8"></ellipse><ellipse cx="320" cy="320" rx="110" ry="250" stroke="#7A5444" stroke-opacity=".14" stroke-width=".8"></ellipse><ellipse cx="320" cy="320" rx="40" ry="250" stroke="#7A5444" stroke-opacity=".14" stroke-width=".8"></ellipse><ellipse cx="320" cy="150" rx="183" ry="16" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="230" rx="233" ry="21" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="320" rx="250" ry="22" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="410" rx="233" ry="21" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="490" rx="183" ry="16" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><path data-keep="1" d="M150 470 Q300 120 520 210" stroke="#9A6E58" stroke-opacity=".55" stroke-width=".9" stroke-dasharray="2 6"></path><circle cx="150" cy="470" r="3.5" fill="#9A6E58" fill-opacity=".6"></circle><circle cx="520" cy="210" r="3.5" fill="#9A6E58" fill-opacity=".6"></circle><circle cx="150" cy="470" r="9" stroke="#9A6E58" stroke-opacity=".35" stroke-width=".8"></circle></svg>
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+      <div class="cols2" data-m="reveal" style="align-items: end">
+        <div style="display: flex; flex-direction: column; gap: 18px">
+          <div class="eyebrow gt-d" style="color: #7A5444">Beyond borders</div>
+          <h2 class="display" style="margin: 0; font-size: 52px; line-height: 1.08">Dubai is home.<br><span class="gt-d gt-anim" style="font-style: italic; color: #9A6E58">London was our first stage.</span></h2>
+        </div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #5E544D">We bring Dubai’s developers to investors abroad, so you can compare projects in one room instead of across a dozen websites.</p>
+      </div>
+      <div class="events" data-m="stagger">
+        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
+          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">London · September</div>
+          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">Dubai Property Expo</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">Hilton London on Park Lane. Seven developers under one roof.</p>
+        </div>
+        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
+          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">London · September</div>
+          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">Danube Open House</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">Danube offices, Knightsbridge. Furnished freehold homes and townhouses.</p>
+        </div>
+        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
+          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">London · September</div>
+          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">DAMAC Property Show</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">DAMAC Tower, Nine Elms. Our first international property show.</p>
+        </div>
+        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
+          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Bangalore · September</div>
+          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">DAMAC Open House</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">Dubai homes, payment plans and freehold ownership, presented in India.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap">
+        <a class="btn btn-dark" href="#contact">Register for the next event</a>
+        <a href="https://www.instagram.com/acresyards/" style="font-size: 14px; color: #5E544D; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center">Next city announced on Instagram · @acresyards →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL / TEAM ============ -->
+  <section style="padding: 120px 0; position: relative; overflow: hidden; background: #F6F1EA">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: 0; top: 0" width="280" height="280" viewBox="0 0 280 280"><path d="M210 0 A70 70 0 0 0 280 70" stroke="#9A6E58" stroke-opacity="0.32" stroke-width=".8"></path><path d="M168 0 A112 112 0 0 0 280 112" stroke="#9A6E58" stroke-opacity="0.28" stroke-width=".8"></path><path d="M126 0 A154 154 0 0 0 280 154" stroke="#9A6E58" stroke-opacity="0.24" stroke-width=".8"></path><path d="M84 0 A196 196 0 0 0 280 196" stroke="#9A6E58" stroke-opacity="0.2" stroke-width=".8"></path><path d="M42 0 A238 238 0 0 0 280 238" stroke="#9A6E58" stroke-opacity="0.16" stroke-width=".8"></path></svg>
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: 50%; bottom: 40px; margin-left: -720px" width="1440" height="24" viewBox="0 0 1440 24"><defs><linearGradient id="hlT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9A6E58" stop-opacity="0"></stop><stop offset="1" stop-color="#9A6E58" stop-opacity="0"></stop></linearGradient></defs><defs><linearGradient id="hlT2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9A6E58" stop-opacity="0"></stop><stop offset=".5" stop-color="#9A6E58" stop-opacity=".4"></stop><stop offset="1" stop-color="#9A6E58" stop-opacity="0"></stop></linearGradient></defs><path d="M120 12 H690" stroke="url(#hlT2)" stroke-width=".8"></path><path d="M750 12 H1320" stroke="url(#hlT2)" stroke-width=".8"></path><path d="M720 5 l7 7 l-7 7 l-7 -7 z" stroke="#9A6E58" stroke-opacity=".5" stroke-width=".8"></path></svg>
+    <div class="wrap cols2" data-m="stagger" style="align-items: center">
+      <div style="aspect-ratio: 5 / 4; background: #E9DED2; border-radius: 0 0 220px 0; position: relative; overflow: hidden">
+        <img src="assets/img_living.jpg" alt="A furnished living room with floor-to-ceiling windows overlooking the city" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div class="eyebrow gt-d" style="color: #7A5444">The people behind it</div>
+        <blockquote class="display" style="margin: 0; font-size: 38px; line-height: 1.25; color: #15110E">“The right property feels even better when you have the right people behind it.”</blockquote>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #5E544D">Same team, different personalities. Advisors from different backgrounds and languages, matched to the client — and always available when a decision can’t wait for Monday.</p>
+        <div><a class="btn btn-dark" href="#contact">Meet the team</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" style="background: #15110E; color: #F6F1EA; padding: 120px 0; position: relative; overflow: hidden">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -40px; top: 10px" width="780" height="1000" viewBox="0 0 780 1000"><defs><linearGradient id="hlC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2A281" stop-opacity="0.3"></stop><stop offset="1" stop-color="#E2A281" stop-opacity="0"></stop></linearGradient></defs><path d="M70 1000 V410 A330 330 0 0 1 730 410 V1000" stroke="url(#hlC)" stroke-width=".8"></path><path d="M130 1000 V350 A270 270 0 0 1 670 350 V1000" stroke="url(#hlC)" stroke-width=".8"></path><path d="M190 1000 V290 A210 210 0 0 1 610 290 V1000" stroke="url(#hlC)" stroke-width=".8"></path><path d="M400 34 l6 6 l-6 6 l-6 -6 z" stroke="#E2A281" stroke-opacity=".45" stroke-width=".8"></path></svg>
+    <div class="wrap cols2" data-m="stagger">
+      <div style="display: flex; flex-direction: column; gap: 28px">
+        <div class="eyebrow gt-l" style="color: #E2A281">Start a conversation</div>
+        <h2 class="display" style="margin: 0; font-size: 56px; line-height: 1.06">Let’s find the one<br><span class="gt-l gt-anim" style="font-style: italic; color: #E2A281">that actually fits.</span></h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #B9ADA3; max-width: 440px">Tell us what you’re looking for. An advisor will call you back — or message us on WhatsApp for a quicker reply.</p>
+        <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 12px">
+          <a href="tel:+971566786429" style="color: #F6F1EA; text-decoration: none; font-size: 22px" class="display">+971 56 678 6429</a>
+          <a class="gt-l" href="https://wa.me/971566786429" style="color: #E2A281; text-decoration: none; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500">WhatsApp us →</a>
+          <a href="https://www.instagram.com/acresyards/" style="color: #B9ADA3; text-decoration: none; font-size: 14px">Instagram · @acresyards</a>
+          <div style="font-size: 14px; color: #B9ADA3">Dubai, United Arab Emirates</div>
+        </div>
+      </div>
+      <div style="background: #211A16; border: 1px solid #3A2F28; padding: 44px 40px; display: flex; flex-direction: column; gap: 32px">
+        <div class="form-grid">
+          <label class="field">Full name<input type="text" placeholder="Your name"></label>
+          <label class="field">Phone / WhatsApp<input type="tel" placeholder="+971"></label>
+          <label class="field">Email<input type="email" placeholder="you@email.com"></label>
+          <label class="field">I’m looking to
+            <span class="sel sel-dark"><select><option>Buy a home</option><option>Invest off-plan</option><option>Sell my property</option><option>Explore Golden Visa options</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          </label>
+          <label class="field">Budget
+            <span class="sel sel-dark"><select><option>Up to AED 1M</option><option>AED 1M – 3M</option><option>AED 3M – 5M</option><option>AED 5M +</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          </label>
+          <label class="field">Preferred language
+            <span class="sel sel-dark"><select><option>English</option><option>Hindi</option><option>Arabic</option><option>Other</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          </label>
+        </div>
+        <label class="field">Message<textarea rows="3" placeholder="Communities, timelines, anything we should know"></textarea></label>
+        <button class="btn btn-copper" type="button" style="width: 100%">Request a call back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: #0E0B09; color: #B9ADA3; padding: 80px 0 40px; position: relative; overflow: hidden">
+    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: 50%; top: 0; margin-left: -720px" width="1440" height="220" viewBox="0 0 1440 220"><defs><linearGradient id="hlF" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E2A281" stop-opacity="0"></stop><stop offset=".5" stop-color="#E2A281" stop-opacity=".22"></stop><stop offset="1" stop-color="#E2A281" stop-opacity="0"></stop></linearGradient></defs><path d="M0 170 C360 60 720 210 1440 40" stroke="url(#hlF)" stroke-width=".8"></path><path d="M0 200 C400 100 760 230 1440 80" stroke="url(#hlF)" stroke-width=".8"></path></svg>
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+      <div class="foot" data-m="stagger">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <img src="assets/ay_logo.svg" alt="Acres &amp; Yards" style="width: 180px; height: auto; display: block">
+          <p style="margin: 0; font-size: 14px; line-height: 1.7; max-width: 300px">Real estate advisory for residential buyers and investors in Dubai.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div class="eyebrow gt-l" style="font-size: 11px; color: #E2A281">Properties</div>
+          <a href="#properties">Off-plan</a><a href="#properties">Ready to buy</a><a href="#properties">Sell with us</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div class="eyebrow gt-l" style="font-size: 11px; color: #E2A281">Company</div>
+          <a href="#company">About</a><a href="#services">Services</a><a href="#events">Events</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div class="eyebrow gt-l" style="font-size: 11px; color: #E2A281">Contact</div>
+          <a href="tel:+971566786429">+971 56 678 6429</a><a href="https://wa.me/971566786429">WhatsApp</a><a href="https://www.instagram.com/acresyards/">Instagram</a>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid #2E2520; padding-top: 28px; font-size: 12px; color: #9C8F85">
+        <span>© 2026 Ark Acres &amp; Yards Real Estate. All rights reserved.</span>
+        <span>Dubai · London · Bangalore</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/971566786429" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15110E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"></path></svg>
+  </a>
+</div>
+</body>
+</html>

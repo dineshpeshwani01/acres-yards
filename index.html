@@ -3,668 +3,1547 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Acres &amp; Yards — Dubai Real Estate Advisory</title>
-<meta name="description" content="Acres &amp; Yards — Dubai real estate advisory for residential buyers and investors. Off-plan and ready homes across Dubai’s leading developers.">
-<meta name="theme-color" content="#15110E">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Acres &amp; Yards — Dubai Real Estate Advisory">
+<meta name="theme-color" content="#0F0C0A">
+<meta property="og:title" content="Acres &amp; Yards">
 <meta property="og:description" content="Guidance you can trust. Decisions treated like our own.">
 <meta property="og:image" content="assets/hero_poster.jpg">
 <link rel="icon" type="image/svg+xml" href="assets/ay_mark.svg">
+<title>Acres &amp; Yards</title>
+<meta name="description" content="Acres &amp; Yards: residential and investment real estate advisory in Dubai.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;1,400;1,500&amp;family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero_poster.jpg" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&amp;family=Urbanist:wght@300..600&amp;display=swap">
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      d.classList.add('motion');
+      var seen = false;
+      try { seen = sessionStorage.getItem('ay-intro') === '1'; } catch (e) {}
+      if (!seen) { d.classList.add('intro'); }
+    }
+  })();
+</script>
 <style>
-html.lenis,html.lenis body{height:auto}.lenis:not(.lenis-autoToggle).lenis-stopped{overflow:clip}.lenis.lenis-smooth iframe{pointer-events:none}.lenis.lenis-smooth{scroll-behavior:auto !important}
+/* Layout: a dark cinematic film in eight chapters, alternating night ink and Dubai stone; left-aligned editorial type, one signature map. */
+:root {
+  --ink: #0F0C0A;
+  --ink-2: #191411;
+  --stone: #ECE4D8;
+  --stone-2: #E2D7C8;
+  --copper: #E2A281;
+  --mocha: #9A6E58;
+  --mocha-ink: #6B4636;
+  --mist: #B4A79B;
+  --dust: #6E625A;
+  --line-dark: rgba(226, 162, 129, 0.2);
+  --line-light: rgba(154, 110, 88, 0.28);
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Urbanist", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --gutter: clamp(18px, 4vw, 56px);
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--stone);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 1px solid var(--copper); outline-offset: 4px; }
+::selection { background: var(--copper); color: var(--ink); }
 
-html{scroll-behavior:smooth}
-body{margin:0;background:#F6F1EA}
-a{color:#7A5444}a:hover{color:#15110E}
-*{box-sizing:border-box}
-.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
-.display{font-family:Urbanist,'Helvetica Neue',Helvetica,sans-serif;font-weight:500;letter-spacing:-0.015em}
-.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
-.navlinks{display:flex;gap:32px;align-items:center}
-.navlinks a{color:#E9DFD5;text-decoration:none;font-size:14px;letter-spacing:.04em}
-.navlinks a:hover{color:#E2A281}
-.search{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:0;background:#F6F1EA;border-radius:2px}
-.search label{display:flex;flex-direction:column;gap:6px;padding:18px 22px;border-right:1px solid #DDD0C2;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5E544D;font-weight:500}
-.search select{border:0;background:transparent;font:400 15px Poppins,system-ui,sans-serif;color:#15110E;padding:0;letter-spacing:0;text-transform:none;appearance:none;cursor:pointer}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;font:500 13px Poppins,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;border-radius:2px}
-.btn-dark{background:#15110E;color:#F6F1EA}
-.tab{background:transparent;border:0;border-bottom:1px solid transparent;padding:12px 2px;font:500 13px Poppins,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5E544D;cursor:pointer;min-height:44px}
-.tab:hover{color:#15110E}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.card{background:#FFFDFA;border:1px solid #E6DACD;display:flex;flex-direction:column}
-.card{transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s,border-color .3s}
-.card:hover{border-color:#C9A994;transform:translateY(-6px);box-shadow:0 24px 48px -24px rgba(21,17,14,.35)}
-.card img{transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
-.card:hover img{transform:scale(1.06)}
-.btn{transition:background .3s,color .3s,border-color .3s,transform .3s}
-.btn:hover{transform:translateY(-2px)}
-.wa{transition:transform .3s}
-.wa:hover{transform:scale(1.08)}
-.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#3A2F28}
-.cols2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
-.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 40px}
-.events{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
-.field{display:flex;flex-direction:column;gap:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#B9ADA3;font-weight:500}
-.field input,.field select,.field textarea{background:transparent;border:0;border-bottom:1px solid #4A3C33;color:#F6F1EA;font:400 16px Poppins,system-ui,sans-serif;padding:10px 0;letter-spacing:0;text-transform:none;border-radius:0}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:#E2A281}
-.field select option{color:#15110E}
-.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
-.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:48px}
-.foot a{color:#B9ADA3;text-decoration:none;font-size:14px}
-.foot a:hover{color:#E2A281}
-.wa{position:fixed;right:28px;bottom:28px;z-index:20;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(21,17,14,.35)}
-.gt-l,.gt-d{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;background-position:0% 50%;padding-right:.04em}
-.gt-l{background-image:linear-gradient(100deg,#B98468 0%,#E2A281 28%,#F7D9C4 50%,#E2A281 72%,#B98468 100%)}
-.gt-d{background-image:linear-gradient(100deg,#6B4636 0%,#8A5F4B 30%,#A97B63 50%,#8A5F4B 70%,#6B4636 100%)}
-.gt-anim.sheen-on{animation:sheen 2.6s cubic-bezier(.45,0,.2,1) 1 both}
-@keyframes sheen{from{background-position:0% 50%}to{background-position:100% 50%}}
-.btn-copper{background:linear-gradient(110deg,#9A6E58 0%,#E2A281 30%,#F5D3BD 50%,#E2A281 70%,#9A6E58 100%);background-size:220% auto;background-position:0% 50%;color:#15110E;transition:background-position .9s cubic-bezier(.22,1,.36,1),transform .3s}
-.btn-copper:hover{background-position:100% 50%;color:#15110E}
-.btn-ghost{position:relative;background:transparent;color:#F6F1EA;border-color:transparent}
-.btn-ghost::before{content:"";position:absolute;inset:0;padding:1px;border-radius:inherit;background:linear-gradient(110deg,#9A6E58,#F5D3BD 50%,#9A6E58);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.8}
-.btn-ghost:hover{color:#F7D9C4}
-.btn-ghost:hover::before{opacity:1}
-.btn-dark:hover{background:linear-gradient(110deg,#6B4636,#9A6E58 50%,#6B4636);color:#F6F1EA}
-.tabpanel .cards > *,.tabpanel [data-m="sellpanel"] > *{transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1),filter .5s cubic-bezier(.22,1,.36,1),border-color .3s,box-shadow .5s}
-.tabpanel .cards > :nth-child(2),.tabpanel [data-m="sellpanel"] > :nth-child(2){transition-delay:.07s}
-.tabpanel .cards > :nth-child(3),.tabpanel [data-m="sellpanel"] > :nth-child(3){transition-delay:.14s}
-.tabpanel [data-m="sellpanel"] > :nth-child(4){transition-delay:.21s}
-.tabpanel.is-out .cards > *,.tabpanel.is-out [data-m="sellpanel"] > *{opacity:0;transform:translateY(-12px);filter:blur(3px);transition-duration:.24s;transition-timing-function:cubic-bezier(.4,0,1,1)}
-.tabpanel.is-in .cards > *,.tabpanel.is-in [data-m="sellpanel"] > *{opacity:0;transform:translateY(20px);filter:blur(4px);transition:none}
-.tabpanel.is-in .card img{transform:scale(1.08);transition:none}
-.tabpanel.is-idle .card:hover{transition-delay:0s}
-@media (prefers-reduced-motion:reduce){.tabpanel .cards > *,.tabpanel [data-m="sellpanel"] > *{transition:none}}
-.about-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:96px;align-items:center}
-.about-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.sel{position:relative;display:block;width:100%}
-.sel select{-webkit-appearance:none;appearance:none;width:100%;padding-right:26px !important;cursor:pointer;background-color:transparent;border-radius:0}
-.sel-chev{position:absolute;right:2px;top:50%;margin-top:-6px;pointer-events:none;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.sel-light .sel-chev{color:#9A6E58}
-.sel-dark .sel-chev{color:#E2A281}
-.sel-light select:focus-visible{outline:1px solid #C9A994;outline-offset:6px}
-.sel-dark select:focus-visible{outline:none}
-.sel-light select option{background:#FFFDFA;color:#15110E}
-.sel-dark select option{background:#211A16;color:#F6F1EA}
-@supports (appearance:base-select){
-.sel select,.sel select::picker(select){appearance:base-select}
-.sel select{border-top:0;border-left:0;border-right:0;min-height:0;line-height:1.5}
-.sel-light select{border-bottom:0;padding:0}
-.sel select::picker-icon{display:none}
-.sel select:open + .sel-chev{transform:rotate(180deg)}
-.sel select::picker(select){border:1px solid rgba(154,110,88,.35);border-radius:2px;padding:6px;margin-block:12px;min-width:anchor-size(width);box-shadow:0 28px 56px -24px rgba(21,17,14,.45);opacity:0;translate:0 -6px;transition:opacity .28s cubic-bezier(.22,1,.36,1),translate .28s cubic-bezier(.22,1,.36,1),overlay .28s allow-discrete,display .28s allow-discrete}
-.sel select:open::picker(select){opacity:1;translate:0 0}
-@starting-style{.sel select:open::picker(select){opacity:0;translate:0 -6px}}
-.sel-light select::picker(select){background:#FFFDFA;color:#15110E}
-.sel-dark select::picker(select){background:#211A16;color:#F6F1EA;border-color:rgba(226,162,129,.3)}
-.sel select option{padding:11px 16px;font:400 14px Poppins,system-ui,sans-serif;letter-spacing:0;text-transform:none;border-radius:1px;background:transparent;transition:background .2s,color .2s;gap:10px}
-.sel select option::checkmark{order:1;margin-left:auto;font-size:12px}
-.sel-light select option:hover,.sel-light select option:focus-visible{background:#F3EAE0;color:#15110E;outline:none}
-.sel-dark select option:hover,.sel-dark select option:focus-visible{background:rgba(226,162,129,.12);color:#F7D9C4;outline:none}
-.sel-light select option:checked{color:#7A5444;font-weight:500}
-.sel-dark select option:checked{color:#E2A281;font-weight:500}
-.sel-light select option::checkmark{color:#9A6E58}
-.sel-dark select option::checkmark{color:#E2A281}
+.wrap { width: 100%; max-width: 1360px; margin-inline: auto; padding-inline: var(--gutter); }
+.serif { font-family: var(--display); font-weight: 400; letter-spacing: -0.01em; }
+.it { font-style: italic; }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+p { margin: 0; }
+.h2 { font-family: var(--display); font-size: clamp(2.5rem, 6.2vw, 6.2rem); line-height: 0.98; letter-spacing: -0.02em; }
+.lead { font-size: clamp(1.05rem, 1.35vw, 1.25rem); line-height: 1.65; max-width: 34em; font-weight: 300; }
+.small { font-size: 0.875rem; line-height: 1.55; }
+.chapter-no { font-family: var(--display); font-style: italic; font-size: 1.05rem; color: var(--copper); display: flex; align-items: center; gap: 14px; }
+.chapter-no::after { content: ""; width: 56px; height: 1px; background: currentColor; opacity: .5; }
+.on-stone .chapter-no { color: var(--mocha-ink); }
+/* readable accents on the light stone chapters: darker mocha (6.5:1) and sturdier hairlines */
+.on-stone .it, .on-stone .chapter-no, .on-stone .pn, .on-stone .when, .on-stone .ap-num, .on-stone .ap-step h3, .on-stone .city h3 {
+  font-optical-sizing: none; font-variation-settings: "opsz" 18;
 }
-.tab{transition:color .35s}
-.tab-on{color:#15110E}
-.tab-ind{position:absolute;left:0;bottom:-1px;height:1px;width:0;background:linear-gradient(90deg,#7A5444,#E2A281 50%,#7A5444);pointer-events:none}
-.wa{background:linear-gradient(135deg,#9A6E58,#E2A281 45%,#F5D3BD 60%,#E2A281 75%,#9A6E58)}
-.wa:hover{filter:brightness(1.06)}
-@media (prefers-reduced-motion:reduce){.gt-anim{animation:none}}
-.mq-row{display:flex;align-items:center;gap:40px;max-width:1240px;margin:0 auto;padding:30px 0 30px 40px}
-.mq-label{flex:none;white-space:nowrap;padding-right:40px;border-right:1px solid #E2D6C9;line-height:2.4}
-.mq{flex:1 1 auto;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.mq-track{display:flex;width:max-content;animation:mq 44s linear infinite;will-change:transform}
-.mq:hover .mq-track{animation-play-state:paused}
-.mq-group{display:flex;align-items:center;gap:72px;padding-right:72px;flex:none;min-height:56px}
-.mq-name{font-family:Urbanist,'Helvetica Neue',Helvetica,sans-serif;font-weight:500;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#5E544D;white-space:nowrap;transition:color .3s}
-.mq-name:hover{color:#15110E}
-.mq-logo{flex:none;filter:grayscale(1) sepia(.25) brightness(.9);opacity:.62;transition:filter .4s,opacity .4s}
-.mq-logo:hover{filter:none;opacity:1}
-@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
-section > .wrap,footer > .wrap{position:relative;z-index:1}
-.hl{display:block}
-@media (max-width:640px){.hl{opacity:.6}}
-@media (max-width:1060px){
-.about-grid{grid-template-columns:minmax(0,1fr);gap:72px}
-.navlinks{display:none}
-.cols2{grid-template-columns:minmax(0,1fr);gap:48px}
-.cards,.svc{grid-template-columns:repeat(2,minmax(0,1fr))}
-.events{grid-template-columns:repeat(2,minmax(0,1fr))}
-.search{grid-template-columns:repeat(2,minmax(0,1fr))}
-.search label{border-bottom:1px solid #DDD0C2}
-.foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+.on-stone .it, .on-stone .chapter-no, .on-stone .when { font-weight: 500; }
+.on-stone .h2 .it { color: var(--mocha-ink); }
+.split-line { display: block; }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 28px;
+  border-radius: 999px; text-decoration: none; font-size: 0.95rem; font-weight: 500; letter-spacing: .01em;
+  border: 1px solid transparent; cursor: pointer; background: none;
+  transition: background .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
 }
-@media (max-width:640px){
-.about-facts{grid-template-columns:minmax(0,1fr)}
-.founder-card{left:0 !important;bottom:16px !important}
-.mq-row{flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0 28px 22px}
-.mq-label{border-right:0;padding-right:0;line-height:1.6}
-.mq{width:100%}
-h1.display{font-size:48px !important}
-.wrap{padding:0 22px}
-.cards,.svc,.events,.cols3,.form-grid,.foot,.search{grid-template-columns:minmax(0,1fr)}
-.search label{border-right:0}
-.hide-sm{display:none}
+.btn-copper { background: var(--copper); color: var(--ink); }
+.btn-copper:hover { background: var(--stone); }
+.btn-line { border-color: rgba(236, 228, 216, .45); color: var(--stone); }
+.btn-line:hover { border-color: var(--copper); color: var(--copper); }
+.on-stone .btn-line { border-color: rgba(15, 12, 10, .35); color: var(--ink); }
+.on-stone .btn-line:hover { border-color: var(--mocha-ink); color: var(--mocha-ink); }
+.textlink { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: color .3s; }
+.textlink:hover { color: var(--copper); }
+
+/* ---------- intro loader ---------- */
+.loader { display: none; }
+html.intro .loader {
+  position: fixed; inset: 0; z-index: 100; background: var(--ink);
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 28px;
 }
-[hidden]{display:none !important}
+.loader-mark { width: 92px; height: 92px; clip-path: inset(100% 0 0 0); }
+.loader-word { font-size: 0.8rem; letter-spacing: .5em; color: var(--copper); padding-left: .5em; opacity: 0; }
+.loader-count {
+  position: absolute; right: var(--gutter); bottom: calc(var(--gutter) + env(safe-area-inset-bottom, 0px));
+  font-family: var(--display); font-size: clamp(3rem, 8vw, 6rem); line-height: 1; color: var(--stone);
+  font-variant-numeric: tabular-nums; opacity: .9;
+}
+
+/* ---------- nav ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  padding: calc(env(safe-area-inset-top, 0px) + 22px) var(--gutter) 22px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  color: var(--stone); transition: color .5s var(--ease), background .5s var(--ease), padding .5s var(--ease);
+  pointer-events: none;
+}
+.nav > * { pointer-events: auto; }
+.nav.scrolled { background: linear-gradient(180deg, rgba(15, 12, 10, .55), rgba(15, 12, 10, 0)); }
+body.on-light .nav { color: var(--ink); }
+body.on-light .nav.scrolled { background: linear-gradient(180deg, rgba(236, 228, 216, .7), rgba(236, 228, 216, 0)); }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand img { width: 40px; height: 40px; }
+.brand span { font-size: 0.78rem; letter-spacing: .42em; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 10px; }
+.nav .btn { min-height: 44px; padding: 0 20px; font-size: .88rem; }
+.nav .btn-line { border-color: currentColor; color: inherit; }
+.nav .btn-line:hover { border-color: var(--copper); color: var(--copper); }
+.menu-btn { background: none; border: 0; min-height: 44px; padding: 0 6px; display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: .9rem; letter-spacing: .04em; }
+.menu-btn i { display: grid; gap: 6px; width: 26px; }
+.menu-btn i::before, .menu-btn i::after { content: ""; height: 1px; background: currentColor; }
+
+.menu {
+  position: fixed; inset: 0; z-index: 60; background: var(--ink-2); color: var(--stone);
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px;
+  padding: calc(env(safe-area-inset-top, 0px) + 110px) var(--gutter) calc(env(safe-area-inset-bottom, 0px) + 48px);
+  overflow-y: auto;
+}
+.menu-close { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 22px); right: var(--gutter); }
+.menu ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; counter-reset: m; }
+.menu li { counter-increment: m; }
+.menu ol a {
+  font-family: var(--display); font-size: clamp(2.2rem, 5.2vw, 4.6rem); line-height: 1.12; text-decoration: none;
+  display: inline-flex; align-items: baseline; gap: 18px; transition: color .3s;
+}
+.menu ol a::before { content: counter(m, decimal-leading-zero); font-family: var(--body); font-size: .85rem; color: var(--dust); }
+.menu ol a:hover { color: var(--copper); font-style: italic; }
+.menu-side { align-self: end; display: grid; gap: 22px; color: var(--mist); }
+.menu-side strong { display: block; font-weight: 400; color: var(--stone); font-size: 1.4rem; font-family: var(--display); }
+
+/* chapter index */
+.index {
+  position: fixed; left: var(--gutter); top: 50%; transform: translateY(-50%); z-index: 40;
+  display: none; flex-direction: column; gap: 10px; color: var(--stone); transition: color .5s;
+}
+body.on-light .index { color: var(--ink); }
+.index a { display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: .72rem; opacity: .45; transition: opacity .3s; font-variant-numeric: tabular-nums; }
+.index a::before { content: ""; width: 14px; height: 1px; background: currentColor; transition: width .4s var(--ease); }
+.index a span { opacity: 0; transform: translateX(-6px); transition: opacity .3s, transform .4s var(--ease); white-space: nowrap; }
+.index a.active { opacity: 1; }
+.index a.active::before { width: 30px; }
+.index a.active span, .index a:hover span { opacity: 1; transform: none; }
+.index a:hover { opacity: 1; }
+@media (min-width: 1280px) { .index { display: flex; } }
+
+/* ---------- 01 hero ---------- */
+.hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; background: var(--ink); }
+.hero-media { position: absolute; inset: 0; }
+.hero-media video { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.hero-media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,12,10,.55) 0%, rgba(15,12,10,.05) 30%, rgba(15,12,10,.25) 60%, rgba(15,12,10,.92) 100%),
+              linear-gradient(90deg, rgba(15,12,10,.55) 0%, rgba(15,12,10,0) 60%);
+}
+.hero-copy { position: relative; z-index: 2; padding-block: 140px clamp(36px, 6vh, 64px); display: grid; gap: clamp(28px, 4vh, 44px); }
+.hero h1 { font-family: var(--display); font-size: clamp(3.1rem, 9.2vw, 9.6rem); line-height: .92; letter-spacing: -0.025em; }
+.hero h1 .it { color: var(--stone-2); }
+.hero-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap; }
+.hero-foot p { max-width: 28em; color: var(--stone-2); font-weight: 300; font-size: 1.08rem; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.scroll-cue { position: absolute; right: var(--gutter); top: 50%; z-index: 2; writing-mode: vertical-rl; font-size: .72rem; letter-spacing: .3em; color: var(--stone-2); display: flex; align-items: center; gap: 14px; }
+.scroll-cue::after { content: ""; width: 1px; height: 64px; background: linear-gradient(var(--stone-2), transparent); }
+.hero-caption { position: absolute; z-index: 2; right: var(--gutter); bottom: 14px; font-size: .7rem; color: var(--mist); opacity: .7; }
+
+/* ---------- 02 photo library ---------- */
+.on-stone { background: var(--stone); color: var(--ink); }
+.promise { padding-block: clamp(110px, 15vh, 180px) clamp(80px, 12vh, 140px); overflow: hidden; }
+.lib-head { display: grid; gap: 24px; margin-bottom: clamp(48px, 8vh, 96px); }
+.lib-sub { color: #5E534C; max-width: 30em; }
+.lib { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 24px); align-items: start; }
+.lib-col { display: grid; gap: clamp(12px, 1.6vw, 24px); min-width: 0; }
+.lib-col:nth-child(2) { margin-top: 12vh; }
+.lib-col:nth-child(4) { margin-top: 7vh; }
+.plate { margin: 0; display: grid; gap: 10px; min-width: 0; }
+.plate-btn { display: block; width: 100%; padding: 0; border: 0; background: var(--stone-2); cursor: zoom-in; overflow: hidden; position: relative; }
+.plate-btn img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease), filter .6s; filter: saturate(.92); }
+.plate-btn:hover img, .plate-btn:focus-visible img { transform: scale(1.06); filter: saturate(1.05); }
+.plate.tall .plate-btn { aspect-ratio: 3 / 4.4; }
+.plate.port .plate-btn { aspect-ratio: 4 / 5; }
+.plate.sq .plate-btn { aspect-ratio: 1 / 1; }
+.plate figcaption, .lb-fig figcaption { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 12px; font-size: .86rem; line-height: 1.35; }
+.pn { font-family: var(--display); font-style: italic; color: var(--mocha-ink); grid-row: span 2; font-variant-numeric: lining-nums; }
+.pt-t { font-weight: 500; }
+.pt-w { color: #6A5E56; }
+.lib-credit { margin-top: 40px; color: #6A5E56; font-size: .8rem; }
+.lightbox { position: fixed; inset: 0; z-index: 70; background: rgba(15, 12, 10, .96); color: var(--stone); display: grid; grid-template-rows: minmax(0, 1fr) auto; padding: calc(env(safe-area-inset-top, 0px) + 70px) var(--gutter) calc(env(safe-area-inset-bottom, 0px) + 24px); gap: 18px; }
+.lb-fig { margin: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 14px; min-height: 0; justify-items: center; }
+.lb-fig img { max-width: 100%; max-height: 100%; object-fit: contain; min-height: 0; }
+.lb-fig figcaption { justify-self: start; width: 100%; }
+.lb-fig .pt-w { color: var(--mist); }
+.lb-close { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 18px); right: var(--gutter); }
+.lb-close, .lb-nav button { background: none; border: 1px solid rgba(236, 228, 216, .35); color: var(--stone); border-radius: 999px; min-height: 44px; padding: 0 20px; cursor: pointer; }
+.lb-close:hover, .lb-nav button:hover { border-color: var(--copper); color: var(--copper); }
+.lb-nav { display: flex; justify-content: flex-end; gap: 10px; }
+@media (max-width: 1000px) {
+  .lib { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lib-col:nth-child(2), .lib-col:nth-child(4) { margin-top: 8vh; }
+  .lib-col:nth-child(3) { margin-top: -8vh; }
+}
+@media (max-width: 680px) { .lib-col:nth-child(3) { margin-top: 0; } }
+
+/* ---------- 03 collection ---------- */
+.collection { background: var(--ink); position: relative; }
+.col-head { padding-block: clamp(110px, 15vh, 180px) 56px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end; }
+.col-head .lead { color: var(--mist); }
+.h-pin { position: relative; }
+.h-track { display: grid; gap: 72px; padding-inline: var(--gutter); padding-bottom: 96px; }
+.panel { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: center; min-width: 0; }
+.panel-media { position: relative; overflow: hidden; aspect-ratio: 4 / 3; background: var(--ink-2); max-width: 100%; }
+.panel-media img { width: 100%; height: 100%; object-fit: cover; transform-origin: center; }
+.panel-tag { position: absolute; left: 18px; top: 18px; background: rgba(15,12,10,.72); backdrop-filter: blur(6px); color: var(--stone); padding: 8px 14px; border-radius: 999px; font-size: .78rem; }
+.panel-body { display: grid; gap: 22px; min-width: 0; }
+.panel-body .where { color: var(--copper); font-family: var(--display); font-style: italic; font-size: 1.1rem; }
+.panel-body h3 { font-family: var(--display); font-size: clamp(2rem, 3.6vw, 3.4rem); line-height: 1.02; letter-spacing: -0.015em; }
+.panel-body p { color: var(--mist); max-width: 30em; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--line-dark); }
+.facts div { padding: 14px 0; border-bottom: 1px solid var(--line-dark); display: grid; gap: 2px; min-width: 0; }
+.facts div:nth-child(odd) { padding-right: 18px; }
+.facts dt { font-size: .78rem; color: var(--dust); }
+.facts dd { margin: 0; font-size: 1.02rem; font-variant-numeric: tabular-nums; }
+.facts dd.price { font-family: var(--display); font-size: 1.5rem; color: var(--stone); }
+.panel-link { color: var(--copper); }
+.panel-sell .sell-steps { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line-dark); }
+.panel-sell .sell-steps li { padding: 14px 0; border-bottom: 1px solid var(--line-dark); display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 10px; color: var(--mist); }
+.panel-sell .sell-steps b { font-family: var(--display); font-weight: 400; font-style: italic; color: var(--copper); }
+.col-progress { display: none; }
+.illus-note { padding-inline: var(--gutter); color: var(--dust); font-size: .78rem; padding-bottom: 28px; }
+
+/* horizontal mode (enabled by script on wide screens) */
+.collection.is-horizontal .h-pin { height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+.collection.is-horizontal .h-track { display: flex; gap: 0; width: max-content; padding: 0; }
+.collection.is-horizontal .panel { width: 84vw; padding-inline: var(--gutter) 5vw; }
+.collection.is-horizontal .panel-media { aspect-ratio: auto; height: 66vh; }
+.collection.is-horizontal .col-progress { display: flex; align-items: center; gap: 18px; padding-inline: var(--gutter); margin-top: 4vh; color: var(--mist); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.col-progress .bar { flex: 1; height: 1px; background: var(--line-dark); position: relative; max-width: 360px; }
+.col-progress .bar i { position: absolute; inset: 0; background: var(--copper); transform-origin: left; transform: scaleX(0); }
+
+/* developer strip */
+.devs { border-top: 1px solid var(--line-dark); padding-block: 30px; display: flex; align-items: center; gap: 40px; }
+.devs-label { flex: none; color: var(--dust); font-size: .85rem; }
+.marquee { flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: mq 48s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-group { display: flex; align-items: center; gap: 72px; padding-right: 72px; }
+.marquee-group img { height: 30px; width: auto; filter: grayscale(1) brightness(0) invert(.86) sepia(.25); opacity: .7; }
+.marquee-group img.tall { height: 46px; }
+.marquee-group span { font-family: var(--display); font-size: 1.5rem; color: var(--mist); white-space: nowrap; }
+@keyframes mq { to { transform: translateX(-50%); } }
+
+/* ---------- 04 map ---------- */
+.mapsec { background: var(--ink-2); position: relative; overflow: hidden; }
+.map-pin { min-height: 100vh; display: flex; align-items: center; padding-block: 120px 80px; }
+.map-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: clamp(24px, 4vw, 64px); align-items: center; width: 100%; }
+.map-intro { display: grid; gap: 22px; align-content: start; }
+.map-intro .lead { color: var(--mist); }
+.places { list-style: none; margin: 8px 0 0; padding: 0; display: grid; border-top: 1px solid var(--line-dark); }
+.places button {
+  width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line-dark);
+  padding: 12px 0; min-height: 44px; display: flex; justify-content: space-between; gap: 12px; cursor: pointer; color: var(--mist);
+  font-size: 1rem; transition: color .3s, padding .4s var(--ease);
+}
+.places button small { color: var(--dust); font-size: .8rem; }
+.places button.active, .places button:hover { color: var(--stone); padding-left: 10px; }
+.places button.active small { color: var(--copper); }
+.map-stage { position: relative; min-width: 0; }
+.map-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.map-svg .sea { fill: #221B17; }
+.map-svg .coast { fill: none; stroke: var(--copper); stroke-width: 1.4; }
+.map-svg .palm { fill: none; stroke: var(--copper); stroke-width: 1.1; stroke-linecap: round; }
+.map-svg .water { fill: none; stroke: #6E8A92; stroke-width: 1.2; opacity: .75; }
+.map-svg .road { fill: none; stroke: var(--mist); stroke-width: .8; stroke-dasharray: 6 7; opacity: .45; }
+.map-svg .grid line { stroke: rgba(236, 228, 216, .05); stroke-width: 1; }
+.map-svg .gulf { font-family: var(--display); font-style: italic; font-size: 22px; fill: var(--dust); }
+.map-svg .road-label { font-family: var(--body); font-size: 11px; fill: var(--dust); letter-spacing: .08em; }
+.pt { cursor: pointer; }
+.pt .dot { fill: var(--copper); }
+.pt .ring { fill: none; stroke: var(--copper); stroke-width: 1; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.pt text { font-family: var(--body); font-size: 13px; fill: var(--mist); transition: fill .3s; }
+.pt.active text { fill: var(--stone); }
+.pt.active .ring { opacity: 1; animation: ping 2.2s var(--ease) infinite; }
+@keyframes ping { 0% { transform: scale(.6); opacity: 1; } 100% { transform: scale(2.4); opacity: 0; } }
+.map-card {
+  position: absolute; right: 0; bottom: 0; width: min(330px, 70%); background: var(--ink); border: 1px solid var(--line-dark);
+  padding: 22px 24px; display: grid; gap: 10px;
+}
+.map-card h3 { font-family: var(--display); font-size: 1.8rem; line-height: 1.05; }
+.map-card p { color: var(--mist); font-size: .95rem; }
+.map-card .tag { color: var(--copper); font-family: var(--display); font-style: italic; }
+.map-note { position: absolute; left: 0; bottom: 0; color: var(--dust); font-size: .75rem; }
+
+/* ---------- 05 approach ---------- */
+.approach { position: relative; }
+.ap-pin { padding-block: clamp(110px, 15vh, 170px); }
+.ap-head { display: grid; gap: 22px; margin-bottom: 64px; }
+.ap-stage { display: grid; gap: 56px; }
+.ap-step { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(24px, 5vw, 80px); align-items: end; border-top: 1px solid var(--line-light); padding-top: 28px; }
+.ap-num { font-family: var(--display); font-size: clamp(6rem, 16vw, 15rem); line-height: .8; color: var(--mocha-ink); letter-spacing: -0.04em; font-variant-numeric: lining-nums; }
+.ap-step h3 { font-family: var(--display); font-size: clamp(2rem, 3.6vw, 3.4rem); line-height: 1.04; margin-bottom: 18px; }
+.ap-step p { color: #4A403A; max-width: 30em; }
+.approach.is-pinned .ap-pin { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-block: 90px 60px; }
+.approach.is-pinned .ap-head { margin-bottom: 4vh; }
+.approach.is-pinned .ap-stage { position: relative; height: min(54vh, 460px); display: block; }
+.approach.is-pinned .ap-step { position: absolute; inset: 0; align-content: end; }
+.ap-dots { display: none; gap: 10px; margin-top: 28px; }
+.approach.is-pinned .ap-dots { display: flex; }
+.ap-dots i { width: 36px; height: 2px; background: var(--line-light); position: relative; overflow: hidden; }
+.ap-dots i b { position: absolute; inset: 0; background: var(--mocha-ink); transform: scaleX(0); transform-origin: left; }
+
+/* ---------- 06 founder ---------- */
+.founder { background: var(--ink); padding-block: clamp(110px, 16vh, 190px); overflow: hidden; }
+.fd-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 110px); align-items: center; }
+.fd-media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--ink-2); max-width: 100%; }
+.fd-media img { width: 100%; height: 118%; object-fit: cover; object-position: 50% 30%; }
+.fd-copy { display: grid; gap: 26px; min-width: 0; }
+.fd-name { font-family: var(--display); font-size: clamp(3rem, 7.2vw, 7.4rem); line-height: .92; letter-spacing: -0.025em; }
+.fd-role { color: var(--copper); font-family: var(--display); font-style: italic; font-size: 1.2rem; }
+.fd-copy p { color: var(--mist); max-width: 32em; }
+.fd-quote { font-family: var(--display); font-style: italic; font-size: clamp(1.5rem, 2.4vw, 2.2rem); line-height: 1.25; color: var(--stone); border-left: 1px solid var(--copper); padding-left: 24px; }
+.fd-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; border-top: 1px solid var(--line-dark); padding-top: 24px; }
+.fd-facts strong { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1; color: var(--stone); margin-bottom: 6px; }
+.fd-facts span { color: var(--dust); font-size: .85rem; }
+
+/* ---------- 07 abroad ---------- */
+.abroad { padding-block: clamp(110px, 15vh, 180px); }
+.ab-head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: 80px; }
+.ab-head .lead { color: #4A403A; }
+.route { position: relative; }
+.route-line { position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--line-light); }
+.route-line i { position: absolute; inset: 0; background: var(--mocha-ink); transform-origin: left; transform: scaleX(1); }
+.cities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 4vw, 64px); }
+.city { position: relative; padding-top: 44px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.city::before { content: ""; position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--stone); border: 1px solid var(--mocha); }
+.city.home::before { background: var(--mocha); }
+.city h3 { font-family: var(--display); font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: 1; }
+.city .when { font-family: var(--display); font-style: italic; color: var(--mocha-ink); }
+.city ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.city li { border-top: 1px solid var(--line-light); padding-top: 12px; display: grid; gap: 2px; }
+.city li b { font-weight: 500; }
+.city li span { color: #5E534C; font-size: .92rem; }
+.ab-cta { margin-top: 64px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+
+/* ---------- 08 contact ---------- */
+.contact { background: var(--ink); padding-block: clamp(110px, 15vh, 180px) 80px; }
+.ct-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 110px); align-items: start; }
+.ct-title { font-family: var(--display); font-size: clamp(3.2rem, 8.5vw, 8.8rem); line-height: .9; letter-spacing: -0.03em; }
+.ct-left { display: grid; gap: 34px; }
+.ct-direct { display: grid; gap: 18px; border-top: 1px solid var(--line-dark); padding-top: 26px; }
+.ct-direct .row { display: flex; justify-content: space-between; gap: 16px; align-items: center; flex-wrap: wrap; }
+.ct-direct .label { color: var(--dust); font-size: .85rem; }
+.phone { font-family: var(--display); font-size: clamp(1.6rem, 2.6vw, 2.2rem); user-select: all; }
+.copy { background: none; border: 1px solid var(--line-dark); border-radius: 999px; min-height: 40px; padding: 0 16px; cursor: pointer; color: var(--mist); font-size: .85rem; }
+.copy:hover { border-color: var(--copper); color: var(--copper); }
+form.enquiry { display: grid; gap: 26px; }
+.f2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 28px; }
+.field { display: grid; gap: 8px; min-width: 0; }
+.field label { font-size: .82rem; color: var(--dust); }
+.field input, .field select, .field textarea {
+  width: 100%; background: transparent; border: 0; border-bottom: 1px solid rgba(236, 228, 216, .22); border-radius: 0;
+  padding: 10px 0 12px; font-size: 1.08rem; color: var(--stone); outline: none; transition: border-color .3s;
+}
+.field textarea { resize: vertical; min-height: 84px; }
+.field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: var(--copper); }
+.field input::placeholder, .field textarea::placeholder { color: #5E534C; }
+.sel { position: relative; }
+.sel select { -webkit-appearance: none; appearance: none; padding-right: 28px; cursor: pointer; }
+.sel::after { content: ""; position: absolute; right: 4px; bottom: 22px; width: 8px; height: 8px; border-right: 1px solid var(--copper); border-bottom: 1px solid var(--copper); transform: rotate(45deg); pointer-events: none; }
+.sel select option { background: var(--ink-2); color: var(--stone); }
+.form-foot { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.form-foot .small { color: var(--dust); max-width: 22em; }
+.form-done { border: 1px solid var(--line-dark); padding: 22px; display: grid; gap: 12px; }
+.form-done p { color: var(--mist); }
+
+/* ---------- footer ---------- */
+.foot { background: var(--ink); border-top: 1px solid var(--line-dark); padding-block: 56px calc(env(safe-area-inset-bottom, 0px) + 28px); overflow: hidden; }
+.foot-top { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; color: var(--mist); font-size: .92rem; }
+.foot-top nav { display: flex; gap: 24px; flex-wrap: wrap; }
+.foot-top a { text-decoration: none; }
+.foot-top a:hover { color: var(--copper); }
+.wordmark { font-family: var(--display); font-size: clamp(3rem, 15.2vw, 15.5rem); line-height: .86; letter-spacing: -0.035em; margin-top: 48px; white-space: nowrap; color: var(--stone); }
+.wordmark .amp { font-style: italic; color: var(--copper); }
+.foot-legal { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--dust); font-size: .78rem; margin-top: 28px; }
+
+
+/* ---------- wow layer ---------- */
+.hero-back { position: absolute; inset: 0; z-index: 0; background: var(--ink); }
+.hero-media { z-index: 1; will-change: clip-path; }
+.flanks { position: absolute; inset: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding-inline: var(--gutter); pointer-events: none; }
+.flanks span { font-family: var(--display); font-size: clamp(3rem, 9.4vw, 10rem); line-height: 1; letter-spacing: -0.035em; color: var(--stone); opacity: 0; }
+.flanks .r { font-style: italic; color: var(--copper); }
+.arch-line { position: absolute; z-index: 1; left: 0; top: 0; border: 1px solid var(--copper); border-bottom: 0; opacity: 0; pointer-events: none; }
+.arch-cap { position: absolute; z-index: 1; left: 0; right: 0; bottom: 3.2%; text-align: center; color: var(--mist); font-size: .82rem; opacity: 0; }
+@media (max-width: 680px) {
+  .flanks { flex-direction: column; justify-content: space-between; padding-block: 9vh 7vh; }
+  .flanks span { font-size: 15vw; }
+}
+
+.band { background: var(--ink); padding-block: clamp(64px, 11vh, 130px); overflow: hidden; border-top: 1px solid var(--line-dark); display: grid; gap: 1vh; }
+.band-row { display: flex; align-items: center; gap: 0.32em; white-space: nowrap; width: max-content; font-family: var(--display); font-size: clamp(3.4rem, 11vw, 11.5rem); line-height: 1.04; letter-spacing: -0.035em; color: var(--stone); will-change: transform; }
+.band-row .ol { color: transparent; -webkit-text-stroke: 1px rgba(226, 162, 129, .75); }
+.band-row .it { font-style: italic; }
+.band-row img { height: .5em; width: auto; opacity: .9; }
+
+.expand { background: var(--ink); }
+.ex-pin { position: relative; height: 100vh; min-height: 520px; overflow: hidden; background: var(--ink); }
+.ex-media { position: absolute; inset: 0; will-change: clip-path; }
+.ex-media img { width: 100%; height: 100%; object-fit: cover; }
+.ex-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,12,10,.1) 40%, rgba(15,12,10,.85) 100%); }
+.ex-words { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; gap: min(34vw, 440px); pointer-events: none; }
+.ex-words span { font-family: var(--display); font-size: clamp(2.2rem, 5.6vw, 6rem); line-height: 1; letter-spacing: -0.02em; white-space: nowrap; color: var(--stone); }
+.ex-words .it { color: var(--copper); }
+.ex-cap { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(32px, 8vh, 80px); }
+.ex-cap p { font-family: var(--display); font-size: clamp(1.6rem, 3.2vw, 3rem); line-height: 1.12; max-width: 20em; color: var(--stone); }
+.ex-cap small { display: block; margin-top: 14px; color: var(--mist); font-family: var(--body); font-size: .85rem; }
+html:not(.motion) .ex-words { display: none; }
+@media (max-width: 680px) { .ex-words { flex-direction: column; gap: 52vh; } .ex-words span { font-size: 9vw; } }
+
+.cursor { position: fixed; left: 0; top: 0; z-index: 95; pointer-events: none; display: none; }
+html.fine .cursor { display: block; }
+.cursor-ring { position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(226, 162, 129, .7); display: grid; place-items: center; }
+.cursor-ring em { font-style: normal; font-size: 11px; letter-spacing: .04em; color: var(--ink); opacity: 0; }
+.cursor-dot { position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); }
+
+.route-dot { position: absolute; top: -6px; left: 0; width: 13px; height: 13px; margin-left: -6px; border-radius: 50%; background: var(--mocha); box-shadow: 0 0 0 6px rgba(154, 110, 88, .18); display: none; }
+html.motion .route-dot { display: block; }
+.city.lit::before { background: var(--mocha); transition: background .4s; }
+.city h3 { transition: color .5s; }
+
+.reveal-wrap { position: relative; }
+.reveal-wrap > [data-reveal] { will-change: clip-path; }
+.reveal-edge { position: absolute; inset: 0; pointer-events: none; z-index: 3; }
+.chapter-no { clip-path: inset(0 0 0 0); }
+
+
+/* ---------- summit ---------- */
+.summit { background: var(--ink); }
+.sm-pin { position: relative; height: 100vh; min-height: 560px; overflow: hidden; background: #1E252E; }
+.sm-img { position: absolute; inset: 0; will-change: transform; }
+.sm-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+.sm-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,12,10,0) 35%, rgba(15,12,10,.82) 100%), linear-gradient(90deg, rgba(15,12,10,.5) 0%, rgba(15,12,10,0) 55%); }
+.cloud { position: absolute; left: -30%; width: 160%; height: auto; pointer-events: none; will-change: transform, opacity; }
+.cloud.c1 { top: -18%; }
+.cloud.c2 { top: 8%; }
+.cloud.c3 { top: 30%; }
+.cloud.c4 { bottom: -30%; z-index: 3; }
+.sm-fog { position: absolute; inset: 0; z-index: 2; background: radial-gradient(ellipse at 50% 55%, rgba(242, 237, 231, .96) 0%, rgba(232, 226, 220, .92) 60%, rgba(214, 208, 203, .9) 100%); }
+.sm-copy { position: absolute; left: 0; right: 0; bottom: clamp(32px, 8vh, 90px); z-index: 4; display: grid; gap: 18px; }
+.sm-count { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+.sm-count span { font-family: var(--display); font-size: clamp(5rem, 15vw, 15rem); line-height: .82; letter-spacing: -0.04em; color: var(--stone); font-variant-numeric: lining-nums tabular-nums; }
+.sm-count small { color: var(--copper); font-family: var(--display); font-style: italic; font-size: clamp(1rem, 1.6vw, 1.4rem); }
+.sm-title { font-family: var(--display); font-size: clamp(2.2rem, 4.8vw, 4.8rem); line-height: 1; letter-spacing: -0.02em; color: var(--stone); }
+.sm-title .it { color: var(--stone-2); }
+.sm-text { color: var(--stone-2); max-width: 30em; }
+html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
+@media (max-width: 680px) { .cloud { left: -80%; width: 260%; } .sm-img img { object-position: 50% 10%; } }
+
+
+/* ---------- hairline illustrations for the text-only chapters ---------- */
+.art { position: absolute; z-index: 0; pointer-events: none; }
+.art svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.art g { stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+.art .dot { fill: currentColor; }
+.ap-pin, .ab-wrap, .ct-left { position: relative; }
+.ap-pin > :not(.art), .ab-wrap > :not(.art), .ct-left > :not(.art) { position: relative; z-index: 1; }
+.art-frame { color: var(--mocha-ink); opacity: .42; right: var(--gutter); top: clamp(80px, 12vh, 140px); width: clamp(170px, 19vw, 280px); aspect-ratio: 308 / 440; }
+.art-globe { color: var(--mocha-ink); opacity: .38; right: var(--gutter); top: -40px; width: clamp(200px, 24vw, 340px); aspect-ratio: 1; }
+.art-burj { color: var(--copper); opacity: .3; right: 0; top: -60px; width: clamp(150px, 17vw, 250px); aspect-ratio: 344 / 704; }
+@media (max-width: 1000px) {
+  .art-frame { top: 70px; width: 140px; opacity: .3; }
+  .art-globe { top: -60px; width: 190px; opacity: .3; }
+  .art-burj { width: 130px; top: -30px; opacity: .25; }
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1000px) {
+  .col-head, .ab-head, .ct-grid, .fd-grid, .map-grid { grid-template-columns: minmax(0, 1fr); }
+  .panel { grid-template-columns: minmax(0, 1fr); }
+  .menu { grid-template-columns: minmax(0, 1fr); }
+  .map-card { position: relative; width: 100%; margin-top: 18px; }
+  .map-note { position: relative; margin-top: 12px; }
+  .map-pin { min-height: 0; }
+  .ap-step { grid-template-columns: minmax(0, 1fr); }
+  .devs { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .marquee { width: 100%; }
+}
+@media (max-width: 680px) {
+  body { font-size: 16px; }
+  .brand span { display: none; }
+  .nav .btn { display: none; }
+  .cities { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  .route-line { display: none; }
+  .f2 { grid-template-columns: minmax(0, 1fr); }
+  .fd-facts { grid-template-columns: minmax(0, 1fr); }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .facts div:nth-child(odd) { padding-right: 0; }
+  .scroll-cue { display: none; }
+  .wordmark { font-size: 13.6vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track, .pt.active .ring { animation: none; }
+}
 </style>
-<script src="assets/motion.min.js" defer></script>
-<script src="assets/lenis.min.js" defer></script>
-<script src="assets/site.js" defer></script>
+
 </head>
 <body>
-<div id="page" style="font-family: Poppins, system-ui, sans-serif; color: #15110E; background: #15110E; width: 100%">
-
-  <!-- ============ HEADER + HERO ============ -->
-  <header id="top" data-m="heroSection" style="background: #15110E; color: #F6F1EA; position: relative; overflow: hidden">
-    <!-- hero media layer: drone video goes here -->
-    <div data-m="heroBg" style="position: absolute; inset: -40px 0 0 0; z-index: 0; background: #1B1512">
-      <video data-m="video" src="assets/hero.mp4" poster="assets/hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%"></video>
-      
-      
-    </div>
-    <!-- legibility scrim -->
-    <div aria-hidden="true" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(21,17,14,.72) 0%, rgba(21,17,14,.35) 48%, rgba(21,17,14,0) 75%), linear-gradient(180deg, rgba(21,17,14,.75) 0%, rgba(21,17,14,.25) 34%, rgba(21,17,14,.4) 68%, rgba(21,17,14,.95) 100%)"></div>
-
-    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 96px; border-bottom: 1px solid rgba(233,223,213,.14); position: relative; z-index: 3">
-      <a href="#top" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
-        <img src="assets/ay_mark.svg" alt="" style="width: 44px; height: 44px; display: block">
-        <span class="gt-l" style="font-size: 14px; letter-spacing: .42em; color: #E2A281; font-weight: 400; white-space: nowrap">ACRES &amp; YARDS</span>
-      </a>
-      <nav class="navlinks" aria-label="Primary">
-        <a href="#properties">Buy</a>
-        <a href="#properties">Off-Plan</a>
-        <a href="#properties">Sell</a>
-        <a href="#services">Services</a>
-        <a href="#events">Events</a>
-        <a href="#company">About</a>
-      </nav>
-      <a class="btn btn-ghost" href="#contact" style="min-height: 46px; padding: 0 22px; font-size: 12px">Book a consultation</a>
-    </div>
-
-    <div class="wrap" style="position: relative; z-index: 3; padding-top: 150px; padding-bottom: 170px; display: flex; flex-direction: column; gap: 32px; max-width: 1240px">
-      <h1 class="display" style="margin: 0; font-size: 84px; line-height: 1.02; letter-spacing: -0.01em; color: #F6F1EA; max-width: 900px"><span data-m="hero" style="display: block">Guidance you can trust.</span><span class="gt-l gt-anim" data-m="hero" style="display: block; font-style: italic; color: #E2A281">Decisions treated like our own.</span></h1>
-      <div data-m="hero" style="display: flex; gap: 16px; flex-wrap: wrap">
-        <a class="btn btn-copper" href="#properties">Explore properties</a>
-        <a class="btn btn-ghost" href="https://wa.me/971566786429">Talk to an advisor</a>
-      </div>
-    </div>
-
-    <!-- search bar -->
-    <div data-m="hero" class="wrap" style="position: relative; z-index: 3; padding-bottom: 56px">
-      <div class="search" role="search">
-        <label>Purpose
-          <span class="sel sel-light"><select aria-label="Purpose"><option>Buy</option><option>Off-plan investment</option><option>Sell</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        </label>
-        <label>Community
-          <span class="sel sel-light"><select aria-label="Community"><option>Any community</option><option>DAMAC Islands</option><option>Dubai Maritime City</option><option>Dubai Marina</option><option>Downtown Dubai</option><option>Business Bay</option><option>Palm Jumeirah</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        </label>
-        <label>Property type
-          <span class="sel sel-light"><select aria-label="Property type"><option>Any type</option><option>Apartment</option><option>Townhouse</option><option>Villa</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        </label>
-        <label>Budget
-          <span class="sel sel-light"><select aria-label="Budget"><option>Any budget</option><option>Up to AED 1M</option><option>AED 1M – 3M</option><option>AED 3M +</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-        </label>
-        <a class="btn btn-dark" href="#properties" style="border-radius: 0; min-height: 100%; padding: 0 36px">Search</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ============ DEVELOPERS ============ -->
-  <section aria-label="Developers" style="border-bottom: 1px solid #E2D6C9; background: #F6F1EA">
-    <div data-m="reveal" class="mq-row">
-      <div class="eyebrow gt-d mq-label" style="color: #7A5444; font-size: 11px">Access across Dubai’s developers</div>
-      <div class="mq">
-        <div class="mq-track">
-          <div class="mq-group"><img class="mq-logo" src="assets/logo_ellington.png" alt="Ellington Properties" style="height: 40px; width: auto; display: block"><span class="mq-name">Emaar</span><img class="mq-logo" src="assets/logo_damac.png" alt="DAMAC" style="height: 24px; width: auto; display: block"><span class="mq-name">Sobha</span><img class="mq-logo" src="assets/logo_nakheel.png" alt="Nakheel" style="height: 50px; width: auto; display: block"><span class="mq-name">Binghatti</span><img class="mq-logo" src="assets/logo_meraas.png" alt="Meraas" style="height: 30px; width: auto; display: block"><span class="mq-name">Arada</span><img class="mq-logo" src="assets/logo_dubai-properties.png" alt="Dubai Properties" style="height: 42px; width: auto; display: block"><span class="mq-name">Danube</span></div>
-          <div class="mq-group" aria-hidden="true"><img class="mq-logo" src="assets/logo_ellington.png" alt="" style="height: 40px; width: auto; display: block"><span class="mq-name">Emaar</span><img class="mq-logo" src="assets/logo_damac.png" alt="" style="height: 24px; width: auto; display: block"><span class="mq-name">Sobha</span><img class="mq-logo" src="assets/logo_nakheel.png" alt="" style="height: 50px; width: auto; display: block"><span class="mq-name">Binghatti</span><img class="mq-logo" src="assets/logo_meraas.png" alt="" style="height: 30px; width: auto; display: block"><span class="mq-name">Arada</span><img class="mq-logo" src="assets/logo_dubai-properties.png" alt="" style="height: 42px; width: auto; display: block"><span class="mq-name">Danube</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROPERTIES ============ -->
-  <section id="properties" style="padding: 120px 0 112px; position: relative; overflow: hidden; background: #F6F1EA">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -90px; top: 30px" width="620" height="900" viewBox="0 0 620 900"><defs><linearGradient id="hlP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A6E58" stop-opacity="0.42"></stop><stop offset="1" stop-color="#9A6E58" stop-opacity="0"></stop></linearGradient></defs><path d="M100 900 V360 A260 260 0 0 1 620 360 V900" stroke="url(#hlP)" stroke-width=".8"></path><path d="M160 900 V300 A200 200 0 0 1 560 300 V900" stroke="url(#hlP)" stroke-width=".8"></path><path d="M220 900 V240 A140 140 0 0 1 500 240 V900" stroke="url(#hlP)" stroke-width=".8"></path><path d="M360 54 l6 6 l-6 6 l-6 -6 z" stroke="#9A6E58" stroke-opacity=".45" stroke-width=".8"></path><path d="M360 20 V46" stroke="#9A6E58" stroke-opacity=".3" stroke-width=".8"></path></svg>
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
-      <div data-m="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap">
-        <div style="display: flex; flex-direction: column; gap: 18px; max-width: 620px">
-          <div class="eyebrow gt-d" style="color: #7A5444">Curated opportunities</div>
-          <h2 class="display" style="margin: 0; font-size: 52px; line-height: 1.08">Fewer options. <span class="gt-d gt-anim" style="font-style: italic; color: #9A6E58">Better ones.</span></h2>
-        </div>
-        <div role="tablist" aria-label="Listing category" data-m="tabs" style="display: flex; gap: 32px; border-bottom: 1px solid #E2D6C9; position: relative">
-          <button role="tab" id="tab-offplan" aria-controls="panel-offplan" aria-selected="true" data-tab="offplan" class="tab tab-on">Off-Plan</button>
-          <button role="tab" id="tab-ready" aria-controls="panel-ready" aria-selected="false" tabindex="-1" data-tab="ready" class="tab">Ready to Buy</button>
-          <button role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="false" tabindex="-1" data-tab="sell" class="tab">Sell With Us</button>
-          <span class="tab-ind" data-m="tabind" aria-hidden="true"></span>
-        </div>
-      </div>
-
-      <div class="tabpanel is-idle" data-m="tabwrap">
-      <div class="cards" data-m="stagger" role="tabpanel" id="panel-offplan" aria-labelledby="tab-offplan" data-panel="offplan">
-          <article class="card">
-              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
-                <img src="assets/img_kitchen_lux.jpg" alt="Warm modern kitchen with marble island and pendant lights" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
-                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Off-Plan</span></div>
-              </div>
-              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">DAMAC Islands · Dubai</div>
-                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">DAMAC Islands Townhouses</h3>
-                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Resort-style living in a lagoon-inspired waterfront community. Five bedrooms for the price of four.</p>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
-                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">5 BR townhouse</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Waterfront</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Golden Visa potential</span>
-                </div>
-                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-                  <div>
-                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Starting from</div>
-                    <div class="display" style="font-size: 22px; color: #15110E">AED 3.3M</div>
-                  </div>
-                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
-                </div>
-              </div>
-            </article>
-          <article class="card">
-              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
-                <img src="assets/img_loft.jpg" alt="Double-height living room with floor-to-ceiling windows" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
-                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Off-Plan</span></div>
-              </div>
-              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Dubai Maritime City</div>
-                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Shahrukhz by Danube</h3>
-                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Waterfront apartments with 50+ amenities, on the edge of Dubai’s maritime district.</p>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
-                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Waterfront</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">50+ amenities</span>
-                </div>
-                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-                  <div>
-                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Price</div>
-                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
-                  </div>
-                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
-                </div>
-              </div>
-            </article>
-          <article class="card">
-              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
-                <img src="assets/img_living.jpg" alt="Living room with linen sofa beside a city-view window" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
-                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Off-Plan</span></div>
-              </div>
-              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">DAMAC Communities · Dubai</div>
-                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">DAMAC Freehold Homes</h3>
-                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Freehold homes with a 0.25% monthly payment plan and 50% on handover.</p>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
-                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Freehold</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">0.25% monthly</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">50% on handover</span>
-                </div>
-                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-                  <div>
-                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Starting from</div>
-                    <div class="display" style="font-size: 22px; color: #15110E">AED 600K</div>
-                  </div>
-                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
-                </div>
-              </div>
-            </article>
-        </div>
-        <div class="cards" role="tabpanel" id="panel-ready" aria-labelledby="tab-ready" data-panel="ready" hidden>
-          <article class="card">
-              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
-                <img src="assets/img_kitchen_oak.jpg" alt="Oak kitchen with white gloss cabinets" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
-                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Ready</span></div>
-              </div>
-              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Dubai Marina</div>
-                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Marina Apartments</h3>
-                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Ready-to-move apartments by the water. Tell us your brief and we’ll share what’s available right now.</p>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
-                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Ready to move</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Waterfront</span>
-                </div>
-                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-                  <div>
-                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Availability</div>
-                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
-                  </div>
-                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
-                </div>
-              </div>
-            </article>
-          <article class="card">
-              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
-                <img src="assets/img_loft.jpg" alt="Double-height living room with city views" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
-                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Ready</span></div>
-              </div>
-              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Downtown Dubai</div>
-                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Downtown Residences</h3>
-                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Move-in-ready homes in the heart of the city, close to Dubai Mall and the Boulevard.</p>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
-                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Ready to move</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">City living</span>
-                </div>
-                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-                  <div>
-                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Availability</div>
-                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
-                  </div>
-                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
-                </div>
-              </div>
-            </article>
-          <article class="card">
-              <div style="aspect-ratio: 4 / 3; background: #E9DED2; position: relative; overflow: hidden">
-                <img src="assets/img_kitchen_lux.jpg" alt="Modern kitchen with marble breakfast bar" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
-                <div style="position: absolute; left: 16px; top: 16px; background: rgba(21,17,14,.88); color: #E2A281; padding: 7px 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500"><span class="gt-l">Ready</span></div>
-              </div>
-              <div style="padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-                <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Business Bay</div>
-                <h3 class="display" style="margin: 0; font-size: 28px; line-height: 1.15">Business Bay Homes</h3>
-                <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Ready apartments along the Dubai Water Canal, minutes from Downtown.</p>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px">
-                  <span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Apartments</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Ready to move</span><span style="border: 1px solid #E2D6C9; padding: 6px 10px; font-size: 12px; color: #5E544D">Canal-side</span>
-                </div>
-                <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #EEE4D9; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-                  <div>
-                    <div style="font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #5E544D">Availability</div>
-                    <div class="display" style="font-size: 22px; color: #15110E">On request</div>
-                  </div>
-                  <a class="gt-d" href="https://wa.me/971566786429" style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: #7A5444; min-height: 44px; display: inline-flex; align-items: center">Enquire →</a>
-                </div>
-              </div>
-            </article>
-        </div>
-
-      <div data-m="sellpanel" role="tabpanel" id="panel-sell" aria-labelledby="tab-sell" data-panel="sell" hidden style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #E2D6C9; border: 1px solid #E2D6C9">
-          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
-            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">01</div>
-            <h3 class="display" style="margin: 0; font-size: 24px">An honest valuation</h3>
-            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">What your property is worth today, and what buyers in your community are actually paying.</p>
-          </div>
-          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
-            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">02</div>
-            <h3 class="display" style="margin: 0; font-size: 24px">Presentation that sells</h3>
-            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">We don’t upload a listing and wait. Photography, video and content made in-house.</p>
-          </div>
-          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
-            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">03</div>
-            <h3 class="display" style="margin: 0; font-size: 24px">Local and global buyers</h3>
-            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Reach beyond Dubai through our investor events in London and Bangalore.</p>
-          </div>
-          <div style="background: #FFFDFA; padding: 36px 30px; display: flex; flex-direction: column; gap: 14px">
-            <div class="display gt-d" style="font-size: 40px; color: #9A6E58">04</div>
-            <h3 class="display" style="margin: 0; font-size: 24px">A clean close</h3>
-            <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #5E544D">Negotiation, paperwork and handover handled by one advisor, start to finish.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
-        <a class="btn btn-dark" href="#properties">View all properties</a>
-        <span style="font-size: 12px; color: #5E544D">Images are for illustration purposes only.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ APPROACH ============ -->
-  <section id="about" style="background: #15110E; color: #F6F1EA; padding: 120px 0; position: relative; overflow: hidden">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: 50%; top: 0; margin-left: -720px" width="1440" height="1000" viewBox="0 0 1440 1000"><path d="M120 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M360 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M600 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M840 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M1080 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path><path d="M1320 0 V1000" stroke="#E2A281" stroke-opacity=".07" stroke-width=".8"></path></svg>
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -260px; top: -60px" width="1000" height="900" viewBox="0 0 1000 900"><defs><linearGradient id="hlA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E2A281" stop-opacity="0.28"></stop><stop offset="1" stop-color="#E2A281" stop-opacity="0.04"></stop></linearGradient></defs><circle cx="560" cy="450" r="380" stroke="url(#hlA)" stroke-width=".8"></circle><circle cx="640" cy="450" r="290" stroke="url(#hlA)" stroke-width=".8"></circle><path d="M0 760 C260 600 520 860 1000 540" stroke="#E2A281" stroke-opacity=".18" stroke-width=".8"></path><circle cx="640" cy="160" r="3" stroke="#E2A281" stroke-opacity=".5" stroke-width=".8"></circle></svg>
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 72px">
-      <div class="cols2" data-m="reveal">
-        <div style="display: flex; flex-direction: column; gap: 20px">
-          <div class="eyebrow gt-l" style="color: #E2A281">Our approach</div>
-          <h2 class="display" style="margin: 0; font-size: 56px; line-height: 1.06">Less comparing.<br><span class="gt-l gt-anim" style="font-style: italic; color: #E2A281">More clarity.</span></h2>
-        </div>
-        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #C9BDB2; font-weight: 300; padding-top: 40px">One project becomes five, the shortlist keeps changing, and every new brochure makes the decision harder. We work the other way: start with what you want the property to do for you, and let everything that doesn’t fit fall away.</p>
-      </div>
-      <div class="cols3" data-m="stagger">
-        <div style="background: #15110E; padding: 40px 36px 8px 0; display: flex; flex-direction: column; gap: 16px">
-          <div class="display gt-l gt-anim" style="font-size: 18px; color: #E2A281; font-style: italic">Step one</div>
-          <h3 class="display" style="margin: 0; font-size: 30px">Know your goal</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #B9ADA3">A home to live in, a rental yield, a Golden Visa route, or a long-term hold. The goal shapes everything after it.</p>
-        </div>
-        <div style="background: #15110E; padding: 40px 36px 8px; display: flex; flex-direction: column; gap: 16px">
-          <div class="display gt-l gt-anim" style="font-size: 18px; color: #E2A281; font-style: italic">Step two</div>
-          <h3 class="display" style="margin: 0; font-size: 30px">Set your budget</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #B9ADA3">Including payment plans, mortgage options and what’s due on handover, so there are no surprises later.</p>
-        </div>
-        <div style="background: #15110E; padding: 40px 0 8px 36px; display: flex; flex-direction: column; gap: 16px">
-          <div class="display gt-l gt-anim" style="font-size: 18px; color: #E2A281; font-style: italic">Step three</div>
-          <h3 class="display" style="margin: 0; font-size: 30px">Filter what doesn’t fit</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #B9ADA3">We compare across developers and communities, then bring you a short list worth visiting.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SERVICES ============ -->
-  <section id="services" style="padding: 120px 0; position: relative; overflow: hidden; background: #F6F1EA">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: -60px; bottom: -40px" width="1120" height="400" viewBox="0 0 1120 400"><path d="M-20 120 C220 50 420 170 700 110 S1040 156 1140 96" stroke="#9A6E58" stroke-opacity="0.26" stroke-width=".8"></path><path d="M-20 154 C220 84 420 204 700 144 S1040 190 1140 130" stroke="#9A6E58" stroke-opacity="0.23" stroke-width=".8"></path><path d="M-20 188 C220 118 420 238 700 178 S1040 224 1140 164" stroke="#9A6E58" stroke-opacity="0.2" stroke-width=".8"></path><path d="M-20 222 C220 152 420 272 700 212 S1040 258 1140 198" stroke="#9A6E58" stroke-opacity="0.17" stroke-width=".8"></path><path d="M-20 256 C220 186 420 306 700 246 S1040 292 1140 232" stroke="#9A6E58" stroke-opacity="0.14" stroke-width=".8"></path><path d="M-20 290 C220 220 420 340 700 280 S1040 326 1140 266" stroke="#9A6E58" stroke-opacity="0.11" stroke-width=".8"></path><path d="M-20 324 C220 254 420 374 700 314 S1040 360 1140 300" stroke="#9A6E58" stroke-opacity="0.08" stroke-width=".8"></path></svg>
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 64px">
-      <div data-m="reveal" style="display: flex; flex-direction: column; gap: 18px; max-width: 640px">
-        <div class="eyebrow gt-d" style="color: #7A5444">What we take care of</div>
-        <h2 class="display" style="margin: 0; font-size: 52px; line-height: 1.08">An agent who works for you, <span class="gt-d gt-anim" style="font-style: italic; color: #9A6E58">not just the deal.</span></h2>
-      </div>
-      <div class="svc" data-m="stagger">
-        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><path d="M5 27V13l11-8 11 8v14"></path><path d="M12 27v-8h8v8"></path></svg>
-          <h3 class="display" style="margin: 0; font-size: 25px">Curated shortlists</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Options compared side by side across developers, instead of the first one pushed your way.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><rect x="4" y="8" width="24" height="17" rx="1"></rect><path d="M4 13h24M9 20h6"></path></svg>
-          <h3 class="display" style="margin: 0; font-size: 25px">Mortgage &amp; finance</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Support with mortgage applications and personal finance options, arranged alongside your purchase.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="16" r="11"></circle><path d="M16 9v7l5 3"></path></svg>
-          <h3 class="display" style="margin: 0; font-size: 25px">Payment plans</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Off-plan structures like 20/80 and low monthly plans, explained in plain numbers before you commit.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><rect x="7" y="4" width="18" height="24" rx="1"></rect><circle cx="16" cy="13" r="3.5"></circle><path d="M11 22h10"></path></svg>
-          <h3 class="display" style="margin: 0; font-size: 25px">Golden Visa guidance</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Which properties may qualify, and what the process looks like from purchase to residency.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><path d="M5 9h14v10H11l-6 4z"></path><path d="M19 13h8v10l-4-3h-6"></path></svg>
-          <h3 class="display" style="margin: 0; font-size: 25px">In your language</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">A multilingual team, so every conversation feels like home — wherever you’re buying from.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #D8C9BA; padding-top: 28px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9A6E58" stroke-width="1.3" aria-hidden="true"><path d="M6 17l6 6L26 9"></path></svg>
-          <h3 class="display" style="margin: 0; font-size: 25px">Long after the booking</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #5E544D">Construction updates, handover, leasing or resale. We stay around once the paperwork is done.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT THE COMPANY ============ -->
-  <section id="company" style="padding: 140px 0; position: relative; overflow: hidden; background: #15110E; color: #F6F1EA">
-    <div aria-hidden="true" style="position: absolute; inset: 0; z-index: 0; overflow: hidden">
-      <img data-m="companyBg" src="assets/founder_bg.jpg" alt="" decoding="async" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: 50% 35%; opacity: .55; display: block; will-change: transform">
-      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,17,14,.55) 0%, rgba(21,17,14,.7) 40%, rgba(21,17,14,.92) 75%, rgba(21,17,14,.96) 100%)"></div>
-      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #15110E 0%, rgba(21,17,14,0) 22%, rgba(21,17,14,0) 78%, #15110E 100%)"></div>
-    </div>
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: -140px; top: -60px" width="520" height="520" viewBox="0 0 520 520"><circle cx="260" cy="260" r="240" stroke="#E2A281" stroke-opacity=".14" stroke-width=".8"></circle><circle cx="260" cy="260" r="180" stroke="#E2A281" stroke-opacity=".1" stroke-width=".8"></circle><path d="M20 260 H500" stroke="#E2A281" stroke-opacity=".08" stroke-width=".8"></path></svg>
-    <div class="wrap about-grid" style="position: relative; z-index: 1">
-      <div data-m="reveal" class="about-media">
-        <div style="position: relative; width: 100%; max-width: 470px; margin: 0 auto">
-          <div aria-hidden="true" style="position: absolute; left: 22px; top: -22px; right: -22px; bottom: 22px; border: 1px solid transparent; border-image: linear-gradient(160deg, rgba(247,217,196,.75), rgba(226,162,129,.35) 45%, rgba(154,110,88,.1)) 1; pointer-events: none"></div>
-          <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #211A16; box-shadow: 0 40px 80px -40px rgba(0,0,0,.7)">
-            <img src="assets/founder.jpg" alt="Mr. Sufiyan Hakam, Founder of Acres &amp; Yards, at his desk overlooking the city" loading="lazy" decoding="async" width="900" height="1205" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; display: block">
-            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21,17,14,0) 60%, rgba(21,17,14,.45) 100%)"></div>
-          </div>
-          <div class="founder-card" style="position: absolute; left: -28px; bottom: 36px; background: #F6F1EA; color: #15110E; padding: 22px 28px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 24px 50px -24px rgba(21,17,14,.55)">
-            <span class="display" style="font-size: 22px; line-height: 1.2">Mr. Sufiyan Hakam</span>
-            <span class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Founder · Acres &amp; Yards</span>
-          </div>
-        </div>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 28px">
-        <div data-m="reveal" style="display: flex; flex-direction: column; gap: 22px">
-          <div class="eyebrow gt-l" style="color: #E2A281">About Acres &amp; Yards</div>
-          <h2 class="display" style="margin: 0; font-size: 54px; line-height: 1.06">Built on trust,<br><span class="gt-l gt-anim" style="font-style: italic; color: #E2A281">not on volume.</span></h2>
-          <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #C9BDB2">Ark Acres &amp; Yards Real Estate is a Dubai advisory for residential buyers and investors. We work across the city’s leading developers — DAMAC, Emaar, Nakheel, Sobha, Ellington and more — so our advice starts with what fits you, not with one developer’s inventory.</p>
-          <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #C9BDB2">Dubai is home. This year we took Dubai real estate to investors abroad, with our first international property show in London and open houses in Bangalore.</p>
-        </div>
-        <div class="about-facts" data-m="stagger">
-          <div style="border-top: 1px solid rgba(226,162,129,.28); padding-top: 20px; display: flex; flex-direction: column; gap: 6px">
-            <span class="display gt-l" style="font-size: 40px; line-height: 1; color: #E2A281">Dubai</span>
-            <span style="font-size: 13px; line-height: 1.6; color: #C9BDB2">Home base and headquarters</span>
-          </div>
-          <div style="border-top: 1px solid rgba(226,162,129,.28); padding-top: 20px; display: flex; flex-direction: column; gap: 6px">
-            <span class="display gt-l" style="font-size: 40px; line-height: 1; color: #E2A281">10</span>
-            <span style="font-size: 13px; line-height: 1.6; color: #C9BDB2">Leading developers in our network</span>
-          </div>
-          <div style="border-top: 1px solid rgba(226,162,129,.28); padding-top: 20px; display: flex; flex-direction: column; gap: 6px">
-            <span class="display gt-l" style="font-size: 40px; line-height: 1; color: #E2A281">3</span>
-            <span style="font-size: 13px; line-height: 1.6; color: #C9BDB2">Cities where we’ve met investors</span>
-          </div>
-        </div>
-        <div data-m="reveal" style="display: flex; flex-direction: column; gap: 10px; padding: 26px 0 4px; border-top: 1px solid rgba(226,162,129,.22)">
-          <span class="display gt-l gt-anim" style="font-size: 26px; font-style: italic; line-height: 1.35; color: #E2A281">“We treat your decisions like our own.”</span>
-          <span style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #C9BDB2">The Acres &amp; Yards promise</span>
-        </div>
-        <div data-m="reveal" style="display: flex; gap: 16px; flex-wrap: wrap">
-          <a class="btn btn-copper" href="#contact">Speak with our team</a>
-          <a class="btn btn-ghost" href="https://wa.me/971566786429">WhatsApp us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EVENTS ============ -->
-  <section id="events" style="background: #EDE4D9; padding: 112px 0; position: relative; overflow: hidden">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -110px; top: -40px" width="640" height="640" viewBox="0 0 640 640"><circle cx="320" cy="320" r="250" stroke="#7A5444" stroke-opacity=".22" stroke-width=".8"></circle><ellipse cx="320" cy="320" rx="180" ry="250" stroke="#7A5444" stroke-opacity=".14" stroke-width=".8"></ellipse><ellipse cx="320" cy="320" rx="110" ry="250" stroke="#7A5444" stroke-opacity=".14" stroke-width=".8"></ellipse><ellipse cx="320" cy="320" rx="40" ry="250" stroke="#7A5444" stroke-opacity=".14" stroke-width=".8"></ellipse><ellipse cx="320" cy="150" rx="183" ry="16" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="230" rx="233" ry="21" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="320" rx="250" ry="22" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="410" rx="233" ry="21" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><ellipse cx="320" cy="490" rx="183" ry="16" stroke="#7A5444" stroke-opacity=".12" stroke-width=".8"></ellipse><path data-keep="1" d="M150 470 Q300 120 520 210" stroke="#9A6E58" stroke-opacity=".55" stroke-width=".9" stroke-dasharray="2 6"></path><circle cx="150" cy="470" r="3.5" fill="#9A6E58" fill-opacity=".6"></circle><circle cx="520" cy="210" r="3.5" fill="#9A6E58" fill-opacity=".6"></circle><circle cx="150" cy="470" r="9" stroke="#9A6E58" stroke-opacity=".35" stroke-width=".8"></circle></svg>
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
-      <div class="cols2" data-m="reveal" style="align-items: end">
-        <div style="display: flex; flex-direction: column; gap: 18px">
-          <div class="eyebrow gt-d" style="color: #7A5444">Beyond borders</div>
-          <h2 class="display" style="margin: 0; font-size: 52px; line-height: 1.08">Dubai is home.<br><span class="gt-d gt-anim" style="font-style: italic; color: #9A6E58">London was our first stage.</span></h2>
-        </div>
-        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #5E544D">We bring Dubai’s developers to investors abroad, so you can compare projects in one room instead of across a dozen websites.</p>
-      </div>
-      <div class="events" data-m="stagger">
-        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
-          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">London · September</div>
-          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">Dubai Property Expo</h3>
-          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">Hilton London on Park Lane. Seven developers under one roof.</p>
-        </div>
-        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
-          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">London · September</div>
-          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">Danube Open House</h3>
-          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">Danube offices, Knightsbridge. Furnished freehold homes and townhouses.</p>
-        </div>
-        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
-          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">London · September</div>
-          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">DAMAC Property Show</h3>
-          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">DAMAC Tower, Nine Elms. Our first international property show.</p>
-        </div>
-        <div style="background: #F6F1EA; padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #7A5444, #E2A281 50%, #7A5444) 1">
-          <div class="eyebrow gt-d" style="font-size: 10px; color: #7A5444">Bangalore · September</div>
-          <h3 class="display" style="margin: 0; font-size: 22px; line-height: 1.2">DAMAC Open House</h3>
-          <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5E544D">Dubai homes, payment plans and freehold ownership, presented in India.</p>
-        </div>
-      </div>
-      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap">
-        <a class="btn btn-dark" href="#contact">Register for the next event</a>
-        <a href="https://www.instagram.com/acresyards/" style="font-size: 14px; color: #5E544D; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center">Next city announced on Instagram · @acresyards →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIAL / TEAM ============ -->
-  <section style="padding: 120px 0; position: relative; overflow: hidden; background: #F6F1EA">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: 0; top: 0" width="280" height="280" viewBox="0 0 280 280"><path d="M210 0 A70 70 0 0 0 280 70" stroke="#9A6E58" stroke-opacity="0.32" stroke-width=".8"></path><path d="M168 0 A112 112 0 0 0 280 112" stroke="#9A6E58" stroke-opacity="0.28" stroke-width=".8"></path><path d="M126 0 A154 154 0 0 0 280 154" stroke="#9A6E58" stroke-opacity="0.24" stroke-width=".8"></path><path d="M84 0 A196 196 0 0 0 280 196" stroke="#9A6E58" stroke-opacity="0.2" stroke-width=".8"></path><path d="M42 0 A238 238 0 0 0 280 238" stroke="#9A6E58" stroke-opacity="0.16" stroke-width=".8"></path></svg>
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: 50%; bottom: 40px; margin-left: -720px" width="1440" height="24" viewBox="0 0 1440 24"><defs><linearGradient id="hlT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9A6E58" stop-opacity="0"></stop><stop offset="1" stop-color="#9A6E58" stop-opacity="0"></stop></linearGradient></defs><defs><linearGradient id="hlT2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9A6E58" stop-opacity="0"></stop><stop offset=".5" stop-color="#9A6E58" stop-opacity=".4"></stop><stop offset="1" stop-color="#9A6E58" stop-opacity="0"></stop></linearGradient></defs><path d="M120 12 H690" stroke="url(#hlT2)" stroke-width=".8"></path><path d="M750 12 H1320" stroke="url(#hlT2)" stroke-width=".8"></path><path d="M720 5 l7 7 l-7 7 l-7 -7 z" stroke="#9A6E58" stroke-opacity=".5" stroke-width=".8"></path></svg>
-    <div class="wrap cols2" data-m="stagger" style="align-items: center">
-      <div style="aspect-ratio: 5 / 4; background: #E9DED2; border-radius: 0 0 220px 0; position: relative; overflow: hidden">
-        <img src="assets/img_living.jpg" alt="A furnished living room with floor-to-ceiling windows overlooking the city" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block">
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 28px">
-        <div class="eyebrow gt-d" style="color: #7A5444">The people behind it</div>
-        <blockquote class="display" style="margin: 0; font-size: 38px; line-height: 1.25; color: #15110E">“The right property feels even better when you have the right people behind it.”</blockquote>
-        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #5E544D">Same team, different personalities. Advisors from different backgrounds and languages, matched to the client — and always available when a decision can’t wait for Monday.</p>
-        <div><a class="btn btn-dark" href="#contact">Meet the team</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" style="background: #15110E; color: #F6F1EA; padding: 120px 0; position: relative; overflow: hidden">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; right: -40px; top: 10px" width="780" height="1000" viewBox="0 0 780 1000"><defs><linearGradient id="hlC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2A281" stop-opacity="0.3"></stop><stop offset="1" stop-color="#E2A281" stop-opacity="0"></stop></linearGradient></defs><path d="M70 1000 V410 A330 330 0 0 1 730 410 V1000" stroke="url(#hlC)" stroke-width=".8"></path><path d="M130 1000 V350 A270 270 0 0 1 670 350 V1000" stroke="url(#hlC)" stroke-width=".8"></path><path d="M190 1000 V290 A210 210 0 0 1 610 290 V1000" stroke="url(#hlC)" stroke-width=".8"></path><path d="M400 34 l6 6 l-6 6 l-6 -6 z" stroke="#E2A281" stroke-opacity=".45" stroke-width=".8"></path></svg>
-    <div class="wrap cols2" data-m="stagger">
-      <div style="display: flex; flex-direction: column; gap: 28px">
-        <div class="eyebrow gt-l" style="color: #E2A281">Start a conversation</div>
-        <h2 class="display" style="margin: 0; font-size: 56px; line-height: 1.06">Let’s find the one<br><span class="gt-l gt-anim" style="font-style: italic; color: #E2A281">that actually fits.</span></h2>
-        <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #B9ADA3; max-width: 440px">Tell us what you’re looking for. An advisor will call you back — or message us on WhatsApp for a quicker reply.</p>
-        <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 12px">
-          <a href="tel:+971566786429" style="color: #F6F1EA; text-decoration: none; font-size: 22px" class="display">+971 56 678 6429</a>
-          <a class="gt-l" href="https://wa.me/971566786429" style="color: #E2A281; text-decoration: none; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500">WhatsApp us →</a>
-          <a href="https://www.instagram.com/acresyards/" style="color: #B9ADA3; text-decoration: none; font-size: 14px">Instagram · @acresyards</a>
-          <div style="font-size: 14px; color: #B9ADA3">Dubai, United Arab Emirates</div>
-        </div>
-      </div>
-      <div style="background: #211A16; border: 1px solid #3A2F28; padding: 44px 40px; display: flex; flex-direction: column; gap: 32px">
-        <div class="form-grid">
-          <label class="field">Full name<input type="text" placeholder="Your name"></label>
-          <label class="field">Phone / WhatsApp<input type="tel" placeholder="+971"></label>
-          <label class="field">Email<input type="email" placeholder="you@email.com"></label>
-          <label class="field">I’m looking to
-            <span class="sel sel-dark"><select><option>Buy a home</option><option>Invest off-plan</option><option>Sell my property</option><option>Explore Golden Visa options</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-          </label>
-          <label class="field">Budget
-            <span class="sel sel-dark"><select><option>Up to AED 1M</option><option>AED 1M – 3M</option><option>AED 3M – 5M</option><option>AED 5M +</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-          </label>
-          <label class="field">Preferred language
-            <span class="sel sel-dark"><select><option>English</option><option>Hindi</option><option>Arabic</option><option>Other</option></select><svg class="sel-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4.5 L6 8.5 L10 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-          </label>
-        </div>
-        <label class="field">Message<textarea rows="3" placeholder="Communities, timelines, anything we should know"></textarea></label>
-        <button class="btn btn-copper" type="button" style="width: 100%">Request a call back</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer style="background: #0E0B09; color: #B9ADA3; padding: 80px 0 40px; position: relative; overflow: hidden">
-    <svg class="hl" aria-hidden="true" data-m="hair" fill="none" style="position: absolute; pointer-events: none; z-index: 0; left: 50%; top: 0; margin-left: -720px" width="1440" height="220" viewBox="0 0 1440 220"><defs><linearGradient id="hlF" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E2A281" stop-opacity="0"></stop><stop offset=".5" stop-color="#E2A281" stop-opacity=".22"></stop><stop offset="1" stop-color="#E2A281" stop-opacity="0"></stop></linearGradient></defs><path d="M0 170 C360 60 720 210 1440 40" stroke="url(#hlF)" stroke-width=".8"></path><path d="M0 200 C400 100 760 230 1440 80" stroke="url(#hlF)" stroke-width=".8"></path></svg>
-    <div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
-      <div class="foot" data-m="stagger">
-        <div style="display: flex; flex-direction: column; gap: 20px">
-          <img src="assets/ay_logo.svg" alt="Acres &amp; Yards" style="width: 180px; height: auto; display: block">
-          <p style="margin: 0; font-size: 14px; line-height: 1.7; max-width: 300px">Real estate advisory for residential buyers and investors in Dubai.</p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px">
-          <div class="eyebrow gt-l" style="font-size: 11px; color: #E2A281">Properties</div>
-          <a href="#properties">Off-plan</a><a href="#properties">Ready to buy</a><a href="#properties">Sell with us</a>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px">
-          <div class="eyebrow gt-l" style="font-size: 11px; color: #E2A281">Company</div>
-          <a href="#company">About</a><a href="#services">Services</a><a href="#events">Events</a>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 14px">
-          <div class="eyebrow gt-l" style="font-size: 11px; color: #E2A281">Contact</div>
-          <a href="tel:+971566786429">+971 56 678 6429</a><a href="https://wa.me/971566786429">WhatsApp</a><a href="https://www.instagram.com/acresyards/">Instagram</a>
-        </div>
-      </div>
-      <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid #2E2520; padding-top: 28px; font-size: 12px; color: #9C8F85">
-        <span>© 2026 Ark Acres &amp; Yards Real Estate. All rights reserved.</span>
-        <span>Dubai · London · Bangalore</span>
-      </div>
-    </div>
-  </footer>
-
-  <a class="wa" href="https://wa.me/971566786429" aria-label="Chat on WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15110E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"></path></svg>
-  </a>
+<div class="loader" aria-hidden="true">
+  <img class="loader-mark" src="assets/ay_mark.svg" alt="">
+  <div class="loader-word">ACRES &amp; YARDS</div>
+  <div class="loader-count">000</div>
 </div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-ring" id="cursorRing"><em id="cursorLabel">View</em></span><span class="cursor-dot" id="cursorDot"></span></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Acres &amp; Yards, back to top">
+    <img src="assets/ay_mark.svg" alt="" width="40" height="40">
+    <span>ACRES &amp; YARDS</span>
+  </a>
+  <div class="nav-right">
+    <a class="btn btn-line" href="https://wa.me/971566786429" target="_blank" rel="noopener">Book a call</a>
+    <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="menu"><i></i>Menu</button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <button class="menu-btn menu-close" id="menuClose" type="button">Close</button>
+  <ol>
+    <li><a href="#promise">Our promise</a></li>
+    <li><a href="#collection">The collection</a></li>
+    <li><a href="#map">Dubai, mapped</a></li>
+    <li><a href="#approach">How we work</a></li>
+    <li><a href="#founder">The founder</a></li>
+    <li><a href="#abroad">Beyond borders</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+  <div class="menu-side">
+    <div><strong>+971 56 678 6429</strong>Call or WhatsApp</div>
+    <div><strong>@acresyards</strong><a class="textlink" href="https://www.instagram.com/acresyards/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+</div>
+
+<nav class="index" id="index" aria-label="Chapters">
+  <a href="#top" data-ch="top">01 <span>Arrival</span></a>
+  <a href="#promise" data-ch="promise">02 <span>Promise</span></a>
+  <a href="#collection" data-ch="collection">03 <span>Collection</span></a>
+  <a href="#map" data-ch="map">04 <span>Map</span></a>
+  <a href="#approach" data-ch="approach">05 <span>Approach</span></a>
+  <a href="#founder" data-ch="founder">06 <span>Founder</span></a>
+  <a href="#abroad" data-ch="abroad">07 <span>Abroad</span></a>
+  <a href="#contact" data-ch="contact">08 <span>Contact</span></a>
+</nav>
+
+<main>
+  <!-- 01 -->
+  <section class="hero" id="top" data-ch="top">
+    <div class="hero-back" aria-hidden="true"></div>
+    <div class="flanks" id="flanks" aria-hidden="true"><span class="l">Acres</span><span class="r">&amp; Yards</span></div>
+    <div class="arch-line" id="archLine" aria-hidden="true"></div>
+    <div class="arch-cap" id="archCap" aria-hidden="true">Real estate advisory, Dubai</div>
+    <div class="hero-media" id="heroMedia">
+      <video src="assets/hero.mp4" poster="assets/hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">SCROLL</div>
+    <div class="wrap hero-copy" id="heroCopy">
+      <h1 data-intro>Guidance you<br>can trust. <span class="it">Decisions<br>treated like our own.</span></h1>
+      <div class="hero-foot">
+        <p data-intro-fade>Residential and investment advisory across Dubai’s leading developers, for buyers at home and abroad.</p>
+        <div class="hero-actions" data-intro-fade>
+          <a class="btn btn-copper" href="#collection">Explore the collection</a>
+          <a class="btn btn-line" href="https://wa.me/971566786429" target="_blank" rel="noopener">Talk to an advisor</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-caption">Dubai Marina from the water</div>
+  </section>
+
+  <!-- 02 -->
+  <section class="promise on-stone" data-reveal="arch" id="promise" data-ch="promise" data-light>
+    <div class="wrap lib-head">
+      <div class="chapter-no">Chapter 02, the city we know</div>
+      <h2 class="h2" data-split>We treat your decisions<br><span class="it">like our own.</span></h2>
+      <p class="lib-sub" data-rise>Eight addresses from our library of Dubai. Tap a photograph to see it full size.</p>
+    </div>
+    <div class="wrap lib"><div class="lib-col" data-speed="-6"><figure class="plate tall" data-cursor="Open"><button type="button" class="plate-btn" data-plate="0" aria-label="Open photograph: Burj Khalifa, Downtown Dubai"><img src="assets/lib_01.jpg" alt="Burj Khalifa seen from below against a clear sky" loading="lazy" decoding="async"></button><figcaption><span class="pn">01</span><span class="pt-t">Burj Khalifa</span><span class="pt-w">Downtown Dubai</span></figcaption></figure><figure class="plate tall" data-cursor="Open"><button type="button" class="plate-btn" data-plate="4" aria-label="Open photograph: Dubai Frame, Zabeel Park"><img src="assets/lib_05.jpg" alt="The gold Dubai Frame against a deep blue sky" loading="lazy" decoding="async"></button><figcaption><span class="pn">05</span><span class="pt-t">Dubai Frame</span><span class="pt-w">Zabeel Park</span></figcaption></figure></div><div class="lib-col" data-speed="8"><figure class="plate sq" data-cursor="Open"><button type="button" class="plate-btn" data-plate="1" aria-label="Open photograph: Museum of the Future, Sheikh Zayed Road"><img src="assets/lib_02.jpg" alt="The Museum of the Future with its Arabic calligraphy facade" loading="lazy" decoding="async"></button><figcaption><span class="pn">02</span><span class="pt-t">Museum of the Future</span><span class="pt-w">Sheikh Zayed Road</span></figcaption></figure><figure class="plate sq" data-cursor="Open"><button type="button" class="plate-btn" data-plate="5" aria-label="Open photograph: Emirates Towers, Sheikh Zayed Road"><img src="assets/lib_06.jpg" alt="The angled crown of an Emirates Tower" loading="lazy" decoding="async"></button><figcaption><span class="pn">06</span><span class="pt-t">Emirates Towers</span><span class="pt-w">Sheikh Zayed Road</span></figcaption></figure></div><div class="lib-col" data-speed="-10"><figure class="plate port" data-cursor="Open"><button type="button" class="plate-btn" data-plate="2" aria-label="Open photograph: Burj Al Arab, From Madinat Jumeirah"><img src="assets/lib_03.jpg" alt="Burj Al Arab beyond the arabesque buildings of Madinat Jumeirah" loading="lazy" decoding="async"></button><figcaption><span class="pn">03</span><span class="pt-t">Burj Al Arab</span><span class="pt-w">From Madinat Jumeirah</span></figcaption></figure><figure class="plate port" data-cursor="Open"><button type="button" class="plate-btn" data-plate="6" aria-label="Open photograph: Towers by day, Dubai"><img src="assets/lib_07.jpg" alt="Glass towers rising into a clear blue sky" loading="lazy" decoding="async"></button><figcaption><span class="pn">07</span><span class="pt-t">Towers by day</span><span class="pt-w">Dubai</span></figcaption></figure></div><div class="lib-col" data-speed="6"><figure class="plate port" data-cursor="Open"><button type="button" class="plate-btn" data-plate="3" aria-label="Open photograph: Al Kazim Towers, Dubai Media City"><img src="assets/lib_04.jpg" alt="The twin Al Kazim Towers above low-rise homes" loading="lazy" decoding="async"></button><figcaption><span class="pn">04</span><span class="pt-t">Al Kazim Towers</span><span class="pt-w">Dubai Media City</span></figcaption></figure><figure class="plate tall" data-cursor="Open"><button type="button" class="plate-btn" data-plate="7" aria-label="Open photograph: A window in the skyline, Dubai"><img src="assets/lib_08.jpg" alt="A modern tower with an open void through its centre" loading="lazy" decoding="async"></button><figcaption><span class="pn">08</span><span class="pt-t">A window in the skyline</span><span class="pt-w">Dubai</span></figcaption></figure></div></div>
+    <p class="wrap lib-credit">Photographs from Pexels.</p>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph">
+    <button type="button" class="lb-close" id="lbClose">Close</button>
+    <figure class="lb-fig"><img id="lbImg" src="" alt=""><figcaption><span class="pn" id="lbNum"></span><span class="pt-t" id="lbTitle"></span><span class="pt-w" id="lbWhere"></span></figcaption></figure>
+    <div class="lb-nav"><button type="button" id="lbPrev">Previous</button><button type="button" id="lbNext">Next</button></div>
+  </div>
+
+  <!-- 03 -->
+  <section class="collection" data-reveal="slice" id="collection" data-ch="collection">
+    <div class="wrap col-head">
+      <div style="display:grid;gap:26px">
+        <div class="chapter-no">Chapter 03, the collection</div>
+        <h2 class="h2" data-split>Fewer options.<br><span class="it">Better ones.</span></h2>
+      </div>
+      <p class="lead" data-rise>A short list from across Dubai’s developers, chosen for what each home does well. Scroll through, then ask us about the one that fits.</p>
+    </div>
+
+    <div class="h-pin" id="hPin">
+      <div class="h-track" id="hTrack">
+        <article class="panel" data-cursor="View">
+          <div class="panel-media" data-parallax-x><img src="assets/img_kitchen_lux.jpg" alt="Warm modern kitchen with a marble island and pendant lights" loading="lazy" decoding="async"><span class="panel-tag">Off-plan</span></div>
+          <div class="panel-body">
+            <div class="where">DAMAC Islands, Dubailand</div>
+            <h3>DAMAC Islands townhouses</h3>
+            <p>Resort-style living in a lagoon-inspired waterfront community, with five bedrooms for the price of four.</p>
+            <dl class="facts">
+              <div><dt>Developer</dt><dd>DAMAC</dd></div>
+              <div><dt>Homes</dt><dd>5-bedroom townhouses</dd></div>
+              <div><dt>Setting</dt><dd>Waterfront, lagoons</dd></div>
+              <div><dt>Starting from</dt><dd class="price">AED 3.3M</dd></div>
+            </dl>
+            <a class="textlink panel-link" href="https://wa.me/971566786429?text=Hello%20Acres%20%26%20Yards%2C%20I%27d%20like%20details%20on%20DAMAC%20Islands." target="_blank" rel="noopener">Ask about DAMAC Islands</a>
+          </div>
+        </article>
+        <article class="panel" data-cursor="View">
+          <div class="panel-media" data-parallax-x><img src="assets/img_loft.jpg" alt="Double-height living room with floor-to-ceiling windows" loading="lazy" decoding="async"><span class="panel-tag">Off-plan</span></div>
+          <div class="panel-body">
+            <div class="where">Dubai Maritime City</div>
+            <h3>Shahrukhz by Danube</h3>
+            <p>Waterfront apartments on the edge of Dubai’s maritime district, with more than fifty amenities in the building.</p>
+            <dl class="facts">
+              <div><dt>Developer</dt><dd>Danube</dd></div>
+              <div><dt>Homes</dt><dd>Apartments</dd></div>
+              <div><dt>Amenities</dt><dd>50+</dd></div>
+              <div><dt>Price</dt><dd class="price">On request</dd></div>
+            </dl>
+            <a class="textlink panel-link" href="https://wa.me/971566786429?text=Hello%20Acres%20%26%20Yards%2C%20I%27d%20like%20details%20on%20Shahrukhz%20by%20Danube." target="_blank" rel="noopener">Ask about Shahrukhz</a>
+          </div>
+        </article>
+        <article class="panel" data-cursor="View">
+          <div class="panel-media" data-parallax-x><img src="assets/img_living.jpg" alt="Living room with a linen sofa beside a city-view window" loading="lazy" decoding="async"><span class="panel-tag">Off-plan</span></div>
+          <div class="panel-body">
+            <div class="where">DAMAC communities</div>
+            <h3>DAMAC freehold homes</h3>
+            <p>Freehold ownership with a gentle monthly payment plan and half the price due at handover.</p>
+            <dl class="facts">
+              <div><dt>Ownership</dt><dd>Freehold</dd></div>
+              <div><dt>Payment plan</dt><dd>0.25% monthly</dd></div>
+              <div><dt>On handover</dt><dd>50%</dd></div>
+              <div><dt>Starting from</dt><dd class="price">AED 600K</dd></div>
+            </dl>
+            <a class="textlink panel-link" href="https://wa.me/971566786429?text=Hello%20Acres%20%26%20Yards%2C%20I%27d%20like%20details%20on%20DAMAC%20freehold%20homes." target="_blank" rel="noopener">Ask about the payment plan</a>
+          </div>
+        </article>
+        <article class="panel" data-cursor="View">
+          <div class="panel-media" data-parallax-x><img src="assets/img_kitchen_oak.jpg" alt="Oak kitchen with white gloss cabinets" loading="lazy" decoding="async"><span class="panel-tag">Ready to move</span></div>
+          <div class="panel-body">
+            <div class="where">Marina, Downtown, Business Bay</div>
+            <h3>Ready homes, keys this season</h3>
+            <p>Move-in-ready apartments in the city’s most established addresses. Tell us your brief and we will share what is available this week.</p>
+            <dl class="facts">
+              <div><dt>Status</dt><dd>Ready to move</dd></div>
+              <div><dt>Homes</dt><dd>Apartments and townhouses</dd></div>
+              <div><dt>Viewings</dt><dd>In person or by video</dd></div>
+              <div><dt>Availability</dt><dd class="price">On request</dd></div>
+            </dl>
+            <a class="textlink panel-link" href="https://wa.me/971566786429?text=Hello%20Acres%20%26%20Yards%2C%20I%27m%20looking%20for%20a%20ready%20home." target="_blank" rel="noopener">Share your brief</a>
+          </div>
+        </article>
+        <article class="panel panel-sell" data-cursor="Value">
+          <div class="panel-media" data-parallax-x><img src="assets/hero_poster.jpg" alt="Dubai Marina towers seen from the water" loading="lazy" decoding="async"><span class="panel-tag">Selling</span></div>
+          <div class="panel-body">
+            <div class="where">For owners</div>
+            <h3>Sell with us</h3>
+            <p>One advisor from valuation to handover, with buyers reached in Dubai and at our events abroad.</p>
+            <ol class="sell-steps">
+              <li><b>i.</b>An honest valuation against recent sales in your community</li>
+              <li><b>ii.</b>Photography, video and content made in-house</li>
+              <li><b>iii.</b>Buyers in Dubai, London and Bangalore</li>
+              <li><b>iv.</b>Negotiation, paperwork and a clean close</li>
+            </ol>
+            <a class="textlink panel-link" href="https://wa.me/971566786429?text=Hello%20Acres%20%26%20Yards%2C%20I%27d%20like%20a%20valuation." target="_blank" rel="noopener">Book a valuation</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-progress" aria-hidden="true"><span id="colNum">01 / 05</span><div class="bar"><i id="colBar"></i></div><span>Keep scrolling</span></div>
+    </div>
+    <p class="illus-note">Interior photographs are for illustration only.</p>
+
+    <div class="wrap devs" data-rise>
+      <div class="devs-label">Advising across</div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <img class="tall" src="assets/logo_ellington.png" alt="Ellington Properties"><span>Emaar</span><img src="assets/logo_damac.png" alt="DAMAC"><span>Sobha</span><img class="tall" src="assets/logo_nakheel.png" alt="Nakheel"><span>Binghatti</span><img src="assets/logo_meraas.png" alt="Meraas"><span>Arada</span><img class="tall" src="assets/logo_dubai-properties.png" alt="Dubai Properties"><span>Danube</span>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <img class="tall" src="assets/logo_ellington.png" alt=""><span>Emaar</span><img src="assets/logo_damac.png" alt=""><span>Sobha</span><img class="tall" src="assets/logo_nakheel.png" alt=""><span>Binghatti</span><img src="assets/logo_meraas.png" alt=""><span>Arada</span><img class="tall" src="assets/logo_dubai-properties.png" alt=""><span>Danube</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="band" id="band" aria-hidden="true">
+    <div class="band-row" data-dir="-1"><span class="ol">Dubai Marina</span><img src="assets/ay_mark.svg" alt=""><span class="it">Palm Jumeirah</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Downtown</span><img src="assets/ay_mark.svg" alt=""><span class="it">Business Bay</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Maritime City</span><img src="assets/ay_mark.svg" alt=""><span class="it">DAMAC Islands</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Dubai Marina</span><img src="assets/ay_mark.svg" alt=""><span class="it">Palm Jumeirah</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Downtown</span><img src="assets/ay_mark.svg" alt=""><span class="it">Business Bay</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Maritime City</span><img src="assets/ay_mark.svg" alt=""><span class="it">DAMAC Islands</span><img src="assets/ay_mark.svg" alt=""></div>
+    <div class="band-row" data-dir="1"><span class="ol">Business Bay</span><img src="assets/ay_mark.svg" alt=""><span class="it">Maritime City</span><img src="assets/ay_mark.svg" alt=""><span class="ol">DAMAC Islands</span><img src="assets/ay_mark.svg" alt=""><span class="it">Dubai Marina</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Palm Jumeirah</span><img src="assets/ay_mark.svg" alt=""><span class="it">Downtown</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Business Bay</span><img src="assets/ay_mark.svg" alt=""><span class="it">Maritime City</span><img src="assets/ay_mark.svg" alt=""><span class="ol">DAMAC Islands</span><img src="assets/ay_mark.svg" alt=""><span class="it">Dubai Marina</span><img src="assets/ay_mark.svg" alt=""><span class="ol">Palm Jumeirah</span><img src="assets/ay_mark.svg" alt=""><span class="it">Downtown</span><img src="assets/ay_mark.svg" alt=""></div>
+  </div>
+
+
+  <section class="summit" id="summit" aria-label="Burj Khalifa above the clouds">
+    <div class="sm-pin" id="smPin">
+      <div class="sm-img" id="smImg"><img src="assets/summit_burj.jpg" alt="Burj Khalifa rising into a cloudy sky" decoding="async" loading="lazy"></div>
+      <div class="sm-shade" aria-hidden="true"></div>
+      <canvas class="cloud c1" width="1600" height="900" aria-hidden="true"></canvas>
+      <canvas class="cloud c2" width="1600" height="900" aria-hidden="true"></canvas>
+      <canvas class="cloud c3" width="1600" height="900" aria-hidden="true"></canvas>
+      <div class="sm-fog" id="smFog" aria-hidden="true"></div>
+      <canvas class="cloud c4" width="1600" height="900" aria-hidden="true"></canvas>
+      <div class="sm-copy wrap" id="smCopy">
+        <div class="sm-count"><span id="smMeters">828</span><small>metres above Downtown Dubai</small></div>
+        <h2 class="sm-title">Above the clouds,<br><span class="it">close to home.</span></h2>
+        <p class="sm-text">Burj Khalifa, and the Downtown homes that gather around it. Ask us what is available in its shadow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="mapsec" data-reveal="lens" id="map" data-ch="map">
+    <div class="map-pin" id="mapPin">
+      <div class="wrap map-grid">
+        <div class="map-intro">
+          <div class="chapter-no">Chapter 04, the city</div>
+          <h2 class="h2" data-split>Dubai,<br><span class="it">mapped.</span></h2>
+          <p class="lead" data-rise>We work across the whole city, so the advice starts with where you want to live rather than one developer’s inventory.</p>
+          <ul class="places" id="places" data-rise>
+            <li><button type="button" data-i="0">Dubai Marina <small>Ready</small></button></li>
+            <li><button type="button" data-i="1">Palm Jumeirah <small>Villas</small></button></li>
+            <li><button type="button" data-i="2">Downtown Dubai <small>Ready</small></button></li>
+            <li><button type="button" data-i="3">Business Bay <small>Canal-side</small></button></li>
+            <li><button type="button" data-i="4">Dubai Maritime City <small>Off-plan</small></button></li>
+            <li><button type="button" data-i="5">DAMAC Islands <small>Off-plan</small></button></li>
+          </ul>
+        </div>
+        <div class="map-stage" data-cursor="Explore" data-rise>
+          <svg class="map-svg" id="mapSvg" viewBox="0 0 1000 640" role="img" aria-label="Stylised map of Dubai showing the communities we advise on">
+            <g class="grid">
+              <line x1="0" y1="160" x2="1000" y2="160"></line><line x1="0" y1="320" x2="1000" y2="320"></line><line x1="0" y1="480" x2="1000" y2="480"></line>
+              <line x1="250" y1="0" x2="250" y2="640"></line><line x1="500" y1="0" x2="500" y2="640"></line><line x1="750" y1="0" x2="750" y2="640"></line>
+            </g>
+            <path class="sea" d="M0,470 C60,450 110,430 170,405 S270,360 300,348 S390,305 430,288 S540,236 600,214 S690,175 710,160 S760,132 790,120 S900,72 1000,40 L1000,0 L0,0 Z"></path>
+            <text class="gulf" x="90" y="150">Arabian Gulf</text>
+            <path class="coast draw" d="M0,470 C60,450 110,430 170,405 S270,360 300,348 S390,305 430,288 S540,236 600,214 S690,175 710,160 S760,132 790,120 S900,72 1000,40"></path>
+            <path class="palm draw" d="M422,290 L360,214 M414.2,280.5 L432.4,255.3 M414.2,280.5 L385.9,293.3 M406.5,271.0 L424.7,245.8 M406.5,271.0 L378.2,283.8 M398.8,261.5 L416.9,236.3 M398.8,261.5 L370.4,274.3 M391.0,252.0 L409.2,226.8 M391.0,252.0 L362.7,264.8 M383.2,242.5 L401.4,217.3 M383.2,242.5 L354.9,255.3 M375.5,233.0 L393.7,207.8 M375.5,233.0 L347.2,245.8 M367.8,223.5 L385.9,198.3 M367.8,223.5 L339.4,236.3 M354.1,269.8 A62,62 0 1 1 415.8,219.4"></path>
+            <path class="water draw" d="M745,140 C770,170 780,200 800,230 S830,280 862,302"></path>
+            <path class="water draw" d="M585,220 C610,250 630,285 665,292 S760,262 800,232"></path>
+            <path class="road draw" d="M40,560 C250,470 500,360 640,302 S820,215 940,150"></path>
+            <text class="road-label" x="140" y="548" transform="rotate(-22 140 548)">SHEIKH ZAYED ROAD</text>
+            <g class="pt" data-i="0" transform="translate(286 360)"><circle class="ring" r="9"></circle><circle class="dot" r="4.5"></circle><text x="14" y="18">Dubai Marina</text></g>
+            <g class="pt" data-i="1" transform="translate(372 224)"><circle class="ring" r="9"></circle><circle class="dot" r="4.5"></circle><text x="-128" y="-14">Palm Jumeirah</text></g>
+            <g class="pt" data-i="2" transform="translate(632 334)"><circle class="ring" r="9"></circle><circle class="dot" r="4.5"></circle><text x="-60" y="30">Downtown</text></g>
+            <g class="pt" data-i="3" transform="translate(676 294)"><circle class="ring" r="9"></circle><circle class="dot" r="4.5"></circle><text x="16" y="22">Business Bay</text></g>
+            <g class="pt" data-i="4" transform="translate(706 152)"><circle class="ring" r="9"></circle><circle class="dot" r="4.5"></circle><text x="-20" y="-18">Maritime City</text></g>
+            <g class="pt" data-i="5" transform="translate(600 548)"><circle class="ring" r="9"></circle><circle class="dot" r="4.5"></circle><text x="16" y="5">DAMAC Islands</text></g>
+            <g transform="translate(950 590)" aria-hidden="true"><path d="M0,-26 L7,0 L0,-6 L-7,0 Z" fill="#B4A79B"></path><text x="-5" y="18" class="road-label">N</text></g>
+          </svg>
+          <div class="map-card" id="mapCard" aria-live="polite">
+            <div class="tag" id="mcTag">Ready homes</div>
+            <h3 id="mcName">Dubai Marina</h3>
+            <p id="mcText">Waterfront towers and a walkable promenade. Ready-to-move apartments, viewings this week.</p>
+            <a class="textlink panel-link" id="mcLink" href="https://wa.me/971566786429" target="_blank" rel="noopener">Ask about Dubai Marina</a>
+          </div>
+          <div class="map-note">Stylised map, not to scale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="approach on-stone" data-reveal="doors" id="approach" data-ch="approach" data-light>
+    <div class="ap-pin wrap" id="apPin">
+      <div class="art art-frame" data-art><svg class="hl-art" viewBox="-4 40 308 440" aria-hidden="true"><g fill="none" vector-effect="non-scaling-stroke"><path d="M40 470 V70 H260 V470" /><path d="M86 470 V116 H214 V470" /><path d="M40 70 L60 50 H280 L260 70 M280 50 V450 L260 470" /><circle cx="53.2" cy="338.3" r="5.9" /><circle cx="64.1" cy="247.0" r="4.4" /><circle cx="63.2" cy="142.0" r="4.3" /><circle cx="51.5" cy="159.0" r="6.6" /><circle cx="71.8" cy="169.6" r="6.5" /><circle cx="66.7" cy="433.3" r="5.3" /><circle cx="60.4" cy="442.4" r="7.5" /><circle cx="74.3" cy="222.7" r="4.3" /><circle cx="51.4" cy="228.7" r="4.9" /><circle cx="55.9" cy="316.1" r="8.9" /><circle cx="59.9" cy="305.3" r="7.8" /><circle cx="49.2" cy="195.9" r="4.4" /><circle cx="61.3" cy="230.5" r="8.1" /><circle cx="61.8" cy="225.9" r="7.5" /><circle cx="67.5" cy="208.1" r="8.8" /><circle cx="63.6" cy="410.0" r="7.4" /><circle cx="232.1" cy="443.7" r="8.4" /><circle cx="234.5" cy="372.3" r="4.7" /><circle cx="236.7" cy="142.5" r="4.9" /><circle cx="243.3" cy="313.4" r="8.0" /><circle cx="233.0" cy="352.5" r="9.3" /><circle cx="239.0" cy="276.0" r="7.6" /><circle cx="246.7" cy="281.7" r="9.0" /><circle cx="226.4" cy="354.5" r="8.0" /><circle cx="248.9" cy="393.0" r="7.9" /><circle cx="233.7" cy="344.0" r="5.7" /><circle cx="235.8" cy="183.8" r="4.1" /><circle cx="223.5" cy="375.8" r="4.7" /><circle cx="229.3" cy="255.1" r="4.8" /><circle cx="228.0" cy="273.7" r="9.2" /><circle cx="246.7" cy="392.2" r="7.3" /><circle cx="232.2" cy="262.9" r="9.2" /><circle cx="219.2" cy="106.7" r="5.8" /><circle cx="91.7" cy="85.0" r="4.8" /><circle cx="147.3" cy="95.7" r="5.2" /><circle cx="60.7" cy="90.6" r="5.3" /><circle cx="161.9" cy="106.6" r="5.8" /><circle cx="152.8" cy="96.5" r="7.5" /><circle cx="69.7" cy="105.0" r="7.4" /><circle cx="217.4" cy="101.9" r="7.9" /><circle cx="131.8" cy="81.1" r="6.0" /><path d="M86 470 V400 H104 V340 H118 V400 H128 V300 H134 V230 H137 V300 H142 V400 H156 V360 H170 V400 H178 V320 H192 V400 H214" /><path d="M0 470 H300" /></g></svg></div>
+      <div class="ap-head">
+        <div class="chapter-no">Chapter 05, how we work</div>
+        <h2 class="h2" data-split>Less comparing.<br><span class="it">More clarity.</span></h2>
+      </div>
+      <div class="ap-stage" id="apStage">
+        <div class="ap-step">
+          <div class="ap-num">01</div>
+          <div><h3>Know your goal</h3><p>A home to live in, a rental yield, a Golden Visa route or a long-term hold. The goal shapes everything that follows.</p></div>
+        </div>
+        <div class="ap-step">
+          <div class="ap-num">02</div>
+          <div><h3>Set your budget</h3><p>Including payment plans, mortgage options and what falls due at handover, so there are no surprises later.</p></div>
+        </div>
+        <div class="ap-step">
+          <div class="ap-num">03</div>
+          <div><h3>Filter what does not fit</h3><p>We compare across developers and communities, then bring you a short list worth visiting, and stay with you after the booking.</p></div>
+        </div>
+      </div>
+      <div class="ap-dots" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+    </div>
+  </section>
+
+
+  <section class="expand" data-reveal="slice-r" id="expand" aria-label="A view of the city">
+    <div class="ex-pin" id="exPin">
+      <div class="ex-media" id="exMedia"><img src="assets/img_loft.jpg" alt="Double-height living room with floor-to-ceiling windows over the city" loading="lazy" decoding="async"></div>
+      <div class="ex-words" id="exWords" aria-hidden="true"><span class="l">Every home</span><span class="r it">starts with a view.</span></div>
+      <div class="ex-cap wrap" id="exCap"><p>From the Marina to Downtown, we know the buildings, the views and the people who sell them.</p><small>Interior shown is illustrative.</small></div>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="founder" data-reveal="horizon" id="founder" data-ch="founder">
+    <div class="wrap fd-grid">
+      <div class="fd-media" id="fdMedia" data-cursor="Hello">
+        <img src="assets/founder.jpg" alt="Mr. Sufiyan Hakam, founder of Acres &amp; Yards, at his desk overlooking the city" loading="lazy" decoding="async" width="900" height="1205">
+      </div>
+      <div class="fd-copy">
+        <div class="chapter-no">Chapter 06, the founder</div>
+        <div>
+          <h2 class="fd-name" data-split>Sufiyan<br>Hakam</h2>
+        </div>
+        <div class="fd-role" data-rise>Founder, Ark Acres &amp; Yards Real Estate</div>
+        <p data-rise>Acres &amp; Yards is a Dubai advisory for residential buyers and investors. Working across the city’s leading developers means the advice starts with what fits you, and this year it reached investors in London and Bangalore.</p>
+        <blockquote data-rise class="fd-quote" style="margin:0">The right property feels even better when you have the right people behind it.</blockquote>
+        <div class="fd-facts">
+          <div><strong>Dubai</strong><span>Home and headquarters</span></div>
+          <div><strong data-count="10">10</strong><span>Developers in our network</span></div>
+          <div><strong data-count="3">3</strong><span>Cities where we have met investors</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section class="abroad on-stone" data-reveal="route" id="abroad" data-ch="abroad" data-light>
+    <div class="wrap ab-wrap">
+      <div class="art art-globe" data-art><svg class="hl-art" viewBox="0 0 400 400" aria-hidden="true"><g fill="none" vector-effect="non-scaling-stroke"><circle cx="200" cy="200" r="160" /><ellipse cx="200" cy="200" rx="130" ry="160" /><ellipse cx="200" cy="200" rx="85" ry="160" /><ellipse cx="200" cy="200" rx="38" ry="160" /><ellipse cx="200" cy="90" rx="116.2" ry="13.9" /><ellipse cx="200" cy="145" rx="150.2" ry="18.0" /><ellipse cx="200" cy="200" rx="160.0" ry="19.2" /><ellipse cx="200" cy="255" rx="150.2" ry="18.0" /><ellipse cx="200" cy="310" rx="116.2" ry="13.9" /><circle cx="150" cy="120" r="3.5" class="dot" /><circle cx="150" cy="120" r="9" /><circle cx="238" cy="196" r="3.5" class="dot" /><circle cx="238" cy="196" r="9" /><circle cx="262" cy="252" r="3.5" class="dot" /><circle cx="262" cy="252" r="9" /><path d="M238 196 Q 175 120 150 120" stroke-dasharray="3 5" /><path d="M238 196 Q 268 222 262 252" stroke-dasharray="3 5" /><circle cx="200" cy="200" r="190" stroke-dasharray="1 7" /></g></svg></div>
+      <div class="ab-head">
+        <div style="display:grid;gap:26px">
+          <div class="chapter-no">Chapter 07, beyond borders</div>
+          <h2 class="h2" data-split>Dubai is home.<br><span class="it">The buyers are everywhere.</span></h2>
+        </div>
+        <p class="lead" data-rise>We bring Dubai’s developers to investors abroad, so you can compare projects in one room instead of across a dozen websites.</p>
+      </div>
+      <div class="route" id="route">
+        <div class="route-line"><i id="routeLine"></i><span class="route-dot" id="routeDot"></span></div>
+        <div class="cities">
+          <div class="city home">
+            <div class="when">Year-round</div>
+            <h3>Dubai</h3>
+            <ul>
+              <li><b>Advisory and viewings</b><span>Ready and off-plan homes across the city</span></li>
+              <li><b>Handover and after</b><span>Construction updates, leasing and resale</span></li>
+            </ul>
+          </div>
+          <div class="city">
+            <div class="when">September</div>
+            <h3>London</h3>
+            <ul>
+              <li><b>Dubai Property Expo</b><span>Hilton London on Park Lane, seven developers</span></li>
+              <li><b>Danube Open House</b><span>Knightsbridge</span></li>
+              <li><b>DAMAC Property Show</b><span>DAMAC Tower, Nine Elms</span></li>
+            </ul>
+          </div>
+          <div class="city">
+            <div class="when">September</div>
+            <h3>Bangalore</h3>
+            <ul>
+              <li><b>DAMAC Open House</b><span>Dubai homes, payment plans and freehold ownership</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ab-cta" data-rise>
+        <a class="btn btn-line" href="https://www.instagram.com/acresyards/" target="_blank" rel="noopener">Next city on Instagram</a>
+        <a class="textlink" href="#contact">Register your interest</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 -->
+  <section class="contact" data-reveal="sunrise" id="contact" data-ch="contact">
+    <div class="wrap ct-grid">
+      <div class="ct-left">
+        <div class="art art-burj" data-art><svg class="hl-art" viewBox="-44 0 344 704" aria-hidden="true"><g fill="none" vector-effect="non-scaling-stroke"><path d="M182.0 700 L182.0 610 L174.0 610 L174.0 520 L166.0 520 L166.0 430 L158.0 430 L158.0 345 L151.0 345 L151.0 265 L144.0 265 L144.0 195 L137.0 195 L137.0 135 L131.0 135 L131.0 88 L126.0 88 L126.0 50 L122.2 50 L120.8 0 L119.2 0 L117.8 50 L114.0 50 L114.0 88 L109.0 88 L109.0 135 L103.0 135 L103.0 195 L96.0 195 L96.0 265 L89.0 265 L89.0 345 L82.0 345 L82.0 430 L74.0 430 L74.0 520 L66.0 520 L66.0 610 L58.0 610 L58.0 700" /><path d="M120 50 V700" /><path d="M62.0 598 H178.0" /><path d="M70.0 508 H170.0" /><path d="M78.0 418 H162.0" /><path d="M86.0 333 H154.0" /><path d="M93.0 253 H147.0" /><path d="M100.0 183 H140.0" /><path d="M107.0 123 H133.0" /><path d="M113.0 76 H127.0" /><path d="M118.0 38 H122.0" /><path d="M182 640 H202 V700 M58 600 H40 V700" /><path d="M-40 700 H300" /><path d="M262 92 A40 40 0 1 1 226 30 A32 32 0 1 0 262 92 Z" /><path d="M36 60 H44 M40 56 V64" /><path d="M206 170 H214 M210 166 V174" /><path d="M14 230 H22 M18 226 V234" /><path d="M276 250 H284 M280 246 V254" /></g></svg></div>
+        <div class="chapter-no">Chapter 08, contact</div>
+        <h2 class="ct-title" data-split>Let’s find<br><span class="it">the one.</span></h2>
+        <div class="ct-direct" data-rise>
+          <div class="row"><span class="label">Call or WhatsApp</span></div>
+          <div class="row"><span class="phone" id="phone">+971 56 678 6429</span><button class="copy" id="copyPhone" type="button">Copy number</button></div>
+          <div class="row"><span class="label">Instagram</span><a class="textlink" href="https://www.instagram.com/acresyards/" target="_blank" rel="noopener">@acresyards</a></div>
+          <div class="row"><span class="label">Office</span><span>Dubai, United Arab Emirates</span></div>
+        </div>
+      </div>
+      <div>
+        <form class="enquiry" id="enquiry" novalidate data-rise>
+          <div class="f2">
+            <div class="field"><label for="fName">Full name</label><input id="fName" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
+            <div class="field"><label for="fPhone">Phone or WhatsApp</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="+971" required></div>
+            <div class="field"><label for="fGoal">I’m looking to</label><div class="sel"><select id="fGoal" name="goal"><option>Buy a home</option><option>Invest off-plan</option><option>Sell my property</option><option>Explore Golden Visa options</option></select></div></div>
+            <div class="field"><label for="fBudget">Budget</label><div class="sel"><select id="fBudget" name="budget"><option>Up to AED 1M</option><option>AED 1M to 3M</option><option>AED 3M to 5M</option><option>AED 5M and above</option></select></div></div>
+            <div class="field"><label for="fArea">Community</label><div class="sel"><select id="fArea" name="area"><option>Open to suggestions</option><option>Dubai Marina</option><option>Palm Jumeirah</option><option>Downtown Dubai</option><option>Business Bay</option><option>Dubai Maritime City</option><option>DAMAC Islands</option></select></div></div>
+            <div class="field"><label for="fLang">Preferred language</label><div class="sel"><select id="fLang" name="lang"><option>English</option><option>Hindi</option><option>Arabic</option><option>Urdu</option><option>Other</option></select></div></div>
+          </div>
+          <div class="field"><label for="fMsg">Anything we should know</label><textarea id="fMsg" name="msg" rows="3" placeholder="Timelines, bedrooms, views"></textarea></div>
+          <div class="form-foot">
+            <button class="btn btn-copper" type="submit">Prepare my WhatsApp message</button>
+            <span class="small" id="formHint">Your details go into a WhatsApp message you can review before sending.</span>
+          </div>
+          <div class="form-done" id="formDone" hidden>
+            <p id="formSummary"></p>
+            <a class="btn btn-line" id="waLink" href="https://wa.me/971566786429" target="_blank" rel="noopener">Open WhatsApp to send</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <span>Residential and investment real estate advisory, Dubai</span>
+      <nav aria-label="Footer">
+        <a href="#collection">Collection</a><a href="#map">Map</a><a href="#founder">About</a><a href="#contact">Contact</a><a href="https://www.instagram.com/acresyards/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="wordmark" id="wordmark" aria-hidden="true">Acres <span class="amp">&amp;</span> Yards</div>
+    <div class="foot-legal"><span>© 2026 Ark Acres &amp; Yards Real Estate</span><span>Dubai, London and Bangalore</span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var d = document.documentElement;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var WA = 'https://wa.me/971566786429';
+
+  /* ---------- video: always try to play muted ---------- */
+  $$('video').forEach(function (v) {
+    v.muted = true;
+    var p = v.play && v.play();
+    if (p && p.catch) { p.catch(function () {}); }
+  });
+
+  /* ---------- menu ---------- */
+  var menu = $('#menu'), openBtn = $('#menuOpen'), closeBtn = $('#menuClose');
+  function setMenu(open) {
+    menu.hidden = !open;
+    openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (window.__lenis) { open ? window.__lenis.stop() : window.__lenis.start(); }
+    if (open) {
+      closeBtn.focus();
+      if (window.gsap && d.classList.contains('motion')) {
+        gsap.fromTo($$('#menu ol a'), { yPercent: 60, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.8, stagger: 0.05, ease: 'expo.out' });
+      }
+    } else { openBtn.focus(); }
+  }
+  openBtn.addEventListener('click', function () { setMenu(true); });
+  closeBtn.addEventListener('click', function () { setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); } });
+
+  /* ---------- anchors ---------- */
+  $$('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      var t = id.length > 1 ? document.querySelector(id) : null;
+      if (!t) { return; }
+      e.preventDefault();
+      if (!menu.hidden) { setMenu(false); }
+      if (window.__lenis) { window.__lenis.scrollTo(t, { duration: 1.6 }); }
+      else { t.scrollIntoView({ behavior: d.classList.contains('motion') ? 'smooth' : 'auto' }); }
+    });
+  });
+
+  /* ---------- copy phone ---------- */
+  var copyBtn = $('#copyPhone');
+  copyBtn.addEventListener('click', function () {
+    var txt = $('#phone').textContent.trim();
+    function done(msg) { copyBtn.textContent = msg; setTimeout(function () { copyBtn.textContent = 'Copy number'; }, 1800); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents($('#phone'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      done('Selected, press copy');
+    }
+    try {
+      navigator.clipboard.writeText(txt).then(function () { done('Copied'); }, fallback);
+    } catch (e) { fallback(); }
+  });
+
+  /* ---------- enquiry form -> WhatsApp message ---------- */
+  var form = $('#enquiry');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = $('#fName').value.trim(), phone = $('#fPhone').value.trim();
+    var hint = $('#formHint');
+    if (!name || !phone) {
+      hint.textContent = 'Add your name and a phone number so an advisor can reach you.';
+      (name ? $('#fPhone') : $('#fName')).focus();
+      return;
+    }
+    var lines = [
+      'Hello Acres & Yards, I would like a call back.',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Looking to: ' + $('#fGoal').value,
+      'Budget: ' + $('#fBudget').value,
+      'Community: ' + $('#fArea').value,
+      'Language: ' + $('#fLang').value
+    ];
+    var msg = $('#fMsg').value.trim();
+    if (msg) { lines.push('Notes: ' + msg); }
+    $('#waLink').href = WA + '?text=' + encodeURIComponent(lines.join('\n'));
+    $('#formSummary').textContent = 'Your message is ready, ' + name.split(' ')[0] + '. Open WhatsApp to review and send it to our team.';
+    $('#formDone').hidden = false;
+    hint.textContent = 'Your details go into a WhatsApp message you can review before sending.';
+  });
+
+  /* ---------- photo library lightbox ---------- */
+  var plates = $$('.plate-btn'), lb = $('#lightbox'), lbIndex = 0, lastFocus = null;
+  function showPlate(i) {
+    lbIndex = (i + plates.length) % plates.length;
+    var b = plates[lbIndex], img = $('img', b), fig = b.closest('figure');
+    $('#lbImg').src = img.getAttribute('src');
+    $('#lbImg').alt = img.alt;
+    $('#lbNum').textContent = $('.pn', fig).textContent;
+    $('#lbTitle').textContent = $('.pt-t', fig).textContent;
+    $('#lbWhere').textContent = $('.pt-w', fig).textContent;
+    if (window.gsap && d.classList.contains('motion')) { gsap.fromTo('#lbImg', { opacity: 0, scale: 0.97 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'expo.out' }); }
+  }
+  function openLb(i) {
+    lastFocus = document.activeElement; showPlate(i); lb.hidden = false;
+    if (window.__lenis) { window.__lenis.stop(); }
+    $('#lbClose').focus();
+  }
+  function closeLb() {
+    lb.hidden = true;
+    if (window.__lenis) { window.__lenis.start(); }
+    if (lastFocus) { lastFocus.focus(); }
+  }
+  plates.forEach(function (b) { b.addEventListener('click', function () { openLb(+b.getAttribute('data-plate')); }); });
+  $('#lbClose').addEventListener('click', closeLb);
+  $('#lbPrev').addEventListener('click', function () { showPlate(lbIndex - 1); });
+  $('#lbNext').addEventListener('click', function () { showPlate(lbIndex + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) { closeLb(); } });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) { return; }
+    if (e.key === 'Escape') { closeLb(); }
+    if (e.key === 'ArrowRight') { showPlate(lbIndex + 1); }
+    if (e.key === 'ArrowLeft') { showPlate(lbIndex - 1); }
+  });
+
+  /* ---------- map ---------- */
+  var PLACES = [
+    { name: 'Dubai Marina', tag: 'Ready homes', text: 'Waterfront towers and a walkable promenade. Ready-to-move apartments, with viewings this week.' },
+    { name: 'Palm Jumeirah', tag: 'Villas and residences', text: 'Beachfront villas and branded residences on the island, for living or a long-term hold.' },
+    { name: 'Downtown Dubai', tag: 'Ready homes', text: 'Apartments around Burj Khalifa and Dubai Mall, the city’s most established address.' },
+    { name: 'Business Bay', tag: 'Canal-side living', text: 'Apartments along the Dubai Water Canal, minutes from Downtown.' },
+    { name: 'Dubai Maritime City', tag: 'Off-plan', text: 'Shahrukhz by Danube: waterfront apartments with more than fifty amenities.' },
+    { name: 'DAMAC Islands', tag: 'Off-plan', text: 'Lagoon-inspired townhouses in Dubailand, five bedrooms from AED 3.3M.' }
+  ];
+  var pts = $$('.pt'), btns = $$('#places button'), current = -1;
+  function activate(i) {
+    if (i === current) { return; }
+    current = i;
+    pts.forEach(function (p) { p.classList.toggle('active', +p.getAttribute('data-i') === i); });
+    btns.forEach(function (b) { b.classList.toggle('active', +b.getAttribute('data-i') === i); });
+    var p = PLACES[i];
+    $('#mcName').textContent = p.name;
+    $('#mcTag').textContent = p.tag;
+    $('#mcText').textContent = p.text;
+    var link = $('#mcLink');
+    link.textContent = 'Ask about ' + p.name;
+    link.href = WA + '?text=' + encodeURIComponent('Hello Acres & Yards, I would like to hear about homes in ' + p.name + '.');
+    if (window.gsap && d.classList.contains('motion')) {
+      gsap.fromTo('#mapCard > *', { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.05, ease: 'expo.out', overwrite: true });
+    }
+  }
+  btns.forEach(function (b) {
+    var i = +b.getAttribute('data-i');
+    b.addEventListener('mouseenter', function () { activate(i); });
+    b.addEventListener('focus', function () { activate(i); });
+    b.addEventListener('click', function () { activate(i); });
+  });
+  pts.forEach(function (p) {
+    var i = +p.getAttribute('data-i');
+    p.addEventListener('mouseenter', function () { activate(i); });
+    p.addEventListener('click', function () { activate(i); });
+  });
+  activate(0);
+
+  /* ---------- motion ---------- */
+  var loader = $('.loader');
+  function endIntro() {
+    d.classList.remove('intro');
+    try { sessionStorage.setItem('ay-intro', '1'); } catch (e) {}
+  }
+  var safety = setTimeout(endIntro, 5000);
+
+  if (!d.classList.contains('motion') || !window.gsap || !window.ScrollTrigger) {
+    clearTimeout(safety); endIntro(); return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  var hasSplit = !!window.SplitText;
+  if (hasSplit) { gsap.registerPlugin(SplitText); }
+
+  // smooth scroll
+  if (window.Lenis) {
+    var lenis = new window.Lenis({ lerp: 0.085, smoothWheel: true });
+    window.__lenis = lenis;
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  var ease = 'expo.out';
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+
+  function heroIntro() {
+    var h1 = $('[data-intro]');
+    if (hasSplit) {
+      SplitText.create(h1, {
+        type: 'lines', mask: 'lines', linesClass: 'split-line', autoSplit: true,
+        onSplit: function (self) {
+          return gsap.from(self.lines, { yPercent: 110, duration: 1.4, stagger: 0.1, ease: ease });
+        }
+      });
+    } else {
+      gsap.from(h1, { y: 40, opacity: 0, duration: 1.2, ease: ease });
+    }
+    gsap.from('[data-intro-fade]', { y: 24, opacity: 0, duration: 1.1, delay: 0.5, stagger: 0.12, ease: ease });
+    gsap.from('#heroMedia video', { scale: 1.18, duration: 2.6, ease: 'power3.out' });
+    gsap.from('.nav, .scroll-cue, .hero-caption', { opacity: 0, duration: 1, delay: 0.7 });
+  }
+
+  fontsReady.then(function () {
+    // intro loader
+    if (d.classList.contains('intro') && loader) {
+      var counter = { v: 0 };
+      var tl = gsap.timeline({
+        onComplete: function () { clearTimeout(safety); endIntro(); }
+      });
+      tl.to('.loader-mark', { clipPath: 'inset(0% 0 0 0)', duration: 1.1, ease: 'power3.inOut' })
+        .to('.loader-word', { opacity: 1, duration: 0.6 }, '-=0.4')
+        .to(counter, { v: 100, duration: 1.5, ease: 'power2.inOut', onUpdate: function () {
+          $('.loader-count').textContent = String(Math.round(counter.v)).padStart(3, '0');
+        } }, 0)
+        .to(loader, { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, '+=0.15')
+        .add(heroIntro, '-=0.55');
+    } else {
+      clearTimeout(safety); endIntro(); heroIntro();
+    }
+    initScroll();
+  });
+
+  function revealSections() {
+    var MATTE = { arch: '#0F0C0A', slice: '#ECE4D8', lens: '#5A4134', doors: '#191411', 'slice-r': '#ECE4D8', corner: '#5A4134', route: '#0F0C0A', sunrise: '#ECE4D8' };
+    var W = function () { return window.innerWidth; }, V = function () { return window.innerHeight; };
+    var hyp = function () { return Math.hypot(W(), V()) * 1.25; };
+    var SHAPES = {
+      arch: [function () { var w = W(), v = V(), side = w < 681 ? w * 0.12 : w * 0.33, r = (w - side * 2) / 2; return 'inset(' + v * 0.12 + 'px ' + side + 'px 0px ' + side + 'px round ' + r + 'px ' + r + 'px 0px 0px)'; },
+             function () { return 'inset(0px 0px 0px 0px round 0px 0px 0px 0px)'; }],
+      slice: [function () { return 'polygon(0px ' + V() * 0.7 + 'px, ' + W() + 'px ' + V() + 'px, ' + W() + 'px 100%, 0px 100%)'; },
+              function () { return 'polygon(0px 0px, ' + W() + 'px 0px, ' + W() + 'px 100%, 0px 100%)'; }],
+      'slice-r': [function () { return 'polygon(0px ' + V() + 'px, ' + W() + 'px ' + V() * 0.7 + 'px, ' + W() + 'px 100%, 0px 100%)'; },
+                  function () { return 'polygon(0px 0px, ' + W() + 'px 0px, ' + W() + 'px 100%, 0px 100%)'; }],
+      lens: [function () { return 'circle(' + W() * 0.05 + 'px at 50% ' + V() * 0.55 + 'px)'; },
+             function () { return 'circle(' + hyp() + 'px at 50% ' + V() * 0.55 + 'px)'; }],
+      doors: [function () { return 'inset(0px ' + W() / 2 + 'px 0px ' + W() / 2 + 'px)'; },
+              function () { return 'inset(0px 0px 0px 0px)'; }],
+      corner: [function () { return 'circle(0px at 0px 0px)'; },
+               function () { return 'circle(' + hyp() + 'px at 0px 0px)'; }],
+      route: [function () { return 'circle(0px at 0px ' + V() * 0.5 + 'px)'; },
+              function () { return 'circle(' + hyp() + 'px at 0px ' + V() * 0.5 + 'px)'; }],
+      sunrise: [function () { return 'circle(0px at 50% ' + V() + 'px)'; },
+                function () { return 'circle(' + hyp() + 'px at 50% ' + V() + 'px)'; }]
+    };
+    $$('[data-reveal]').forEach(function (sec) {
+      var kind = sec.getAttribute('data-reveal'), shape = SHAPES[kind];
+      if (!shape) { return; }
+      var wrap = document.createElement('div');
+      wrap.className = 'reveal-wrap';
+      wrap.style.background = MATTE[kind];
+      sec.parentNode.insertBefore(wrap, sec);
+      wrap.appendChild(sec);
+      gsap.fromTo(sec, { clipPath: shape[0] }, {
+        clipPath: shape[1], ease: 'none', immediateRender: true,
+        scrollTrigger: {
+          trigger: wrap, start: 'top bottom', end: 'top 8%', scrub: 0.6, invalidateOnRefresh: true,
+          onUpdate: function (self) { if (self.progress > 0.995) { sec.style.clipPath = 'none'; } },
+          onLeave: function () { sec.style.clipPath = 'none'; }
+        }
+      });
+      var rise = $$('[data-rise]', sec);
+      if (rise.length) {
+        gsap.from(rise, { y: 70, opacity: 0, duration: 1.3, stagger: 0.1, ease: ease, scrollTrigger: { trigger: wrap, start: 'top 55%', once: true } });
+      }
+    });
+    $$('.chapter-no').forEach(function (el) {
+      gsap.fromTo(el, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
+  }
+
+  function initScroll() {
+    revealSections();
+    // nav state
+    ScrollTrigger.create({ start: 80, end: 'max', toggleClass: { targets: '#nav', className: 'scrolled' } });
+    $$('[data-light]').forEach(function (sec) {
+      ScrollTrigger.create({ trigger: sec, start: 'top 40px', end: 'bottom 40px', toggleClass: { targets: document.body, className: 'on-light' } });
+    });
+    // chapter index
+    var links = $$('#index a');
+    $$('[data-ch]').forEach(function (sec) {
+      if (sec.tagName === 'A') { return; }
+      ScrollTrigger.create({
+        trigger: sec, start: 'top center', end: 'bottom center',
+        onToggle: function (self) {
+          if (!self.isActive) { return; }
+          links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-ch') === sec.getAttribute('data-ch')); });
+        }
+      });
+    });
+
+    // WOW 1: the hero video folds into the A&Y arch
+    (function () {
+      var hero = $('#top'), media = $('#heroMedia'), line = $('#archLine');
+      function arch() {
+        var W = window.innerWidth, H = hero.offsetHeight, small = W < 681;
+        var w = small ? W * 0.62 : Math.min(W * 0.3, 470);
+        var h = small ? H * 0.58 : H * 0.74;
+        var side = (W - w) / 2, top = (H - h) / 2 + (small ? 0 : H * 0.02), bottom = H - top - h, r = w / 2;
+        return { side: side, top: top, bottom: bottom, r: r, w: w, h: h };
+      }
+      function placeLine() {
+        var a = arch(), p = 16;
+        line.style.left = (a.side - p) + 'px'; line.style.top = (a.top - p) + 'px';
+        line.style.width = (a.w + p * 2) + 'px'; line.style.height = (a.h + p) + 'px';
+        line.style.borderRadius = (a.r + p) + 'px ' + (a.r + p) + 'px 0 0';
+      }
+      placeLine();
+      ScrollTrigger.addEventListener('refreshInit', placeLine);
+      var tl = gsap.timeline({
+        scrollTrigger: { trigger: hero, start: 'top top', end: '+=120%', pin: true, scrub: 0.8, invalidateOnRefresh: true }
+      });
+      tl.to('#heroCopy, .scroll-cue, .hero-caption', { opacity: 0, y: -70, duration: 0.35, ease: 'power2.in' }, 0)
+        .fromTo(media, { clipPath: 'inset(0px 0px 0px 0px round 0px 0px 0px 0px)' }, {
+          clipPath: function () { var a = arch(); return 'inset(' + a.top + 'px ' + a.side + 'px ' + a.bottom + 'px ' + a.side + 'px round ' + a.r + 'px ' + a.r + 'px 0px 0px)'; },
+          duration: 1, ease: 'power3.inOut'
+        }, 0)
+        .fromTo('#flanks .l', { x: function () { return -window.innerWidth * 0.18; }, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: 'expo.out' }, 0.5)
+        .fromTo('#flanks .r', { x: function () { return window.innerWidth * 0.18; }, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: 'expo.out' }, 0.5)
+        .fromTo(line, { opacity: 0, scale: 0.94, transformOrigin: '50% 100%' }, { opacity: 1, scale: 1, duration: 0.3 }, 0.75)
+        .to('#archCap', { opacity: 1, duration: 0.25 }, 0.8);
+    })();
+
+    // headline line reveals
+    $$('[data-split]').forEach(function (el) {
+      if (hasSplit) {
+        SplitText.create(el, {
+          type: 'lines', mask: 'lines', linesClass: 'split-line', autoSplit: true,
+          onSplit: function (self) {
+            return gsap.from(self.lines, { yPercent: 110, duration: 1.3, stagger: 0.09, ease: ease, scrollTrigger: { trigger: el, start: 'top 86%', once: true } });
+          }
+        });
+      }
+    });
+
+    // photo library: plates rise in, columns drift at different speeds
+    $$('.lib-col').forEach(function (col) {
+      var sp = +col.getAttribute('data-speed');
+      gsap.fromTo(col, { yPercent: -sp / 2 }, { yPercent: sp, ease: 'none', scrollTrigger: { trigger: '.lib', start: 'top bottom', end: 'bottom top', scrub: true } });
+      $$('.plate-btn', col).forEach(function (b, i) {
+        gsap.fromTo(b, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.inOut', delay: i * 0.05, scrollTrigger: { trigger: b, start: 'top 92%', once: true } });
+        gsap.fromTo($('img', b), { scale: 1.35 }, { scale: 1, duration: 1.8, ease: 'expo.out', scrollTrigger: { trigger: b, start: 'top 92%', once: true }, clearProps: 'transform' });
+      });
+    });
+
+    var mm = gsap.matchMedia();
+
+    // collection: horizontal on wide screens
+    mm.add('(min-width: 1001px)', function () {
+      var sec = $('#collection'), track = $('#hTrack'), pin = $('#hPin');
+      sec.classList.add('is-horizontal');
+      var panels = $$('.panel', track);
+      var dist = function () { return Math.max(0, track.scrollWidth - window.innerWidth); };
+      var tween = gsap.to(track, {
+        x: function () { return -dist(); }, ease: 'none',
+        scrollTrigger: {
+          trigger: pin, start: 'top top', end: function () { return '+=' + dist(); }, pin: true, scrub: 1, invalidateOnRefresh: true,
+          onUpdate: function (self) {
+            $('#colBar').style.transform = 'scaleX(' + self.progress.toFixed(3) + ')';
+            var n = Math.min(panels.length, Math.floor(self.progress * panels.length) + 1);
+            $('#colNum').textContent = String(n).padStart(2, '0') + ' / ' + String(panels.length).padStart(2, '0');
+          }
+        }
+      });
+      panels.forEach(function (p) {
+        var img = $('img', p);
+        gsap.fromTo(img, { xPercent: -6, scale: 1.16 }, { xPercent: 6, scale: 1.16, ease: 'none', scrollTrigger: { trigger: p, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
+        gsap.from($$('.panel-body > *', p), { y: 40, opacity: 0, stagger: 0.06, duration: 1, ease: ease, scrollTrigger: { trigger: p, containerAnimation: tween, start: 'left 70%', once: true } });
+      });
+      ScrollTrigger.refresh();
+      return function () { sec.classList.remove('is-horizontal'); gsap.set(track, { clearProps: 'transform' }); };
+    });
+    mm.add('(max-width: 1000px)', function () {
+      $$('.panel-media').forEach(function (m) {
+        gsap.fromTo(m, { clipPath: 'inset(14% 10% 14% 10%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', scrollTrigger: { trigger: m, start: 'top 92%', end: 'top 45%', scrub: true } });
+        gsap.fromTo($('img', m), { scale: 1.3 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: m, start: 'top 92%', end: 'top 45%', scrub: true } });
+      });
+    });
+
+    // map: draw the coastline, then walk through the communities
+    var drawEls = $$('#mapSvg .draw');
+    drawEls.forEach(function (p) {
+      var len = p.getTotalLength();
+      p.style.strokeDasharray = p.classList.contains('road') ? '6 7' : len + ' ' + len;
+      if (!p.classList.contains('road')) { p.style.strokeDashoffset = len; }
+      p.__len = len;
+    });
+    var road = $('#mapSvg .road');
+    mm.add('(min-width: 1001px)', function () {
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#mapPin', start: 'top top', end: '+=180%', pin: true, scrub: 0.6,
+          onUpdate: function (self) {
+            var p = self.progress;
+            if (p > 0.32) { activate(Math.min(5, Math.floor((p - 0.32) / 0.68 * 6))); }
+          }
+        }
+      });
+      drawEls.forEach(function (p, i) {
+        if (p === road) { tl.from(p, { opacity: 0, duration: 0.15 }, 0.12); return; }
+        tl.to(p, { strokeDashoffset: 0, duration: 0.28, ease: 'none' }, i * 0.03);
+      });
+      tl.from('.pt .dot', { scale: 0, transformOrigin: '50% 50%', stagger: 0.025, duration: 0.08 }, 0.22);
+      tl.from('.pt text', { opacity: 0, stagger: 0.025, duration: 0.08 }, 0.24);
+      tl.to({}, { duration: 0.68 });
+    });
+    mm.add('(max-width: 1000px)', function () {
+      var tl = gsap.timeline({ scrollTrigger: { trigger: '#mapSvg', start: 'top 80%', once: true } });
+      drawEls.forEach(function (p) { if (p !== road) { tl.to(p, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' }, 0); } });
+    });
+
+    // approach: pinned steps
+    mm.add('(min-width: 1001px)', function () {
+      var sec = $('#approach'); sec.classList.add('is-pinned');
+      var steps = $$('.ap-step'), bars = $$('.ap-dots b');
+      gsap.set(steps, { opacity: 0, yPercent: 12 });
+      gsap.set(steps[0], { opacity: 1, yPercent: 0 });
+      var tl = gsap.timeline({ scrollTrigger: { trigger: '#apPin', start: 'top top', end: '+=160%', pin: true, scrub: 0.6 } });
+      tl.to(bars[0], { scaleX: 1, duration: 1, ease: 'none' });
+      for (var i = 1; i < steps.length; i++) {
+        tl.to(steps[i - 1], { opacity: 0, yPercent: -12, duration: 0.5 }, '>-0.15')
+          .to(steps[i], { opacity: 1, yPercent: 0, duration: 0.5 }, '<0.2')
+          .to(bars[i], { scaleX: 1, duration: 1, ease: 'none' }, '<');
+      }
+      ScrollTrigger.refresh();
+      return function () { sec.classList.remove('is-pinned'); gsap.set(steps, { clearProps: 'all' }); };
+    });
+
+    // founder
+    gsap.fromTo('#fdMedia', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6, ease: 'expo.inOut', scrollTrigger: { trigger: '#fdMedia', start: 'top 80%', once: true } });
+    gsap.fromTo('#fdMedia img', { yPercent: -10 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '#founder', start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.from('.fd-facts > div', { y: 30, opacity: 0, stagger: 0.1, duration: 1, ease: ease, scrollTrigger: { trigger: '.fd-facts', start: 'top 88%', once: true } });
+
+    // route line and cities
+    gsap.fromTo('#routeLine', { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '#route', start: 'top 80%', end: 'top 35%', scrub: true } });
+    gsap.from('.city', { y: 40, opacity: 0, stagger: 0.15, duration: 1.1, ease: ease, scrollTrigger: { trigger: '#route', start: 'top 80%', once: true } });
+
+    // footer wordmark
+    if (hasSplit) {
+      var chars = SplitText.create('#wordmark', { type: 'chars', mask: 'chars' }).chars;
+      gsap.from(chars, { yPercent: 100, stagger: 0.03, duration: 1.2, ease: ease, scrollTrigger: { trigger: '#wordmark', start: 'top 95%', once: true } });
+    }
+
+    // WOW 2: community band, driven by scroll and skewed by speed
+    var rows = $$('.band-row');
+    rows.forEach(function (r) {
+      var dir = +r.getAttribute('data-dir');
+      gsap.fromTo(r, { xPercent: dir < 0 ? 0 : -45 }, { xPercent: dir < 0 ? -45 : 0, ease: 'none', scrollTrigger: { trigger: '#band', start: 'top bottom', end: 'bottom top', scrub: 0.4 } });
+    });
+    var skewTo = gsap.quickTo(rows, 'skewX', { duration: 0.6, ease: 'power3.out' });
+    ScrollTrigger.create({
+      trigger: '#band', start: 'top bottom', end: 'bottom top',
+      onUpdate: function (self) { skewTo(gsap.utils.clamp(-9, 9, self.getVelocity() / -260)); },
+      onLeave: function () { skewTo(0); }, onLeaveBack: function () { skewTo(0); }
+    });
+
+    // WOW 3: a small window grows into a full-screen view
+    (function () {
+      var pin = $('#exPin');
+      function box() {
+        var W = window.innerWidth, H = pin.offsetHeight, small = W < 681;
+        var w = small ? W * 0.56 : Math.min(W * 0.32, 440), h = small ? H * 0.34 : H * 0.5;
+        return 'inset(' + (H - h) / 2 + 'px ' + (W - w) / 2 + 'px ' + (H - h) / 2 + 'px ' + (W - w) / 2 + 'px round 6px)';
+      }
+      var tl = gsap.timeline({ scrollTrigger: { trigger: pin, start: 'top top', end: '+=150%', pin: true, scrub: 0.8, invalidateOnRefresh: true } });
+      tl.fromTo('#exMedia', { clipPath: box }, { clipPath: 'inset(0px 0px 0px 0px round 0px)', duration: 1, ease: 'power2.inOut' }, 0)
+        .fromTo('#exMedia img', { scale: 1.45 }, { scale: 1, duration: 1, ease: 'power2.inOut' }, 0)
+        .to('#exWords .l', { x: function () { return -window.innerWidth * 0.32; }, opacity: 0, duration: 0.6, ease: 'power2.in' }, 0.05)
+        .to('#exWords .r', { x: function () { return window.innerWidth * 0.32; }, opacity: 0, duration: 0.6, ease: 'power2.in' }, 0.05)
+        .from('#exCap > *', { y: 40, opacity: 0, stagger: 0.08, duration: 0.3 }, 0.8);
+    })();
+
+    // WOW: Burj Khalifa rises out of the clouds
+    (function () {
+      function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+      $$('.cloud').forEach(function (cv, k) {
+        var ctx = cv.getContext && cv.getContext('2d');
+        if (!ctx) { return; }
+        var r = rng(17 + k * 31), W = cv.width, H = cv.height;
+        var clusters = 9 + k * 2;
+        for (var c = 0; c < clusters; c++) {
+          var cx = r() * W, cy = H * (0.25 + r() * 0.5), puffs = 26 + Math.floor(r() * 20);
+          for (var p = 0; p < puffs; p++) {
+            var x = cx + (r() - 0.5) * 520, y = cy + (r() - 0.5) * 160, rad = 50 + r() * 150;
+            var g = ctx.createRadialGradient(x, y, 0, x, y, rad);
+            var a = 0.16 + r() * 0.2, tone = 236 + Math.floor(r() * 16);
+            g.addColorStop(0, 'rgba(' + tone + ',' + (tone - 4) + ',' + (tone - 8) + ',' + a + ')');
+            g.addColorStop(1, 'rgba(' + tone + ',' + (tone - 4) + ',' + (tone - 8) + ',0)');
+            ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI * 2); ctx.fill();
+          }
+        }
+      });
+      var meters = $('#smMeters'), m = { v: 0 };
+      var tl = gsap.timeline({ scrollTrigger: { trigger: '#smPin', start: 'top top', end: '+=260%', pin: true, scrub: 1 } });
+      tl.fromTo('#smImg', { scale: 1.45, yPercent: 14 }, { scale: 1, yPercent: 0, ease: 'power2.out', duration: 1 }, 0)
+        .to('#smFog', { opacity: 0, ease: 'power1.inOut', duration: 0.45 }, 0)
+        .to('.cloud.c1', { xPercent: -28, yPercent: -40, opacity: 0, ease: 'power1.in', duration: 0.6 }, 0)
+        .to('.cloud.c2', { xPercent: 26, yPercent: -10, opacity: 0, ease: 'power1.in', duration: 0.65 }, 0.05)
+        .to('.cloud.c3', { xPercent: -22, yPercent: 30, opacity: 0, ease: 'power1.in', duration: 0.7 }, 0.08)
+        .to('.cloud.c4', { yPercent: 70, scale: 1.4, opacity: 0, ease: 'power1.in', duration: 0.8 }, 0)
+        .fromTo(m, { v: 0 }, { v: 828, ease: 'power2.out', duration: 0.55, onUpdate: function () { meters.textContent = Math.round(m.v); } }, 0.32)
+        .from('.sm-count', { y: 60, opacity: 0, duration: 0.25 }, 0.3)
+        .from('.sm-title', { y: 80, opacity: 0, duration: 0.3 }, 0.55)
+        .from('.sm-text', { y: 40, opacity: 0, duration: 0.25 }, 0.7)
+        .to({}, { duration: 0.25 });
+    })();
+
+    // hairline illustrations: one soft slide-in when their chapter arrives (not tied to scroll)
+    $$('[data-art]').forEach(function (a) {
+      var sec = a.closest('section');
+      gsap.from(a, { y: 50, x: 24, autoAlpha: 0, duration: 2, ease: 'expo.out', scrollTrigger: { trigger: sec, start: 'top 45%', once: true } });
+    });
+
+    // counting facts
+    $$('[data-count]').forEach(function (el) {
+      var n = +el.getAttribute('data-count'), o = { v: 0 };
+      gsap.to(o, { v: n, duration: 1.6, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true }, onUpdate: function () { el.textContent = Math.round(o.v); } });
+    });
+
+    // route dot travels Dubai -> London -> Bangalore and lights each city
+    var cities = $$('.city');
+    gsap.fromTo('#routeDot', { left: '0%' }, {
+      left: '100%', ease: 'none',
+      scrollTrigger: {
+        trigger: '#route', start: 'top 80%', end: 'top 35%', scrub: true,
+        onUpdate: function (self) { cities.forEach(function (c, i) { c.classList.toggle('lit', self.progress >= i / (cities.length - 0.4)); }); }
+      }
+    });
+
+    // cursor and magnetic buttons on precise pointers
+    if (window.matchMedia('(pointer: fine)').matches) {
+      d.classList.add('fine');
+      var ring = $('#cursorRing'), dot = $('#cursorDot'), label = $('#cursorLabel');
+      var rx = gsap.quickTo(ring, 'x', { duration: 0.5, ease: 'power3' }), ry = gsap.quickTo(ring, 'y', { duration: 0.5, ease: 'power3' });
+      var dx = gsap.quickTo(dot, 'x', { duration: 0.12 }), dy = gsap.quickTo(dot, 'y', { duration: 0.12 });
+      window.addEventListener('pointermove', function (e) { rx(e.clientX); ry(e.clientY); dx(e.clientX); dy(e.clientY); });
+      $$('[data-cursor]').forEach(function (el) {
+        el.addEventListener('pointerenter', function () {
+          label.textContent = el.getAttribute('data-cursor');
+          gsap.to(ring, { scale: 2, backgroundColor: 'rgba(226,162,129,.92)', borderColor: 'rgba(226,162,129,0)', duration: 0.4, ease: 'power3.out' });
+          gsap.to(label, { opacity: 1, scale: 0.5, duration: 0.3 });
+          gsap.to(dot, { opacity: 0, duration: 0.2 });
+        });
+        el.addEventListener('pointerleave', function () {
+          gsap.to(ring, { scale: 1, backgroundColor: 'rgba(226,162,129,0)', borderColor: 'rgba(226,162,129,.7)', duration: 0.4, ease: 'power3.out' });
+          gsap.to(label, { opacity: 0, duration: 0.2 });
+          gsap.to(dot, { opacity: 1, duration: 0.2 });
+        });
+      });
+      $$('a, button').forEach(function (el) {
+        if (el.closest('[data-cursor]')) { return; }
+        el.addEventListener('pointerenter', function () { gsap.to(ring, { scale: 1.5, duration: 0.3 }); });
+        el.addEventListener('pointerleave', function () { gsap.to(ring, { scale: 1, duration: 0.3 }); });
+      });
+      $$('.btn, .menu-btn, .copy').forEach(function (b) {
+        var bx = gsap.quickTo(b, 'x', { duration: 0.5, ease: 'power3' }), by = gsap.quickTo(b, 'y', { duration: 0.5, ease: 'power3' });
+        b.addEventListener('pointermove', function (e) {
+          var r = b.getBoundingClientRect();
+          bx((e.clientX - r.left - r.width / 2) * 0.3); by((e.clientY - r.top - r.height / 2) * 0.4);
+        });
+        b.addEventListener('pointerleave', function () { gsap.to(b, { x: 0, y: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)' }); });
+      });
+    }
+
+    // refresh every trigger in page order, so sections below a pinned section
+    // (like the sideways collection) wait for the full pin before they start
+    var all = ScrollTrigger.getAll().filter(function (st) { return st.trigger && !st.vars.containerAnimation; });
+    all.sort(function (a, b) {
+      if (a.trigger === b.trigger) { return (b.pin ? 1 : 0) - (a.pin ? 1 : 0); }
+      return a.trigger.compareDocumentPosition(b.trigger) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+    });
+    all.forEach(function (st, i) { st.refreshPriority = all.length - i; });
+    ScrollTrigger.sort();
+    ScrollTrigger.refresh();
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  }
+})();
+
+</script>
+
 </body>
 </html>

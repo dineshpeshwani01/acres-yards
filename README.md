@@ -1,24 +1,9 @@
-# Acres & Yards — Homepage draft
+# Acres & Yards — homepage concept (v2)
 
-Static website (no build step). Open `index.html` locally or host on GitHub Pages.
+Static site, no build step. Libraries load from jsDelivr: GSAP 3.13 (ScrollTrigger, SplitText) and Lenis 1.3.
 
-## Structure
-- `index.html` — the page (styles inline)
-- `assets/site.js` — tabs, scroll animations, WhatsApp enquiry form
-- `assets/motion.min.js` — Motion v14 (animation engine, the vanilla build of Framer Motion)
-- `assets/lenis.min.js` — Lenis v1.3 (smooth scrolling)
-- `assets/*` — logo, images, hero video
+To update the live GitHub Pages site, replace the repository's files with the contents of this folder
+(index.html, assets/, .nojekyll, README.md) and commit. The old site.js, motion.min.js and lenis.min.js
+in assets/ are no longer used and can be deleted.
 
-## Deploy to GitHub Pages
-1. Create a new **public** repository on GitHub, e.g. `acres-yards`.
-2. Upload everything in this folder (including the hidden `.nojekyll` file) to the root of the repo — or push with git:
-   ```
-   git init && git add -A && git commit -m "Acres & Yards homepage draft"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/acres-yards.git
-   git push -u origin main
-   ```
-3. Repo → **Settings → Pages** → Source: *Deploy from a branch* → Branch: `main` / `(root)` → Save.
-4. After ~1 minute the site is live at `https://<your-username>.github.io/acres-yards/`.
-
-Image credits: hero video and interior photos from Pexels (free licence). Interior images are for illustration only.
+Interior photographs and the hero clip are from Pexels and are for illustration only.

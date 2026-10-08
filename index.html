@@ -18,12 +18,12 @@
     var d = document.documentElement;
     d.classList.add('js');
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduce) {
-      d.classList.add('motion');
-      var seen = false;
-      try { seen = sessionStorage.getItem('ay-intro') === '1'; } catch (e) {}
-      if (!seen) { d.classList.add('intro'); }
-    }
+    /* every visitor gets the scroll experience; "reduce motion" switches to a calmer version */
+    d.classList.add('motion');
+    if (reduce) { d.classList.add('calm'); }
+    var seen = false;
+    try { seen = sessionStorage.getItem('ay-intro') === '1'; } catch (e) {}
+    if (!seen && !reduce) { d.classList.add('intro'); }
   })();
 </script>
 <style>
@@ -532,9 +532,10 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
   .facts div:nth-child(odd) { padding-right: 0; }
   .scroll-cue { display: none; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track, .pt.active .ring { animation: none; }
-}
+/* calmer, never off: slower marquee for visitors who prefer reduced motion */
+html.calm .marquee-track { animation-duration: 90s; }
+/* hide Safari's play-button overlay on the background videos */
+video::-webkit-media-controls, video::-webkit-media-controls-start-playback-button, video::-webkit-media-controls-overlay-play-button { display: none !important; -webkit-appearance: none; opacity: 0 !important; }
 </style>
 
 </head>
@@ -594,7 +595,7 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
     <div class="arch-line" id="archLine" aria-hidden="true"></div>
     <div class="arch-cap" id="archCap" aria-hidden="true">Real estate advisory, Dubai</div>
     <div class="hero-media" id="heroMedia">
-      <video src="assets/hero.mp4" poster="assets/hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <video disablepictureinpicture disableremoteplayback src="assets/hero.mp4" poster="assets/hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
     </div>
     <div class="scroll-cue" aria-hidden="true">SCROLL</div>
     <div class="wrap hero-copy" id="heroCopy">
@@ -979,11 +980,23 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
   var WA = 'https://wa.me/971566786429';
 
   /* ---------- video: always try to play muted ---------- */
-  $$('video').forEach(function (v) {
-    v.muted = true;
-    var p = v.play && v.play();
-    if (p && p.catch) { p.catch(function () {}); }
+  /* background video: muted inline autoplay; if the phone blocks it (Low Power Mode),
+     start it on the first touch or scroll, and keep showing the poster until then */
+  var vids = $$('video');
+  function playAll() {
+    vids.forEach(function (v) {
+      v.muted = true; v.defaultMuted = true; v.playsInline = true;
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
+      if (!v.paused) { return; }
+      var p = v.play && v.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    });
+  }
+  playAll();
+  ['touchstart', 'pointerdown', 'scroll', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, playAll, { passive: true, once: true });
   });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) { playAll(); } });
 
   /* ---------- hero headline: always two lines, kept inside the bottom third ---------- */
   function fitHero() {
@@ -1179,8 +1192,9 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
   var hasSplit = !!window.SplitText;
   if (hasSplit) { gsap.registerPlugin(SplitText); }
 
-  // smooth scroll
-  if (window.Lenis) {
+  var calm = d.classList.contains('calm');
+  // smooth scroll (wheel only; phones keep their native scrolling)
+  if (window.Lenis && !calm) {
     var lenis = new window.Lenis({ lerp: 0.085, smoothWheel: true });
     window.__lenis = lenis;
     lenis.on('scroll', ScrollTrigger.update);
@@ -1476,7 +1490,7 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
     var skewTo = gsap.quickTo(rows, 'skewX', { duration: 0.6, ease: 'power3.out' });
     ScrollTrigger.create({
       trigger: '#band', start: 'top bottom', end: 'bottom top',
-      onUpdate: function (self) { skewTo(gsap.utils.clamp(-9, 9, self.getVelocity() / -260)); },
+      onUpdate: function (self) { if (!calm) { skewTo(gsap.utils.clamp(-9, 9, self.getVelocity() / -260)); } },
       onLeave: function () { skewTo(0); }, onLeaveBack: function () { skewTo(0); }
     });
 

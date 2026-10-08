@@ -183,8 +183,9 @@ body.on-light .index { color: var(--ink); }
   background: linear-gradient(180deg, rgba(15,12,10,.55) 0%, rgba(15,12,10,.05) 30%, rgba(15,12,10,.25) 60%, rgba(15,12,10,.92) 100%),
               linear-gradient(90deg, rgba(15,12,10,.55) 0%, rgba(15,12,10,0) 60%);
 }
-.hero-copy { position: relative; z-index: 2; padding-block: 140px clamp(36px, 6vh, 64px); display: grid; gap: clamp(28px, 4vh, 44px); }
-.hero h1 { font-family: var(--display); font-size: clamp(3.1rem, 9.2vw, 9.6rem); line-height: .92; letter-spacing: -0.025em; }
+.hero-copy { position: relative; z-index: 2; padding-block: 0 clamp(28px, 5vh, 56px); display: grid; gap: clamp(16px, 2.6vh, 32px); }
+.hero h1 { font-family: var(--display); font-size: clamp(2rem, 5.4vw, 6.4rem); line-height: .98; letter-spacing: -0.025em; }
+.hero h1 .ln { display: block; white-space: nowrap; }
 .hero h1 .it { color: var(--stone-2); }
 .hero-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap; }
 .hero-foot p { max-width: 28em; color: var(--stone-2); font-weight: 300; font-size: 1.08rem; }
@@ -597,7 +598,7 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
     </div>
     <div class="scroll-cue" aria-hidden="true">SCROLL</div>
     <div class="wrap hero-copy" id="heroCopy">
-      <h1 data-intro>Guidance you<br>can trust. <span class="it">Decisions<br>treated like our own.</span></h1>
+      <h1 data-intro id="heroTitle"><span class="ln">Guidance you can trust.</span><span class="ln it">Decisions treated like our own.</span></h1>
       <div class="hero-foot">
         <p data-intro-fade>Residential and investment advisory across Dubai’s leading developers, for buyers at home and abroad.</p>
         <div class="hero-actions" data-intro-fade>
@@ -984,6 +985,26 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
     if (p && p.catch) { p.catch(function () {}); }
   });
 
+  /* ---------- hero headline: always two lines, kept inside the bottom third ---------- */
+  function fitHero() {
+    var h1 = $('#heroTitle'), copy = $('#heroCopy'), foot = $('.hero-foot');
+    if (!h1 || !copy) { return; }
+    var W = window.innerWidth, H = window.innerHeight;
+    var cs = getComputedStyle(copy);
+    var availW = copy.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    h1.style.fontSize = '100px';
+    var widest = Math.max.apply(null, $$('.ln', h1).map(function (l) { return l.scrollWidth; }));
+    var byWidth = 100 * availW / widest * 0.98;
+    var budget = (W < 681 ? 0.45 : 1 / 3) * H;
+    var rest = parseFloat(cs.paddingBottom) + parseFloat(cs.rowGap || cs.gap || 0) + (foot ? foot.offsetHeight : 0);
+    var byHeight = (budget - rest) / (2 * 0.98);
+    h1.style.fontSize = Math.max(26, Math.min(byWidth, byHeight, 112)) + 'px';
+  }
+  fitHero();
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitHero); }
+  window.addEventListener('resize', fitHero);
+  window.addEventListener('load', fitHero);
+
   /* ---------- footer wordmark fits the content column exactly ---------- */
   function fitWordmark() {
     var wm = $('#wordmark'), inner = $('#wmIn');
@@ -1188,6 +1209,7 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
   }
 
   fontsReady.then(function () {
+    fitHero();
     // intro loader
     if (d.classList.contains('intro') && loader) {
       var counter = { v: 0 };
@@ -1512,7 +1534,7 @@ html:not(.motion) .cloud, html:not(.motion) .sm-fog { display: none; }
     // hairline illustrations: one soft slide-in when their chapter arrives (not tied to scroll)
     $$('[data-art]').forEach(function (a) {
       var sec = a.closest('section');
-      gsap.from(a, { y: 50, x: 24, autoAlpha: 0, duration: 2, ease: 'expo.out', scrollTrigger: { trigger: sec, start: 'top 45%', once: true } });
+      gsap.from(a, { y: 60, autoAlpha: 0, duration: 2, ease: 'expo.out', scrollTrigger: { trigger: sec, start: 'top 45%', once: true } });
     });
 
     // counting facts
